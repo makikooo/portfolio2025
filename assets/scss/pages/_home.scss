@@ -1,3 +1,272 @@
 @use "../globals/index" as *;
 
+#home {
 
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding-top: 5px;
+        position: sticky;
+        top: 0;
+        height: 80px;
+        z-index: 10000;
+
+        .logo_link {
+            .title_name {
+                font-size: 1.75rem;
+            }
+
+            .sub_title {
+                font-size: 0.75rem;
+            }
+
+        }
+
+        .nav_list {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 30px;
+
+            .nav_item {
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+                border: #D0A900 3px solid;
+                background-color: #fff;
+                position: relative;
+
+                .nav_link {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 0.65rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .mv {
+        position: relative;
+        height: 90vh;
+
+        .mv_wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+
+            .mv_title {
+                font-size: 1.75rem;
+                letter-spacing: 7px;
+            }
+
+            .mv_subtitle {
+                letter-spacing: 4px;
+                font-family: "Zen Maru Gothic", serif;
+            }
+        }
+    }
+
+    .sec01 {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto 100px;
+
+        .sec01_title {
+            margin-bottom: 30px;
+            font-size: 1.25rem;
+        }
+
+        .sec01_text {
+            font-size: 1rem;
+            font-family: "Zen Maru Gothic", serif;
+            margin-bottom: 60px;
+        }
+
+    }
+
+    .sec02 {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto 50px;
+
+        .works_list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto 50px;
+
+            .works_link_item {
+                padding: 0 15px 10px;
+
+                &:first-child {
+                    border-bottom: 2px solid #C39000;
+                }
+
+                .works_link {
+                    font-family: "Zen Maru Gothic", serif;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .sec03 {
+        width: 100%;
+
+        .work_link_wrapper {
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 10px;
+            padding-top: 20px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background: rgba(246, 175, 132, 20%);
+                z-index: 500;
+            }
+
+            .link_flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 90%;
+                max-width: 1200px;
+                margin: 0 auto;
+
+                .work_wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+                    gap: 20px;
+
+                    .work_image {
+                        width: 320px;
+                        height: auto;
+                        object-fit: cover;
+                        z-index: 10;
+                    }
+
+                    .work_box {
+                        width: 100%;
+
+                        .work_title {
+                            font-size: 1.25rem;
+                            margin-bottom: 15px;
+                        }
+
+                        &>div {
+                            padding: 5px 20px;
+                            border: 1px solid #E7D173;
+                            width: 150px;
+                            border-radius: 5px;
+                            margin-bottom: 10px;
+                            font-family: "Zen Maru Gothic", serif;
+                        }
+
+                        &>ul {
+                            padding-left: 1.5em;
+
+                            &>li {
+                                list-style-type: circle;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+
+                .button_wrapper {
+                    width: 300px;
+
+                    .work_button {
+                        display: block;
+                        width: 100%;
+                        padding: 10px;
+
+                        .button_flex {
+                            display: inline-flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            margin: 0px auto;
+                            padding: 10px 10%;
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+
+                            span {
+                                font-weight: 600;
+                            }
+
+                            & img {
+                                width: 25px;
+                                height: 25px;
+                            }
+
+                        }
+
+                        .border {
+                            height: 1px;
+                            width: 80%;
+                            margin: 0 auto 10px;
+                            background-color: #484742;
+                        }
+
+
+                    }
+
+                    .detail_button {
+                        background: linear-gradient(to bottom, #D0A900, #E7D173, #D0A900);
+                        margin-bottom: 20px;
+                        border-radius: 10px;
+                    }
+
+                    .site_button {
+                        border: #E7D173 solid 4px;
+                        border-radius: 10px;
+                        background: #fff;
+                    }
+                }
+            }
+        }
+
+        .center_wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto 100px;
+
+            &>a {
+                width: 320px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                background: linear-gradient(to bottom, #D0A900, #E7D173, #D0A900);
+                border-radius: 10px;
+
+                &>span {
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                }
+
+                &>img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
