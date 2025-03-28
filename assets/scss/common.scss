@@ -55,3 +55,81 @@ body {
     max-width: 1000px;
     margin: 0 auto;
 }
+
+.nav_sp_only {
+    position: relative;
+}
+
+.humbergur_box {
+    width: 50px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1000;
+
+    span {
+        position: absolute;
+        height: 1.5px;
+        width: 100%;
+        background: #000;
+        transition: all 0.4s ease;
+    }
+
+    span:first-child {
+        top: 0;
+    }
+
+    span:nth-child(2) {
+        top: 50%;
+    }
+
+    span:last-child {
+        bottom: 0;
+    }
+}
+
+.active.humbergur_box {
+    span:first-child {
+        transform: rotate(45deg);
+        top: 16px;
+    }
+
+    span:nth-child(2) {
+        opacity: 0;
+    }
+
+    span:last-child {
+        transform: rotate(135deg);
+        bottom: 13px;
+    }
+}
+
+.sp_nav_list {
+    position: absolute;
+    right: -400px;
+    top: -26px;
+    width: 300px;
+    height: 100vh;
+    padding: 50px;
+    background: #f4ecc8;
+    text-align: center;
+    transition: right 1s ease;
+
+    li {
+        border-bottom: #dcbc31 2px solid;
+        padding: 15px 70px;
+
+        &:first-child {
+            margin-top: 50px;
+            border-top: #dcbc31 2px solid;
+        }
+
+        a {
+            font-weight: 700;
+        }
+    }
+
+    &.active {
+        right: -34px;
+    }
+}
