@@ -393,7 +393,72 @@
                 display: none;
             }
         }
+    }
 
+    .about_me {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto 100px;
+
+        .section_title {
+            font-size: 1.5rem;
+            margin-bottom: 60px;
+
+            span {
+                font-size: 0.75rem;
+            }
+        }
+
+        .about_flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+
+            .about_image_box {
+                width: 700px;
+
+                img {}
+            }
+
+            .about_text_box {
+                padding: 0 20px 0 20px;
+
+                .about_title {
+                    font-size: 1.25rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    font-family: "Zen Maru Gothic", serif;
+                }
+
+                .web_site_title {
+                    margin-top: 30px;
+                    font-size: 1rem;
+                }
+
+                a {
+                    display: block;
+                    font-family: "Zen Maru Gothic", serif;
+                }
+            }
+        }
+
+        &>a {
+            width: 300px;
+            margin: 40px auto 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 15px;
+            background: linear-gradient(to bottom, #D0A900, #E7D173, #D0A900);
+            font-weight: 600;
+
+            img {
+                width: 20px;
+            }
+        }
     }
 }
 

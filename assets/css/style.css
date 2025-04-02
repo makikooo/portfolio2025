@@ -319,6 +319,58 @@
 #home .work_continuation .center_wrapper.hidden {
   display: none;
 }
+#home .about_me {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 100px;
+}
+#home .about_me .section_title {
+  font-size: 1.5rem;
+  margin-bottom: 60px;
+}
+#home .about_me .section_title span {
+  font-size: 0.75rem;
+}
+#home .about_me .about_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+#home .about_me .about_flex .about_image_box {
+  width: 700px;
+}
+#home .about_me .about_flex .about_text_box {
+  padding: 0 20px 0 20px;
+}
+#home .about_me .about_flex .about_text_box .about_title {
+  font-size: 1.25rem;
+}
+#home .about_me .about_flex .about_text_box p {
+  font-size: 1rem;
+  font-family: "Zen Maru Gothic", serif;
+}
+#home .about_me .about_flex .about_text_box .web_site_title {
+  margin-top: 30px;
+  font-size: 1rem;
+}
+#home .about_me .about_flex .about_text_box a {
+  display: block;
+  font-family: "Zen Maru Gothic", serif;
+}
+#home .about_me > a {
+  width: 300px;
+  margin: 40px auto 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #D0A900, #E7D173, #D0A900);
+  font-weight: 600;
+}
+#home .about_me > a img {
+  width: 20px;
+}
 
 #home .work_continuation .work_link_wrapper.hidden {
   display: none;
