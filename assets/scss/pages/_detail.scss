@@ -1,0 +1,40 @@
+@use "../globals/index" as *;
+
+#detail {
+    .sec01 {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto 100px;
+        text-align: center;
+
+        .section_title {
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 1.25rem;
+        }
+
+        .detail_title {
+            display: inline-block;
+            text-align: center;
+            border-bottom: 2px solid #C39000;
+            font-size: 1rem;
+            font-family: "Zen Maru Gothic", serif;
+            margin-bottom: 60px;
+        }
+
+        .images_wrapper {
+            width: 400px;
+            max-width: 90%;
+            margin: 0 auto;
+
+            img {}
+        }
+
+        .detail_subtitle {
+            text-align: left;
+            font-family: "Zen Maru Gothic", serif;
+        }
+
+        .detal_text {}
+    }
+}

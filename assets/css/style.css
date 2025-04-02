@@ -322,4 +322,33 @@
 
 #home .work_continuation .work_link_wrapper.hidden {
   display: none;
+}
+
+#detail .sec01 {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+#detail .sec01 .section_title {
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 1.25rem;
+}
+#detail .sec01 .detail_title {
+  display: inline-block;
+  text-align: center;
+  border-bottom: 2px solid #C39000;
+  font-size: 1rem;
+  font-family: "Zen Maru Gothic", serif;
+  margin-bottom: 60px;
+}
+#detail .sec01 .images_wrapper {
+  width: 400px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+#detail .sec01 .detail_subtitle {
+  text-align: left;
+  font-family: "Zen Maru Gothic", serif;
 }/*# sourceMappingURL=style.css.map */
