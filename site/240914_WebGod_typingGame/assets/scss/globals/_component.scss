@@ -1,0 +1,35 @@
+@use "variables" as *;
+@use "mq" as *;
+
+//蛍光色のアンダーライン
+@mixin underLine {
+    text-decoration: underline; /* 下線 */
+    text-decoration-thickness: 0.3em; /* 線の太さ */
+    text-decoration-color: $underLine; /* 線の色 */
+    text-underline-offset: 0em; /* 線の位置。テキストに重なるようにやや上部にする */
+    text-decoration-skip-ink: none; /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+}
+
+// 共通ボタン
+@mixin button ($height: 62px, $width: 444px, $gradientStart: #41BBFF, $gradientEnd: #75FB7A, $borderRadius: 31px) {
+    height: $height;
+    max-width: $width;
+    width: 90%;
+    background: linear-gradient(90deg, $gradientStart 0%, $gradientEnd 70%);
+    border-radius: $borderRadius;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1%;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    color: #ffffff;
+    background-size: 200% 100%; //ホバーの設定
+    transition: background-position 0.8s; //ホバーの速度
+    @include mq(md) {
+        font-size: 16px;
+    }
+}

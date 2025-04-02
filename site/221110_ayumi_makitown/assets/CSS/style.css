@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+
+/* 
+共通設定
+*/
+body{
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+/* 
+ヘッダー
+*/
+/* .header {} */
+.header-first {
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  margin-left: 25px;
+  font-size: 22px;
+}
+
+/* .header-nav1 {} */
+.header-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-item {
+  padding-left: 25px;
+}
+
+.header-item:nth-child(3) {
+  padding-right: 25px;
+}
+
+.header-item a {
+  color: #fff;
+}
+
+.header-second {
+  background: rgb(220, 219, 219);
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+}
+
+/* .header-second nav {} */
+
+.header-categoly-list {
+  display: flex;
+  justify-content: left;
+  margin: 0;
+}
+
+.header-categoly-item {
+  margin: 0 15px;
+  padding-top: 5px;
+}
+
+.information{
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+/* 
+カテゴリー
+*/
+.outer {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  font: 18px bold;
+}
+
+.categoly {
+  width: 140px;
+  margin-right: 10px;
+}
+.categoly-item {
+  border-top: 1px solid rgb(199, 199, 199);
+  padding-bottom: 18px;
+}
+
+/* 
+メインコンテンツ
+*/
+.main {
+  width: 650px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.original {
+  width: 180px;
+}
+
+.original > img {
+  width: 180px;
+}
+
+.hr {
+  border: 0.5px solid rgb(235, 234, 234);
+}
+.price {
+  font-size: 13px;
+  color: #999;
+  margin: 0;
+  padding: 7px;
+  text-align: center;
+}
+
+.under {
+  margin-bottom: 30px;
+}
+/* .original new {} */
+.popularity {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+/* .popularity-item {} */
+
+/*
+アサイド
+*/
+.aside {
+  width: 200px;
+}
+
+.aside-img {
+  width: 200px;
+  height: auto;
+  margin-top: 25px;
+}
+
+.under {
+  margin-bottom: 80px;
+}
+
+/* 
+フッター
+*/
+.footer-top ,.footer-center {
+  background-color: rgb(240, 238, 238);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.footer-link {
+  color: #999;
+}
+
+.footer-center {
+  height: 45px;
+}
+
+.footer-center  ul {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  margin: 0 auto 25px;
+}
+
+.footer-bottom ,.comment{
+  background: #000;
+  height: 45px;
+}
+
+.footer-bottom p {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-bottom small {
+  color: #fff;
+  line-height: 45px;
+}
+
+.comment {
+  color: #fff;
+}
+
+.comment p {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}

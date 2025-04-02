@@ -1,0 +1,29 @@
+@use "globals" as *;
+
+ /* 共通スタイル */
+a {
+    text-decoration: none;
+}
+ul {
+    padding-left: 0;
+    & li {
+        list-style: none;
+    }
+}
+
+/* レスポンシブ用 */
+.sp_only {
+    display: none;
+}
+.pc_only {
+    display: block;
+}
+@include mq(md) {
+    .sp_only {
+        display: block;
+    }
+    .pc_only {
+        display: none;
+    }
+}
+

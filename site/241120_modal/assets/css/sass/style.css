@@ -1,0 +1,8 @@
+.test2 {
+  color: #0000ff;
+}
+@media screen and (max-width: 768px) {
+  .test2 {
+    color: #00ff00;
+  }
+}/*# sourceMappingURL=style.css.map */

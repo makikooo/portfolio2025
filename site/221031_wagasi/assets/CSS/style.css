@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* 
+共通設定
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+body {
+  background-image: url(../images/monyo.gif);
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* 
+header
+*/
+.header {
+  position: relative;
+}
+
+h1 {
+  height: 50px;
+  background-image: url(../images/h1Back.png);
+}
+
+.osusume {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  top: 25px;
+  right: 25px;
+}
+
+/* 
+リンク
+*/
+ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000;
+  margin-bottom: 20px;
+}
+
+li {
+  padding: 10px 36px;
+  background-color: #000;
+}
+
+li a {
+  color: #fff;
+}
+
+/*
+コンテンツ
+*/
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.news {
+  margin: 0 15px;
+}
+
+.news-img {
+  margin-bottom: 10px;
+}
+
+.news p a {
+  color: blue;
+}
+
+.news-text ,.item p {
+  margin-bottom: 5px;
+}
+
+.news2 {
+  margin-right: 15px;
+}
+
+/* 
+footer
+*/
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  height: 70px;
+  vertical-align: middle;
+}
+
+small {
+  line-height: 35px;
+  font-size: 10px;
+  letter-spacing: 3px;
+}

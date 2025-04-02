@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* 共通スタイル */
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+}
+ul li {
+  list-style: none;
+}
+
+/* レスポンシブ用 */
+.sp_only {
+  display: none;
+}
+
+.pc_only {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .sp_only {
+    display: block;
+  }
+  .pc_only {
+    display: none;
+  }
+}/*# sourceMappingURL=common.css.map */

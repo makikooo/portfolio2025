@@ -1,0 +1,44 @@
+@use "../globals/index" as *;
+
+body {
+  position: relative;
+}
+.modal-open {
+  display: block;
+  padding: 15px;
+  background: #dea2a2;
+  border-radius: 10px;
+}
+
+.modal-overlay {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba($color: #4b1a1a, $alpha: 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  &.open {
+    display: block;
+  }
+  .modal {
+    border: #4b1a1a solid 2px;
+    border-radius: 20px;
+    background-color: beige;
+    width: 500px;
+    margin: 100px auto;
+    padding: 15px;
+    position: relative;
+    .modal-close {
+      position: absolute;
+      top: -12px;
+      right: -9px;
+      padding: 5px 8px;
+      border: #4b1a1a solid 2px;
+      border-radius: 50%;
+      background: beige;
+      z-index: 3;
+    }
+  }
+}

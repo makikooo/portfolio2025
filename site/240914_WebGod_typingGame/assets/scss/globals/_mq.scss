@@ -1,0 +1,12 @@
+$breakpoints: (
+  'xl': 'screen and (max-width: 1280px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'md': 'screen and (max-width: 768px)',
+  'sm': 'screen and (max-width: 480px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

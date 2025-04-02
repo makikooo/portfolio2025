@@ -37,6 +37,10 @@ body {
   color: #484742;
 }
 
+.zenmaru {
+  font-family: "Zen Maru Gothic", serif;
+}
+
 .section_title {
   font-size: 1.5rem;
   margin-bottom: 60px;
@@ -115,4 +119,47 @@ body {
 }
 .sp_nav_list.active {
   right: -34px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-top: 5px;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  z-index: 10000;
+}
+.header .logo_link .title_name {
+  font-size: 1.75rem;
+}
+.header .logo_link .sub_title {
+  font-size: 0.75rem;
+}
+.header .nav_list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+}
+.header .nav_list .nav_item {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: #D0A900 3px solid;
+  background-color: #fff;
+  position: relative;
+}
+.header .nav_list .nav_item .nav_link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.65rem;
+  font-weight: 600;
 }/*# sourceMappingURL=common.css.map */
