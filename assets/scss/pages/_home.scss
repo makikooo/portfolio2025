@@ -92,6 +92,10 @@
             padding-top: 20px;
             transition: background-color 0.3s ease;
 
+            @include mq(md) {
+                margin: 0 auto 60px;
+            }
+
             &:hover {
                 background: #f6cd841a;
                 z-index: 500;
@@ -104,12 +108,21 @@
                 width: 90%;
                 max-width: 1200px;
                 margin: 0 auto;
+                gap: 20px;
+
+                @include mq(md) {
+                    flex-direction: column;
+                }
 
                 .work_wrapper {
                     display: flex;
                     justify-content: space-between;
                     align-items: start;
                     gap: 20px;
+
+                    @include mq(md) {
+                        flex-direction: column;
+                    }
 
                     .work_image {
                         width: 320px;
@@ -123,6 +136,10 @@
 
                     .work_box {
                         width: 100%;
+
+                        @include mq(md) {
+                            margin-bottom: 20px;
+                        }
 
                         .work_title {
                             font-size: 1.25rem;
@@ -151,6 +168,13 @@
 
                 .button_wrapper {
                     width: 300px;
+
+                    @include mq(md) {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 20px;
+                    }
 
                     .work_button {
                         display: block;
@@ -194,6 +218,10 @@
                         background: linear-gradient(to bottom, #D0A900, #E7D173, #D0A900);
                         margin-bottom: 20px;
                         border-radius: 10px;
+
+                        @include mq(md) {
+                            margin-bottom: 0;
+                        }
                     }
 
                     .site_button {
@@ -259,6 +287,10 @@
             padding-top: 20px;
             transition: background-color 0.3s ease;
 
+            @include mq(md) {
+                margin: 0 auto 60px;
+            }
+
             &:hover {
                 background: rgba(246, 175, 132, 20%);
                 z-index: 500;
@@ -271,12 +303,21 @@
                 width: 90%;
                 max-width: 1200px;
                 margin: 0 auto;
+                gap: 20px;
+
+                @include mq(md) {
+                    flex-direction: column;
+                }
 
                 .work_wrapper {
                     display: flex;
                     justify-content: space-between;
                     align-items: start;
                     gap: 20px;
+
+                    @include mq(md) {
+                        flex-direction: column;
+                    }
 
                     .work_image {
                         width: 320px;
@@ -319,6 +360,13 @@
                 .button_wrapper {
                     width: 300px;
 
+                    @include mq(md) {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 20px;
+                    }
+
                     .work_button {
                         display: block;
                         width: 100%;
@@ -353,20 +401,27 @@
                             margin: 0 auto 10px;
                             background-color: #484742;
                         }
-
-
                     }
 
                     .detail_button {
                         background: linear-gradient(to bottom, #D0A900, #E7D173, #D0A900);
                         margin-bottom: 20px;
                         border-radius: 10px;
+
+                        @include mq(md) {
+                            margin-bottom: 0;
+                        }
                     }
 
                     .site_button {
                         border: #E7D173 solid 4px;
                         border-radius: 10px;
                         background: #fff;
+
+                        @include mq(md) {
+                            border: #E7D173 solid 1px;
+
+                        }
                     }
                 }
             }
@@ -453,15 +508,31 @@
             .site_table {
                 border-spacing: 25px 5px;
 
+                @include mq(md) {
+                    display: block;
+                }
+
+                @include mq(md) {
+                    border-spacing: 0;
+                }
+
                 tr {
                     text-align: left;
 
                     th {
                         font-weight: normal;
+
+                        @include mq(md) {
+                            display: block;
+                        }
                     }
 
                     td {
                         font-family: "Zen Maru Gothic", serif;
+
+                        @include mq(md) {
+                            display: block;
+                        }
                     }
                 }
             }

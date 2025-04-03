@@ -222,6 +222,7 @@ body {
 @media screen and (max-width: 768px) {
   .footer .footer_flex .footer_name {
     font-size: 1rem;
+    text-align: left;
   }
 }
 .footer .footer_flex nav ul {
