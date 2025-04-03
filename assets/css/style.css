@@ -66,7 +66,7 @@
   transition: background-color 0.3s ease;
 }
 #home .sec03 .work_link_wrapper:hover {
-  background: rgba(246, 175, 132, 0.2);
+  background: rgba(246, 205, 132, 0.1019607843);
   z-index: 500;
 }
 #home .sec03 .work_link_wrapper .link_flex {
@@ -187,10 +187,12 @@
 }
 #home .work_continuation {
   display: none;
-  width: 100%;
 }
 #home .work_continuation.active {
   display: block;
+}
+#home .work_continuation.last_wrapper {
+  margin-bottom: 50px;
 }
 #home .work_continuation .work_link_wrapper {
   width: 100%;
@@ -319,47 +321,52 @@
 #home .work_continuation .center_wrapper.hidden {
   display: none;
 }
-#home .about_me {
+#home .about_me .section_title {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto 100px;
-}
-#home .about_me .section_title {
+  margin: 0 auto 30px;
   font-size: 1.5rem;
-  margin-bottom: 60px;
 }
 #home .about_me .section_title span {
   font-size: 0.75rem;
 }
-#home .about_me .about_flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
+#home .about_me .about_image_box img {
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
 }
-#home .about_me .about_flex .about_image_box {
-  width: 700px;
-}
-#home .about_me .about_flex .about_text_box {
+#home .about_me .about_text_box {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto 40px;
   padding: 0 20px 0 20px;
 }
-#home .about_me .about_flex .about_text_box .about_title {
+#home .about_me .about_text_box .about_title {
   font-size: 1.25rem;
 }
-#home .about_me .about_flex .about_text_box p {
+#home .about_me .about_text_box p {
   font-size: 1rem;
   font-family: "Zen Maru Gothic", serif;
 }
-#home .about_me .about_flex .about_text_box .web_site_title {
+#home .about_me .about_text_box .web_site_title {
   margin-top: 30px;
   font-size: 1rem;
 }
-#home .about_me .about_flex .about_text_box a {
-  display: block;
+#home .about_me .about_text_box .site_table {
+  border-spacing: 25px 5px;
+}
+#home .about_me .about_text_box .site_table tr {
+  text-align: left;
+}
+#home .about_me .about_text_box .site_table tr th {
+  font-weight: normal;
+}
+#home .about_me .about_text_box .site_table tr td {
   font-family: "Zen Maru Gothic", serif;
 }
 #home .about_me > a {
   width: 300px;
-  margin: 40px auto 20px;
+  margin: 40px auto 60px;
   padding: 20px;
   display: flex;
   justify-content: space-around;
@@ -370,6 +377,66 @@
 }
 #home .about_me > a img {
   width: 20px;
+}
+#home .contact {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+#home .contact .section_title {
+  font-size: 1.5rem;
+  margin-bottom: 60px;
+  text-align: left;
+}
+#home .contact .section_title span {
+  font-size: 0.75rem;
+}
+#home .contact p {
+  width: 310px;
+  margin: 0 auto 20px;
+  text-align: left;
+}
+#home .contact form .contact_table {
+  border-spacing: 2rem 1rem;
+  margin-bottom: 30px;
+}
+#home .contact form .contact_table tr th {
+  text-align: left;
+  width: 350px;
+}
+#home .contact form .contact_table tr td {
+  text-align: left;
+}
+#home .contact form .contact_table tr td input,
+#home .contact form .contact_table tr td textarea {
+  max-width: 100%;
+  width: 794px;
+  border-radius: 15px;
+  border: 1px solid #333;
+}
+#home .contact form .contact_table tr td input {
+  height: 55px;
+}
+#home .contact form .contact_table tr td textarea {
+  height: 255px;
+}
+#home .contact form button {
+  width: 320px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(to bottom, #D0A900, #E7D173, #D0A900);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 55px;
+}
+#home .contact > p {
+  width: 800px;
+  max-width: 80%;
+  margin: 0 auto 50px;
 }
 
 #home .work_continuation .work_link_wrapper.hidden {

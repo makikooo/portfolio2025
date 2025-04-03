@@ -126,44 +126,95 @@ body {
 }
 
 .header {
+  width: 100%;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+.header .header_content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
-  background-color: #fff;
   padding-top: 5px;
-  position: sticky;
-  top: 0;
   height: 80px;
-  z-index: 10000;
 }
-.header .logo_link .title_name {
+.header .header_content .logo_link .title_name {
   font-size: 1.75rem;
 }
-.header .logo_link .sub_title {
+.header .header_content .logo_link .sub_title {
   font-size: 0.75rem;
 }
-.header .nav_list {
+.header .header_content .nav_list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 30px;
 }
-.header .nav_list .nav_item {
+.header .header_content .nav_list .nav_item {
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  border: #D0A900 3px solid;
+  border: #D0A900 1px solid;
   background-color: #fff;
   position: relative;
 }
-.header .nav_list .nav_item .nav_link {
+.header .header_content .nav_list .nav_item .nav_link {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 0.65rem;
   font-weight: 600;
+}
+
+.footer {
+  background-color: #d3b63b;
+  text-align: center;
+  padding-bottom: 20px;
+  border-radius: 93px 93px 0px 0px/53px 50px 0px 0px;
+  position: relative;
+}
+.footer .go_to_top {
+  position: absolute;
+  top: -85px;
+  right: 50px;
+  width: 65px;
+  height: 65px;
+  background: #d3b63b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+}
+.footer .footer_flex {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto 50px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer_flex .footer_name {
+  font-size: 1.25rem;
+}
+.footer .footer_flex nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer .footer_flex nav ul li {
+  margin-right: 20px;
+}
+.footer .footer_flex nav ul li a {
+  display: block;
+  font-size: 1rem;
+}
+.footer .footer_copy {
+  font-size: 0.5rem;
 }/*# sourceMappingURL=common.css.map */

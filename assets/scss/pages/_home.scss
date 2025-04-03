@@ -83,7 +83,7 @@
             transition: background-color 0.3s ease;
 
             &:hover {
-                background: rgba(246, 175, 132, 20%);
+                background: #f6cd841a;
                 z-index: 500;
             }
 
@@ -238,7 +238,9 @@
             display: block;
         }
 
-        width: 100%;
+        &.last_wrapper {
+            margin-bottom: 50px;
+        }
 
         .work_link_wrapper {
             width: 100%;
@@ -396,57 +398,68 @@
     }
 
     .about_me {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto 100px;
 
         .section_title {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto 30px;
             font-size: 1.5rem;
-            margin-bottom: 60px;
 
             span {
                 font-size: 0.75rem;
             }
         }
 
-        .about_flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
+        .about_image_box {
 
-            .about_image_box {
-                width: 700px;
+            img {
+                width: 100vw;
+                height: 300px;
+                object-fit: cover;
 
-                img {}
+            }
+        }
+
+        .about_text_box {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto 40px;
+            padding: 0 20px 0 20px;
+
+            .about_title {
+                font-size: 1.25rem;
             }
 
-            .about_text_box {
-                padding: 0 20px 0 20px;
+            p {
+                font-size: 1rem;
+                font-family: "Zen Maru Gothic", serif;
+            }
 
-                .about_title {
-                    font-size: 1.25rem;
-                }
+            .web_site_title {
+                margin-top: 30px;
+                font-size: 1rem;
+            }
 
-                p {
-                    font-size: 1rem;
-                    font-family: "Zen Maru Gothic", serif;
-                }
+            .site_table {
+                border-spacing: 25px 5px;
 
-                .web_site_title {
-                    margin-top: 30px;
-                    font-size: 1rem;
-                }
+                tr {
+                    text-align: left;
 
-                a {
-                    display: block;
-                    font-family: "Zen Maru Gothic", serif;
+                    th {
+                        font-weight: normal;
+                    }
+
+                    td {
+                        font-family: "Zen Maru Gothic", serif;
+                    }
                 }
             }
         }
 
         &>a {
             width: 300px;
-            margin: 40px auto 20px;
+            margin: 40px auto 60px;
             padding: 20px;
             display: flex;
             justify-content: space-around;
@@ -460,7 +473,87 @@
             }
         }
     }
+
+    .contact {
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+
+        .section_title {
+            font-size: 1.5rem;
+            margin-bottom: 60px;
+            text-align: left;
+
+            span {
+                font-size: 0.75rem;
+            }
+        }
+
+        p {
+            width: 310px;
+            margin: 0 auto 20px;
+            text-align: left;
+        }
+
+        form {
+            .contact_table {
+                border-spacing: 2rem 1rem;
+                margin-bottom: 30px;
+
+                tr {
+                    th {
+                        text-align: left;
+                        width: 350px;
+                    }
+
+                    td {
+                        text-align: left;
+
+                        input,
+                        textarea {
+                            max-width: 100%;
+                            width: 794px;
+                            border-radius: 15px;
+                            border: 1px solid #333;
+                        }
+
+                        input {
+                            height: 55px;
+                        }
+
+                        textarea {
+                            height: 255px;
+                        }
+
+                    }
+                }
+            }
+
+            button {
+                width: 320px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                background: linear-gradient(to bottom, #D0A900, #E7D173, #D0A900);
+                border-radius: 10px;
+                border: none;
+                cursor: pointer;
+                margin-bottom: 55px;
+            }
+        }
+
+        &>p {
+            width: 800px;
+            max-width: 80%;
+            margin: 0 auto 50px;
+        }
+    }
+
 }
+
+
 
 #home .work_continuation .work_link_wrapper.hidden {
     display: none;

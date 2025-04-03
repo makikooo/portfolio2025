@@ -37,3 +37,15 @@ continuation_button02.addEventListener('click', function () {
     });
     continuation_button_wrapper02.classList.add('hidden');
 });
+
+/*******************************************
+ *  各ページ(フッター）上に戻るのボタンを押したら時間かけて戻る
+ *******************************************/
+let go_to_top_button = document.querySelector('.go_to_top');
+
+go_to_top_button.addEventListener('click', () => {
+    window.scroll({
+        top: 0,
+        behavior: "smooth",
+    });
+});
