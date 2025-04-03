@@ -40,6 +40,11 @@ body {
   font-size: 16px;
   color: #484742;
 }
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
 
 .zenmaru {
   font-family: "Zen Maru Gothic", serif;
@@ -128,7 +133,7 @@ body {
 .header {
   width: 100%;
   background-color: #fff;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10000;
 }
@@ -144,6 +149,11 @@ body {
 }
 .header .header_content .logo_link .title_name {
   font-size: 1.75rem;
+}
+@media screen and (max-width: 768px) {
+  .header .header_content .logo_link .title_name {
+    font-size: 1.25rem;
+  }
 }
 .header .header_content .logo_link .sub_title {
   font-size: 0.75rem;
@@ -185,11 +195,17 @@ body {
   width: 65px;
   height: 65px;
   background: #d3b63b;
+  border: 2px solid #fff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.75rem;
+}
+@media screen and (max-width: 768px) {
+  .footer .go_to_top {
+    top: -40px;
+  }
 }
 .footer .footer_flex {
   max-width: 1200px;
@@ -203,6 +219,11 @@ body {
 .footer .footer_flex .footer_name {
   font-size: 1.25rem;
 }
+@media screen and (max-width: 768px) {
+  .footer .footer_flex .footer_name {
+    font-size: 1rem;
+  }
+}
 .footer .footer_flex nav ul {
   display: flex;
   justify-content: flex-end;
@@ -214,6 +235,11 @@ body {
 .footer .footer_flex nav ul li a {
   display: block;
   font-size: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .footer .footer_flex nav ul li a {
+    font-size: 0.75rem;
+  }
 }
 .footer .footer_copy {
   font-size: 0.5rem;

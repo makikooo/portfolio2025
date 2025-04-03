@@ -1,6 +1,11 @@
 @use "../globals/index" as *;
 
 #home {
+    margin-top: 80px;
+
+    @include mq(md) {
+        overflow: hidden;
+    }
 
     .mv {
         position: relative;
@@ -59,9 +64,14 @@
 
             .works_link_item {
                 padding: 10px 15px;
+                transition: border-bottom 0.3s ease;
 
-                &:first-child {
-                    border-bottom: 2px solid #C39000;
+                &:hover {
+                    border-bottom: 2px solid rgba(195, 144, 0, 0.5);
+                }
+
+                &.active-category {
+                    border-bottom: 2px solid #D0A900;
                 }
 
                 .works_link {
@@ -490,30 +500,52 @@
             }
         }
 
-        p {
-            width: 310px;
-            margin: 0 auto 20px;
-            text-align: left;
-        }
-
         form {
             .contact_table {
                 border-spacing: 2rem 1rem;
                 margin-bottom: 30px;
+                width: 100%;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+
+                @include mq(md) {
+                    border-spacing: 1rem 0.8rem;
+                }
 
                 tr {
+                    @include mq(md) {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 1rem;
+                    }
+
                     th {
                         text-align: left;
-                        width: 350px;
+                        width: 180px;
+                        vertical-align: top;
+                        padding-top: 15px;
+
+                        @include mq(md) {
+                            width: 100%;
+                            padding-bottom: 5px;
+                            padding-top: 0;
+                        }
                     }
 
                     td {
                         text-align: left;
+                        width: calc(100% - 180px);
+
+                        @include mq(md) {
+                            width: 100%;
+                        }
 
                         input,
                         textarea {
-                            max-width: 100%;
-                            width: 794px;
+                            width: 100%;
+                            padding: 10px 15px;
+                            box-sizing: border-box;
                             border-radius: 15px;
                             border: 1px solid #333;
                         }
@@ -545,12 +577,16 @@
         }
 
         &>p {
+            text-align: left;
             width: 800px;
-            max-width: 80%;
+            max-width: 85%;
             margin: 0 auto 50px;
         }
     }
 
+    .hidden {
+        display: none;
+    }
 }
 
 

@@ -43,6 +43,10 @@ body {
     font-style: normal;
     font-size: 16px;
     color: #484742;
+
+    @include mq(md) {
+        font-size: 14px;
+    }
 }
 
 .zenmaru {
@@ -145,7 +149,7 @@ body {
 .header {
     width: 100%;
     background-color: #fff;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 10000;
 
@@ -162,6 +166,10 @@ body {
         .logo_link {
             .title_name {
                 font-size: 1.75rem;
+
+                @include mq(md) {
+                    font-size: 1.25rem;
+                }
             }
 
             .sub_title {
@@ -211,11 +219,16 @@ body {
         width: 65px;
         height: 65px;
         background: #d3b63b;
+        border: 2px solid #fff;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 0.75rem;
+
+        @include mq(md) {
+            top: -40px;
+        }
     }
 
     .footer_flex {
@@ -229,6 +242,10 @@ body {
 
         .footer_name {
             font-size: 1.25rem;
+
+            @include mq(md) {
+                font-size: 1rem;
+            }
         }
 
         nav {
@@ -243,6 +260,10 @@ body {
                     a {
                         display: block;
                         font-size: 1rem;
+
+                        @include mq(md) {
+                            font-size: 0.75rem;
+                        }
                     }
                 }
             }
