@@ -1,0 +1,152 @@
+@charset "utf-8";
+html {
+  font-size: 62.5%;
+}
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-family: "Arial",'メイリオ',sans-serif;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin: 60px auto 0;
+}
+.wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width:767px) {
+  .container {
+    margin: 0 auto;
+  }
+}
+/* 
+header 
+*/
+.header_img {
+  width: 100%; /* 訂正 */
+  width: 90vw;
+  /* height: auto; */
+  margin-bottom: 32px;
+}
+.header_list {
+  display: flex;
+  margin-bottom: 62px;
+  align-items: center; /* 追加 */
+}
+.header_item {
+  margin-right: 50px;
+}
+.header_item_link {
+  font-size: 1.4rem;
+}
+.header_logo {
+  width: 110px;
+  height: 13px;
+}
+
+
+/* 
+concept,work共通部分
+ */
+.title {
+  margin-bottom: 4px;
+  font-size: 2.4rem;
+}
+.subTitle {
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+.text {
+  font-size: 1.6rem;
+}
+.img_box {
+  width: 50%;
+}
+.img {
+  width: 100%;
+}
+@media (max-width:767px)  {
+  .title {
+    margin: 10px 0 4px;
+    font-size: 2.0rem;
+  }
+  .text {
+    margin-bottom: 60px;
+  }
+  .img_box {
+    width: 100%;
+  }
+}
+
+/*
+concept
+*/
+.concept {
+  display: flex;
+  align-items: center;
+}
+.concept_text_box {
+  width: 50%;
+  padding: 0 67px 0 67px;
+}
+@media (max-width:767px) {
+  .concept {
+    flex-direction: column;
+  }
+  .concept_text_box {
+    width: 100%;
+    padding: 0;
+  }
+}
+/* 
+work
+*/
+.work {
+  /* margin: 60px auto 80px; */
+  display: flex;
+  align-items: center;
+}
+.work_text_box {
+  /* padding: 100px 67px 0 67px; */
+  width: 50%;
+}
+@media (max-width:767px) {
+  .work {
+    flex-direction: column-reverse;
+    margin: 0;
+    }
+    .work_text_box {
+      padding: 0;
+      width: 100%;
+    }
+}
+
+/* 
+footer
+*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width:767px) {
+  .footer {
+    margin-top: 87px;
+    }
+}

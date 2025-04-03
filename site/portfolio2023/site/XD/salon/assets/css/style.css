@@ -1,0 +1,502 @@
+@charset "utf-8";
+ /* 
+ 基本設定
+*/
+.container {
+  width: 375px;
+}
+
+a{
+  text-decoration: none;
+}
+
+th {
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Zen Kaku Gothic New','Courier New', Courier, monospace;
+}
+
+/**
+index
+**/
+
+/* 
+header
+*/
+#index .header {
+  display: flex;
+  justify-content: space-between;
+  height: 550px;
+  background-image: url(../images/portrait_seabreeze_img\ Sea\ breez\ Sea\ breezeimg04.png);
+}
+
+#index .header > a > img {
+  padding: 35px 0 0 15px;
+}
+
+#index .header > nav > ul > li {
+  padding: 8px 20px;
+}
+
+/* 
+共通ヘッダー
+*/
+#menu .header,#staff .header ,.header{
+  display: flex;
+  justify-content: left;
+  background-color: #fff;
+}
+
+
+#menu .yajirusi h1, #staff h1 ,h1{
+  margin: 0 50px 0 25px;
+  padding: 0;
+}
+
+#menu .yajirusi img,.header h1 img {
+  width: 45px;
+}
+
+#menu .yajirusi, .header h2{
+  color: #CD9D1B;
+}
+
+#menu .yajirusi h2 , .header h2{
+  margin: 10px 50px;
+}
+
+/* 
+main
+*/
+#index section {
+  width: 299px;
+  margin: 15px auto;
+  padding: 0;
+}
+
+#index section > p {
+  margin: 0;
+  font-size: 12px;
+}
+
+#index figure {
+  margin: 0;
+  width: 375px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#index figure > img {
+  width: 188px;
+  height: auto;
+}
+
+/**
+menu
+**/
+/* 
+menu 背景画像の配置
+*/
+#menu section {
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  width: 390px;
+  height: 1700px;
+  background-color: rgba(255,252,245, 0.7);
+
+}
+
+/*
+背景写真
+*/
+#menu section img {
+  width: 200px;
+  margin: 0;
+}
+
+#menu .photo1 {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  width: 200px;
+  height: auto;
+  margin: 0;
+  z-index: 1;
+}
+
+#menu .photo2 {
+  position: absolute;
+  top: 280px;
+  left: 0px;
+  width: 200px;
+  height: auto;
+  margin: 0;
+  z-index: 1;
+}
+
+#menu .photo3 {
+  position: absolute;
+  top: 500px;
+  right: 0px;
+  width: 200px;
+  height: auto;
+  margin: 0;
+  z-index: 1;
+}
+
+#menu .photo4 {
+  position: absolute;
+  top: 700px;
+  left: 0px;
+  width: 200px;
+  height: auto;
+  margin: 0;
+  z-index: 1;
+}
+
+#menu .photo5 {
+  position: absolute;
+  top: 920px;
+  right: 0px;
+  width: 200px;
+  height: auto;
+  margin: 0;
+  z-index: 1;
+}
+
+#menu .photo6 {
+  position: absolute;
+  top: 1150px;
+  left: 0px;
+  width: 200px;
+  height: auto;
+  margin: 0;
+  z-index: 1;
+}
+
+#menu .photo7 {
+  position: absolute;
+  top: 1420px;
+  right: 0px;
+  width: 200px;
+  height: auto;
+  margin: 0;
+  z-index: 1;
+}
+/* 
+背景と文字の配置
+*/
+#menu .text-wrapper {
+  background-color: rgba(255,252,245, 0.7);
+  margin: 0;
+  left: 0px;
+  top: 0px;
+  width: 390px;
+  z-index: 2;
+  position: absolute;
+}
+
+/* 
+menu
+*/
+/*
+メニュー表
+*/
+#menu h3 {
+  margin: 35px auto 35px;
+  text-align: center;
+  font-size: 29px;
+}
+
+#menu .text-wrapper table {
+  width: 230px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+#menu .text-wrapper table tr {
+  text-align: left;
+  height: 30px;
+}
+
+#menu .text-wrapper table tr td {
+  width: 140px;
+  text-align: right;
+}
+
+#menu .cell {
+  text-align: center;
+  padding-top: 25px;
+  line-height: 19px;
+  font-weight: bold;
+}
+
+#menu .cell2 {
+  text-align: center;
+  height: 16px;
+  padding-bottom: 0;
+}
+
+#menu .nail td {
+  width: 550px;
+  padding-top: 20px;
+}
+
+#menu .eyelash {
+  margin: 0;
+}
+
+#menu .margin {
+  padding-bottom: 20px;
+}
+
+/* menu 予約 */
+#menu .reserve-wrap {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.reserve-table1 {
+  display: inline-block;
+  width: 300px;
+  margin: 0px auto;
+  padding-top: 25px;
+  font-size: 16px;
+}
+
+/* .reserve-table1 {
+} */
+.reserve-table1 th {
+  width: 70px;
+  text-align: right;
+}
+
+#menu .reserve-td {
+  width: 30px;
+}
+
+.reserve-table1 td {
+  width: 210px;
+} 
+
+.reserve-table1 {
+  display: inline-block;
+  width: 300px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+}
+
+/* .reserve-table2 {
+} */
+.reserve-table2 th {
+  width: 70px;
+  text-align: left;
+}
+.reserve-table2 tr {
+  margin-bottom: 20px;
+}
+
+.reserve-table2 label {
+  border-left: 1px solid #000;
+  padding: 5px;
+  font-size: 14px;
+  text-align: left;
+}
+
+#menu .reserve-td, #access .reserve-td {
+  width: 30px;
+}
+
+.reserve-table2 td {
+  width: 210px;
+} 
+
+/* 
+form
+*/
+form input {
+  width: 225px;
+}
+
+.input .textarea {
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.textarea {
+  height: 40px;
+}
+
+.button {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 15px;
+  border-radius: 8x;
+  width: 100px;
+  border: 1px solid #000;
+}
+
+.button-wrap {
+  text-align: center;
+}
+
+.footer {
+  width: 395px;
+  text-align: center;
+  margin-top: 25px;
+}
+.footer-img {
+  display: inline-block;
+  width: 100px; 
+  height: 41px;
+}
+
+/** 
+staff 
+**/
+#staff {
+  background-color: rgba(255,252,245, 0.7);
+  z-index: 0;
+}
+
+#staff .logo {
+  text-align: center;
+}
+
+#staff .logo-img {
+  margin: 40px 0;
+  width: 104px;
+  height: 41px;
+}
+
+#staff p {
+  display: inline-block;
+  margin: 0 60px 25px;
+  padding: 15px 0;
+  font-size: 14px;
+  border-top: 2px solid #CD9D1B;
+  border-bottom: 2px solid #CD9D1B;
+}
+
+#staff .main {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* 勉強必須 */
+#staff .main::before {
+  content: '';
+  background-image: url(../images/staff_bg.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+  z-index: 1;
+}
+
+#staff .main img {
+  width: 129px;
+  height: 129px;
+  margin: 10px;
+  border: 4px solid #fff;
+  margin: 10px ;
+  z-index: 3;
+}
+
+#staff .reserve-button {
+  position: relative;
+  top: 10px;
+  left: 100px;
+  padding: 5px 40px;
+  margin-bottom: 20px;
+  border: 2px solid #CD9D1B;
+  font-size: 20px;
+  font-weight: bold;
+  color: #CD9D1B;
+  background: #fff;
+  border-radius: 25px;
+  z-index: 3;
+}
+
+#staff .reserve-button a:link {
+  color: #CD9D1B; 
+  font-weight: bold;
+}
+
+
+/**
+access 
+**/
+.access {
+  background-color: #FFFBF2;
+  height: 350px;
+}
+
+#access .wrapper {
+  text-align: center;
+}
+
+iframe {
+  margin-top: 30px;
+}
+
+.map-wrapper p {
+  text-align: left;
+  margin: 20px 50px 5px;
+  padding: 5px;
+  border-left: 1px solid #000;
+}
+
+.contact-header h2 {
+  text-align: center;
+  color: #CD9D1B;
+}
+
+.reserve-wrap {
+  background-color: #C4DEEB;
+}
+
+#access .reserve-table2 {
+  margin: 0 auto;
+}
+
+#access .reserve-table1 {
+  margin: 20px 30px 20px 40px;
+}
+
+#access .reserve-table2 th {
+  margin-bottom: 30px;
+}
+#access label ,#access input {
+  margin-bottom: 20px;
+}
+
+#access textarea {
+  margin-bottom: 10px;
+}
+
+/**
+reserve
+**/
+#reserve .header-img {
+  width: 375px;
+  height: 256px;
+  text-align: left;
+
+}
+
+#reserve .reserve-wrap {
+  background-color: #FFFBF2;
+}

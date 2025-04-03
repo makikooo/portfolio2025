@@ -1,0 +1,255 @@
+@charset "utf-8";
+html {
+  font-size: 100%;
+}
+body {
+  background-color: #E6E2D7;
+}
+*{
+  font-family: "Noto Serif JP",YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS Ｐ明朝", "MS 明朝", serif;
+}
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+}
+img{
+  max-width: 100%;
+  vertical-align: bottom;
+}
+ul{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*
+header
+*/
+header {
+  width: 100%;
+  /* 背景を画面下まで設定 */
+  height: 100vh;
+  background-image: url(../images/mainvisual-pc1.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 60px 80px;
+  margin-bottom: 180px;
+  /* 「オンラインストアを見る」ボタンを配置するためのposition */
+  position: relative;
+  /* 縦書きの指定（各ブラウザに対応するためのベンダープレフィックスを設定） */
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;  /* Chrome、Safari用 */
+  -moz-writing-mode: vertical-rl;     /* Firefox用 */
+  -ms-writing-mode: tb-rl;            /* IE用 */
+}
+.header_title {
+  color: #fff;
+  margin: 0 0 0 25px;
+}
+.onlinestore {
+  position: absolute;
+  left: 40px;
+  bottom: 30px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.button {
+  display: block;
+  padding: 30px 15px;
+  border: solid 1px #fff;
+}
+.button:hover {
+  opacity: 0.7;
+}
+.header_list {
+  margin-left: 25px;
+}
+@media (max-width:872px){
+  header {
+    background-image: url(../images/mainvisual-sp.jpg);
+  }
+}
+
+/* 
+sec01
+*/
+.sec01 {
+  margin-bottom: 180px;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 201px 280px;
+  margin: 0;
+}
+.sec01 p,
+.sec01 h2,
+.sec01 ul {
+  writing-mode: vertical-rl;
+}
+.sec01 p {
+  font-size: 12px;
+}
+.sec01 h2 {
+  font-size: 36px;
+  margin-left: 90px;
+}
+.sec01_list {
+  font-size: 0.75rem;
+  padding: 30px;
+  border-left: 1px solid #000;
+}
+.sec01_list:nth-child(1){
+  border-right: 1px solid #000;
+}
+.sec01_list time {
+  display: block;
+}
+@media (max-width:872px){
+  .sec01 {
+    padding-right: 0;
+  }
+}
+
+/* 
+position共通
+*/
+.bgi {
+  max-width: 639px;
+  width: 100%;
+  padding-bottom: 40%;
+  position: relative;
+}
+.bgi::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 358px;
+  height: 137px;
+  text-align: center;
+}
+.bgi_text {
+  position: absolute;
+  color: #fff;
+}
+
+/* 
+sec02
+ */
+.sec02 {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 208px 184px;
+} 
+.sec02_title {
+  writing-mode: vertical-lr;
+  font-size: 36px;
+  margin-left: 20px;
+}
+.sec02_title span{
+  font-size: 16px;
+  margin-top: 25px;
+}
+.bgi1 {
+  min-width: 639px;
+  background: url(../images/products11.jpg) center center /cover no-repeat;
+}
+.bgi1::before {
+  background-color: #f9e90694;
+  left: -20px;
+  bottom: -20px;
+}
+.bgi_text1 {
+  bottom: 28px;
+  left: 84px;
+}
+@media (max-width:872px){
+  .sec02 {
+    padding: 0;
+    margin-bottom: 100px;
+  }
+}
+
+/* 
+sec03
+*/
+.sec03 {
+  padding: 0 0 180px 208px;
+  max-width: 100%;
+}
+.bgi2 {
+  display: inline-block;
+  min-height: 426px;
+  background: url(../images/products21.jpg) center center /cover no-repeat;
+}
+.bgi2::before {
+  background-color: #bb070794;
+  bottom: -20px;
+  right: -20px;
+}
+.bgi_text2 {
+  bottom: 28px;
+  left: 406px;
+}
+.sec03_title {
+  display: inline-block;
+  margin: 0;
+}
+@media (max-width:872px){
+  .sec03 {
+    padding: 0;
+    margin-bottom: 100px;
+  }
+}
+
+
+/* 
+sec04
+*/
+iframe {
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* 
+footer
+*/
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 80px 54px 30px;
+}
+.flex {
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+footer .left,
+footer .right {
+  display: inline-block;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+.footer_title,
+.tel {
+  margin: 0 0 0 60px;
+}
+.right p {
+  text-orientation: upright;
+}
+footer li {
+  margin-left: 25px;
+} 
+.left {
+  margin-left: 35px;
+}

@@ -1,0 +1,221 @@
+@charset "utf-8";
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: rgb(85, 84, 84);
+  font-size: 10px;
+  height: 100%;
+  font-family: toppan-bunkyu-midashi-go-std, forma-djr-micro, 'Kosugi', 'Zen Kaku Gothic New', sans-serif;
+}
+
+
+a {
+  font-family: forma-djr-micro, 'Kosugi', 'Zen Kaku Gothic New', sans-serif;
+  text-decoration: none;
+  color: red;
+}
+
+.container {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.into {
+  letter-spacing: 0.2rem;
+  font-size: 1.8rem;
+}
+
+h1 {
+  font-weight: 900;
+  font-style: normal;
+  font-size: 123px;
+  margin: 0;
+  line-height: 115px;
+  vertical-align: middle;
+}
+
+/*========= スクロールダウンのためのCSS ===============*/
+
+
+/*=== 9-1-4 矢印が動いてスクロールを促す  ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown4{
+  /*描画位置*/
+  position:absolute;
+  bottom:1%;
+  right: 50%;
+  /*矢印の動き1秒かけて永遠にループ*/
+  animation: arrowmove 1s ease-in-out infinite;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes arrowmove{
+  0%{bottom:1%;}
+  50%{bottom:3%;}
+ 100%{bottom:1%;}
+}
+
+/*Scrollテキストの描写*/
+.scrolldown4 span{
+/*描画位置*/
+position: absolute;
+left:-20px;
+bottom:10px;
+/*テキストの形状*/
+color: rgb(255, 9, 9);
+font-size: 0.9rem;
+letter-spacing: 0.1em;
+/*--縦書きの指定--*/
+-ms-writing-mode: tb-rl;
+-webkit-writing-mode: vertical-rl;
+writing-mode: vertical-rl;
+/*↓縦書きの記述を改行させないための記述*/
+white-space: pre;
+/*--mixedを指定--*/
+-webkit-text-orientation: mixed;
+text-orientation: mixed;
+}
+
+/* 矢印の描写 */
+.scrolldown4:before {
+content: "";
+/*描画位置*/
+position: absolute;
+bottom: 0;
+right: -6px;
+/*矢印の形状*/
+width: 1px;
+height: 20px;
+background: rgb(255, 0, 0);
+transform: skewX(-31deg);
+}
+
+.scrolldown4:after{
+content:"";
+/*描画位置*/
+position: absolute;
+bottom:0;
+right:0;
+/*矢印の形状*/
+width:1px;
+height: 150px;
+background:rgb(255, 0, 0);
+}
+
+/*========= レイアウトのためのCSS ===============*/
+section {
+  height: 100vh;
+}
+
+.bgimg {
+  background: url(../images/bg1.png) no-repeat;
+  background-color: #000;
+  background-size: cover;
+  background-position: 50% 10%;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.black {
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outer {
+  text-align: center;
+}
+
+h2 {
+  color: red;
+  font-size: 2rem;
+  border-bottom: 2px solid red;
+  width: 80%;
+  margin: 0 auto 15% auto;
+}
+
+.live_title {
+  padding-top: 54%;
+  width: 25%;
+}
+
+.kasane {
+  position: relative;
+  text-align: center;
+}
+
+.text {
+  position: absolute;
+  text-align: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #000;
+  font-size: 1.23rem;
+  line-height: 4rem;
+  font-family: forma-djr-micro, 'Kosugi', 'Zen Kaku Gothic New', sans-serif;
+  font-weight: normal;
+}
+
+.white2 {
+  height: 500px;
+  width: 100%;
+}
+
+.live {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  border: #000 10px solid;
+}
+
+.comment {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.thanks {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  color: red;
+}
+
+.yoko {
+  text-align: left;
+}
+
+.bz {
+  padding-top: 48%;
+}
+.bz_title {
+  margin-bottom: 15px;
+}

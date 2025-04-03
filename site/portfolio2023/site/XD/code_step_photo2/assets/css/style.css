@@ -1,0 +1,166 @@
+@charset "utf-8";
+html {
+  font-size: 100%;
+}
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  font-family: "Meiryo";
+}
+img {
+  max-width: 100%;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 
+header
+*/
+header {
+  margin-bottom: 60px;
+}
+.logo {
+  margin: 60px 0 15px;
+}
+.logo a {
+  display: block;
+}
+.logo img {
+  width: 180px;
+  height: 18px;
+}
+.bg {
+  background:url(../images/mainvisual.jpg) center center /cover no-repeat;
+  width: 100%;
+  height: 400px;
+}
+
+/* 
+main
+*/
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* 
+index
+*/
+.index {
+  background-color: #F5F5F5;
+  padding: 65px 60px 60px;
+  margin-bottom: 60px;
+}
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 34px;
+}
+.wrapper {
+  border: 1px solid #000;
+  padding: 33px;
+}
+.list {
+  display:table;
+  margin: 0 auto;
+}
+.item {
+  margin-bottom: 26px;
+}
+
+/* 
+photo
+*/
+.photo {
+  display: grid;
+  grid-template-columns: calc( 100% / 2 - 16px) calc( 100% / 2 - 16px);
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+/* 
+detail
+*/
+.detail {
+  padding: 65px 76px 62px 60px;
+  background: #F5F5F5;
+  margin-bottom: 78px;
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+.left {
+  border-right: 1px solid #000;
+  padding-right: 40px;
+  width: 35%;
+}
+dt {
+  margin-bottom: 7px;
+}
+dd:not(:last-of-type) {
+  margin-bottom: 17px;
+}
+.right {
+  width: 65%;
+  padding-left: 40px;
+}
+.text1,
+.text2 {
+  font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 2;
+}
+a {
+  color: #000;
+}
+
+/* 
+footer
+*/
+footer {
+  text-align: center;
+}
+small {
+  margin-bottom: 17px;
+}
+
+@media (max-width:1024px) {
+  main {
+    padding: 0 20px;
+  }
+  .item {
+    padding-top: 20px;
+  }
+  .photo {
+    display: block;
+    width: 100%;
+  }
+  .photo img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .detail{
+    padding: 25px;
+  }
+  .left,
+  .right {
+    width: 100%;
+    margin: 0;
+  }
+  .left {
+    border-right: 0;
+    border-bottom: 1px solid #000;
+    margin-bottom: 43px;
+  }
+  .right{
+    margin-top: 43px;
+    padding: 0;
+  }
+}

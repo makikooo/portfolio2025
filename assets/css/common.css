@@ -171,10 +171,11 @@ body {
   position: relative;
 }
 .header .header_content .nav_list .nav_item .nav_link {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0.65rem;
   font-weight: 600;
 }
@@ -230,6 +231,11 @@ body {
 }
 .footer .footer_flex nav ul li {
   margin-right: 20px;
+}
+@media screen and (max-width: 768px) {
+  .footer .footer_flex nav ul li {
+    margin-right: 13px;
+  }
 }
 .footer .footer_flex nav ul li a {
   display: block;
