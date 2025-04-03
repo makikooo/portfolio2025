@@ -108,6 +108,7 @@
 }
 @media screen and (max-width: 768px) {
   #home .sec03 .work_link_wrapper .link_flex .work_wrapper {
+    width: 100%;
     flex-direction: column;
   }
 }
@@ -119,6 +120,17 @@
   z-index: 10;
   border: #D0A900 solid 2px;
   border-radius: 10px;
+}
+@media screen and (max-width: 960px) {
+  #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_image {
+    width: 270px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_image {
+    width: 100%;
+  }
 }
 #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box {
   width: 100%;
@@ -150,8 +162,14 @@
 #home .sec03 .work_link_wrapper .link_flex .button_wrapper {
   width: 300px;
 }
+@media screen and (max-width: 960px) {
+  #home .sec03 .work_link_wrapper .link_flex .button_wrapper {
+    width: 220px;
+  }
+}
 @media screen and (max-width: 768px) {
   #home .sec03 .work_link_wrapper .link_flex .button_wrapper {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -201,6 +219,11 @@
   border: #E7D173 solid 4px;
   border-radius: 10px;
   background: #fff;
+}
+@media screen and (max-width: 768px) {
+  #home .sec03 .work_link_wrapper .link_flex .button_wrapper .site_button {
+    border: #E7D173 solid 1px;
+  }
 }
 #home .sec03 .center_wrapper {
   display: flex;
@@ -278,6 +301,7 @@
 }
 @media screen and (max-width: 768px) {
   #home .work_continuation .work_link_wrapper .link_flex .work_wrapper {
+    width: 100%;
     flex-direction: column;
   }
 }
@@ -289,6 +313,17 @@
   z-index: 10;
   border: #D0A900 solid 2px;
   border-radius: 10px;
+}
+@media screen and (max-width: 960px) {
+  #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_image {
+    width: 270px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_image {
+    width: 100%;
+  }
 }
 #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box {
   width: 100%;
@@ -315,12 +350,19 @@
 #home .work_continuation .work_link_wrapper .link_flex .button_wrapper {
   width: 300px;
 }
+@media screen and (max-width: 960px) {
+  #home .work_continuation .work_link_wrapper .link_flex .button_wrapper {
+    width: 220px;
+  }
+}
 @media screen and (max-width: 768px) {
   #home .work_continuation .work_link_wrapper .link_flex .button_wrapper {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    width: 100%;
   }
 }
 #home .work_continuation .work_link_wrapper .link_flex .button_wrapper .work_button {
@@ -547,6 +589,36 @@
 }
 #home .contact form .contact_table tr td textarea {
   height: 255px;
+}
+#home .contact form .box {
+  width: 650px;
+  height: 250px;
+  border: 1px solid #333;
+  overflow-y: scroll;
+  margin: 0 auto 30px;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  #home .contact form .box {
+    width: 250px;
+    height: 150px;
+  }
+}
+#home .contact form .box p {
+  margin-bottom: 24px;
+}
+#home .contact form .box ul {
+  padding-left: 20px;
+  list-style: circle;
+  margin-bottom: 24px;
+}
+#home .contact form .agreement_flex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+#home .contact form .agreement_flex .check {
+  margin-right: 10px;
 }
 #home .contact form button {
   width: 320px;

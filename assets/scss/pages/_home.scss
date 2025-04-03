@@ -121,6 +121,7 @@
                     gap: 20px;
 
                     @include mq(md) {
+                        width: 100%;
                         flex-direction: column;
                     }
 
@@ -132,6 +133,15 @@
                         z-index: 10;
                         border: #D0A900 solid 2px;
                         border-radius: 10px;
+
+                        @include mq(lg) {
+                            width: 270px;
+                            height: auto;
+                        }
+
+                        @include mq(md) {
+                            width: 100%;
+                        }
                     }
 
                     .work_box {
@@ -169,7 +179,12 @@
                 .button_wrapper {
                     width: 300px;
 
+                    @include mq(lg) {
+                        width: 220px;
+                    }
+
                     @include mq(md) {
+                        width: 100%;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -228,6 +243,11 @@
                         border: #E7D173 solid 4px;
                         border-radius: 10px;
                         background: #fff;
+
+                        @include mq(md) {
+                            border: #E7D173 solid 1px;
+
+                        }
                     }
                 }
             }
@@ -316,6 +336,7 @@
                     gap: 20px;
 
                     @include mq(md) {
+                        width: 100%;
                         flex-direction: column;
                     }
 
@@ -327,6 +348,15 @@
                         z-index: 10;
                         border: #D0A900 solid 2px;
                         border-radius: 10px;
+
+                        @include mq(lg) {
+                            width: 270px;
+                            height: auto;
+                        }
+
+                        @include mq(md) {
+                            width: 100%;
+                        }
                     }
 
                     .work_box {
@@ -360,11 +390,17 @@
                 .button_wrapper {
                     width: 300px;
 
+                    @include mq(lg) {
+                        width: 220px;
+                    }
+
                     @include mq(md) {
+                        width: 100%;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         gap: 20px;
+                        width: 100%;
                     }
 
                     .work_button {
@@ -632,6 +668,45 @@
                     }
                 }
             }
+
+            .box {
+                width: 650px;
+                height: 250px;
+                border: 1px solid #333;
+                overflow-y: scroll;
+                margin: 0 auto 30px;
+                text-align: left;
+
+                @include mq(md) {
+                    width: 250px;
+                    height: 150px;
+                }
+
+                p {
+                    margin-bottom: 24px;
+                }
+
+                ul {
+                    padding-left: 20px;
+                    list-style: circle;
+                    margin-bottom: 24px;
+
+                    li {}
+                }
+            }
+
+            .agreement_flex {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+
+                .check {
+                    margin-right: 10px;
+                }
+            }
+
+
+            .contact_button {}
 
             button {
                 width: 320px;

@@ -231,3 +231,34 @@ document.addEventListener('DOMContentLoaded', function () {
     // 初期化: デフォルトでactiveクラスを持つ「ALL」項目にボーダーを追加
     document.querySelector('.category_link.active').parentElement.style.borderBottom = '2px solid #C39000';
 });
+
+/*******************************************
+ *  トップページ 利用規約同意チェックすると送信ボタンを押せれる
+ *******************************************/
+// 利用規約同意チェックボックスと送信ボタンの要素を取得
+const agreementCheckbox = document.getElementById('agreement');
+const submitButton = document.querySelector('.contact_button');
+
+// 初期状態で送信ボタンを無効化して半透明にする
+if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.style.opacity = '0.5';
+    submitButton.style.cursor = 'not-allowed';
+}
+
+// チェックボックスの状態が変わった時のイベントハンドラー
+if (agreementCheckbox) {
+    agreementCheckbox.addEventListener('change', function () {
+        if (this.checked) {
+            // チェックされた場合、ボタンを有効化して不透明度を元に戻す
+            submitButton.disabled = false;
+            submitButton.style.opacity = '1';
+            submitButton.style.cursor = 'pointer';
+        } else {
+            // チェックが外れた場合、ボタンを無効化して半透明にする
+            submitButton.disabled = true;
+            submitButton.style.opacity = '0.5';
+            submitButton.style.cursor = 'not-allowed';
+        }
+    });
+}
