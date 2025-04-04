@@ -1,6 +1,18 @@
 'use strict'
 
 /*******************************************
+ *  ローディング
+ *******************************************/
+const loading = document.querySelector('.loading');
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        loading.classList.add('loaded');
+    }, 3000);
+});
+
+
+/*******************************************
  *  ハンバーガーメニュー
  *******************************************/
 let humbergur = document.querySelector('.humbergur_box');
