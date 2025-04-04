@@ -120,15 +120,32 @@
     .sec03 {
         width: 100%;
 
+        @include mq(md) {
+            width: 90%;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+            text-align: left;
+        }
+
         .work_link_wrapper {
             width: 100%;
-            margin: 0 auto;
-            padding-bottom: 10px;
+            margin: 0 auto 25px;
             padding-top: 20px;
+            padding-bottom: 20px;
             transition: background-color 0.3s ease;
 
             @include mq(md) {
-                margin: 0 auto 60px;
+                display: inline-block;
+                width: 44%;
+                margin: 0 1% 30px;
+                vertical-align: top;
+                box-sizing: border-box;
+            }
+
+            @include mq(sm) {
+                width: 100%;
+                margin: 0 0 30px;
             }
 
             &:hover {
@@ -146,8 +163,8 @@
                 gap: 30px;
 
                 @include mq(md) {
-                    flex-direction: column;
-                    gap: 20px;
+                    display: block;
+                    width: 100%;
                 }
 
                 .work_wrapper {
@@ -159,8 +176,7 @@
 
                     @include mq(md) {
                         width: 100%;
-                        flex-direction: column;
-                        gap: 20px;
+                        display: block;
                     }
 
                     .work_image {
@@ -178,11 +194,16 @@
                         }
 
                         @include mq(md) {
-                            width: 90%;
-                            max-width: 400px;
+                            width: 100%;
                             height: auto;
+                            aspect-ratio: 16 / 10;
+                            object-fit: cover;
+                        }
+
+                        @include mq(sm) {
+                            width: 90%;
+                            max-width: 300px;
                             margin: 0 auto;
-                            display: block;
                         }
                     }
 
@@ -190,12 +211,19 @@
                         width: 45%;
 
                         @include mq(md) {
-                            margin-bottom: 20px;
+                            width: 100%;
+                            margin: 10px 0;
+                            text-align: left;
                         }
 
                         .work_title {
                             font-size: 1.25rem;
                             margin-bottom: 15px;
+
+                            @include mq(md) {
+                                font-size: 1rem;
+                                margin-bottom: 10px;
+                            }
                         }
 
                         &>div {
@@ -205,14 +233,36 @@
                             border-radius: 5px;
                             margin-bottom: 10px;
                             font-family: "Zen Maru Gothic", serif;
+
+                            @include mq(md) {
+                                padding: 3px 10px;
+                                width: auto;
+                                display: inline-block;
+                                font-size: 0.85rem;
+                            }
                         }
 
                         &>ul {
-                            padding-left: 1.5em;
+                            height: 70px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+
+                            @include mq(md) {
+                                height: 90px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                            }
 
                             &>li {
                                 list-style-type: circle;
                                 margin-bottom: 5px;
+
+                                @include mq(md) {
+                                    font-size: 0.85rem;
+                                    margin-bottom: 3px;
+                                }
                             }
                         }
                     }
@@ -229,17 +279,18 @@
 
                     @include mq(md) {
                         width: 100%;
-                        max-width: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        gap: 20px;
+                        display: block;
+                        margin: 0 auto;
                     }
 
                     .work_button {
                         display: block;
                         width: 100%;
                         padding: 10px;
+
+                        @include mq(md) {
+                            padding: 1px;
+                        }
 
                         .button_flex {
                             display: inline-flex;
@@ -280,7 +331,7 @@
                         border-radius: 10px;
 
                         @include mq(md) {
-                            margin-bottom: 0;
+                            margin-bottom: 10px;
                         }
                     }
 
@@ -337,6 +388,14 @@
     .work_continuation {
         display: none;
 
+        @include mq(md) {
+            width: 90%;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+            text-align: left;
+        }
+
         &.active {
             display: block;
         }
@@ -347,13 +406,22 @@
 
         .work_link_wrapper {
             width: 100%;
-            margin: 0 auto;
-            padding-bottom: 10px;
+            margin: 0 auto 25px;
+            padding-bottom: 25px;
             padding-top: 20px;
             transition: background-color 0.3s ease;
 
             @include mq(md) {
-                margin: 0 auto 60px;
+                display: inline-block;
+                width: 44%;
+                margin: 0 1% 30px;
+                vertical-align: top;
+                box-sizing: border-box;
+            }
+
+            @include mq(sm) {
+                width: 100%;
+                margin: 0 0 30px;
             }
 
             &:hover {
@@ -371,8 +439,8 @@
                 gap: 30px;
 
                 @include mq(md) {
-                    flex-direction: column;
-                    gap: 20px;
+                    display: block;
+                    width: 100%;
                 }
 
                 .work_wrapper {
@@ -384,8 +452,7 @@
 
                     @include mq(md) {
                         width: 100%;
-                        flex-direction: column;
-                        gap: 20px;
+                        display: block;
                     }
 
                     .work_image {
@@ -403,20 +470,36 @@
                         }
 
                         @include mq(md) {
-                            width: 90%;
-                            max-width: 400px;
+                            width: 100%;
                             height: auto;
+                            aspect-ratio: 16 / 10;
+                            object-fit: cover;
+                        }
+
+                        @include mq(sm) {
+                            width: 90%;
+                            max-width: 300px;
                             margin: 0 auto;
-                            display: block;
                         }
                     }
 
                     .work_box {
                         width: 45%;
 
+                        @include mq(md) {
+                            width: 100%;
+                            margin: 10px 0;
+                            text-align: left;
+                        }
+
                         .work_title {
                             font-size: 1.25rem;
                             margin-bottom: 15px;
+
+                            @include mq(md) {
+                                font-size: 1rem;
+                                margin-bottom: 10px;
+                            }
                         }
 
                         &>div {
@@ -426,14 +509,36 @@
                             border-radius: 5px;
                             margin-bottom: 10px;
                             font-family: "Zen Maru Gothic", serif;
+
+                            @include mq(md) {
+                                padding: 3px 10px;
+                                width: auto;
+                                display: inline-block;
+                                font-size: 0.85rem;
+                            }
                         }
 
                         &>ul {
-                            padding-left: 1.5em;
+                            height: 70px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+
+                            @include mq(md) {
+                                height: 90px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                            }
 
                             &>li {
                                 list-style-type: circle;
                                 margin-bottom: 5px;
+
+                                @include mq(md) {
+                                    font-size: 0.85rem;
+                                    margin-bottom: 3px;
+                                }
                             }
                         }
                     }
@@ -450,18 +555,18 @@
 
                     @include mq(md) {
                         width: 100%;
-                        max-width: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        gap: 20px;
-                        width: 100%;
+                        display: block;
+                        margin: 0 auto;
                     }
 
                     .work_button {
                         display: block;
                         width: 100%;
                         padding: 10px;
+
+                        @include mq(md) {
+                            padding: 1px;
+                        }
 
                         .button_flex {
                             display: inline-flex;
@@ -500,7 +605,7 @@
                         border-radius: 10px;
 
                         @include mq(md) {
-                            margin-bottom: 0;
+                            margin-bottom: 10px;
                         }
                     }
 
@@ -793,5 +898,5 @@
 
 
 #home .work_continuation .work_link_wrapper.hidden {
-    display: none;
+    display: none important;
 }
