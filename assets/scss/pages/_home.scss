@@ -143,21 +143,24 @@
                 width: 90%;
                 max-width: 1200px;
                 margin: 0 auto;
-                gap: 20px;
+                gap: 30px;
 
                 @include mq(md) {
                     flex-direction: column;
+                    gap: 20px;
                 }
 
                 .work_wrapper {
+                    flex: 2;
                     display: flex;
-                    justify-content: space-between;
-                    align-items: start;
-                    gap: 20px;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 30px;
 
                     @include mq(md) {
                         width: 100%;
                         flex-direction: column;
+                        gap: 20px;
                     }
 
                     .work_image {
@@ -166,7 +169,7 @@
                         object-fit: cover;
                         aspect-ratio: 320 / 200;
                         z-index: 10;
-                        border: #D0A900 solid 2px;
+                        border: 1px solid #f4d85d;
                         border-radius: 10px;
 
                         @include mq(lg) {
@@ -175,7 +178,11 @@
                         }
 
                         @include mq(md) {
-                            width: 100%;
+                            width: 90%;
+                            max-width: 400px;
+                            height: auto;
+                            margin: 0 auto;
+                            display: block;
                         }
                     }
 
@@ -212,14 +219,17 @@
                 }
 
                 .button_wrapper {
-                    width: 300px;
+                    flex: 1;
+                    max-width: 300px;
+                    width: auto;
 
                     @include mq(lg) {
-                        width: 220px;
+                        max-width: 220px;
                     }
 
                     @include mq(md) {
                         width: 100%;
+                        max-width: 100%;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -358,21 +368,24 @@
                 width: 90%;
                 max-width: 1200px;
                 margin: 0 auto;
-                gap: 20px;
+                gap: 30px;
 
                 @include mq(md) {
                     flex-direction: column;
+                    gap: 20px;
                 }
 
                 .work_wrapper {
+                    flex: 2;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: flex-start;
                     align-items: start;
-                    gap: 20px;
+                    gap: 30px;
 
                     @include mq(md) {
                         width: 100%;
                         flex-direction: column;
+                        gap: 20px;
                     }
 
                     .work_image {
@@ -381,7 +394,7 @@
                         object-fit: cover;
                         aspect-ratio: 320 / 200;
                         z-index: 10;
-                        border: #D0A900 solid 2px;
+                        border: 1px solid #f4d85d;
                         border-radius: 10px;
 
                         @include mq(lg) {
@@ -390,7 +403,11 @@
                         }
 
                         @include mq(md) {
-                            width: 80%;
+                            width: 90%;
+                            max-width: 400px;
+                            height: auto;
+                            margin: 0 auto;
+                            display: block;
                         }
                     }
 
@@ -404,7 +421,7 @@
 
                         &>div {
                             padding: 5px 20px;
-                            border: 1px solid #E7D173;
+                            border: 0.5px solid #f4d85d;
                             width: 150px;
                             border-radius: 5px;
                             margin-bottom: 10px;
@@ -423,14 +440,17 @@
                 }
 
                 .button_wrapper {
-                    width: 30%;
+                    flex: 1;
+                    max-width: 300px;
+                    width: auto;
 
                     @include mq(lg) {
-                        width: 220px;
+                        max-width: 220px;
                     }
 
                     @include mq(md) {
                         width: 100%;
+                        max-width: 100%;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -475,7 +495,7 @@
                     }
 
                     .detail_button {
-                        background: linear-gradient(to bottom, #D0A900, #E7D173, #D0A900);
+                        background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
                         margin-bottom: 20px;
                         border-radius: 10px;
 

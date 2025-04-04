@@ -19,13 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // タイトルとサブタイトルを表示（hidden クラスを削除）
         setTimeout(function () {
             mvTitle.classList.remove('hidden');
-
-            setTimeout(function () {
-
-                mvSubtitle.classList.remove('hidden');
-
-            }, 800);
-        }, 500);
+            mvSubtitle.classList.remove('hidden');
+        }, 700);
     });
 });
 
