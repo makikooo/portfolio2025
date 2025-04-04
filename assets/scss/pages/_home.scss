@@ -89,8 +89,9 @@
         .works_list {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: start;
             align-items: center;
+            gap: 20px;
             width: 80%;
             max-width: 1000px;
             margin: 0 auto 50px;
@@ -100,6 +101,7 @@
                 transition: border-bottom 0.3s ease;
 
                 &:hover {
+                    background-color: #efe4b5;
                     border-bottom: 2px solid rgba(195, 144, 0, 0.5);
                 }
 
@@ -615,7 +617,7 @@
             justify-content: space-around;
             align-items: center;
             border-radius: 15px;
-            background: linear-gradient(to bottom, #D0A900, #E7D173, #D0A900);
+            background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
             font-weight: 600;
 
             img {
