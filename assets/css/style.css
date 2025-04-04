@@ -24,6 +24,9 @@
   opacity: 0;
   visibility: hidden;
 }
+#home .mv.loading.loaded .mv_wrapper {
+  opacity: 1;
+}
 #home .mv .mv_wrapper {
   position: absolute;
   top: 45%;
@@ -34,10 +37,20 @@
 #home .mv .mv_wrapper .mv_title {
   font-size: 1.75rem;
   letter-spacing: 7px;
+  transition: visibility 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  visibility: visible;
+}
+#home .mv .mv_wrapper .mv_title.hidden {
+  visibility: hidden;
 }
 #home .mv .mv_wrapper .mv_subtitle {
   letter-spacing: 4px;
   font-family: "Zen Maru Gothic", serif;
+  transition: visibility 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  visibility: visible;
+}
+#home .mv .mv_wrapper .mv_subtitle.hidden {
+  visibility: hidden;
 }
 #home .sec01 {
   width: 90%;

@@ -1,15 +1,34 @@
 'use strict'
-
 /*******************************************
- *  ローディング
+ *  ローディング時の文字を徐々に表示する
  *******************************************/
-const loading = document.querySelector('.loading');
+document.addEventListener('DOMContentLoaded', function () {
+    const loading = document.querySelector('.loading');
+    const mvTitle = document.querySelector('.mv_title');
+    const mvSubtitle = document.querySelector('.mv_subtitle');
 
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        loading.classList.add('loaded');
-    }, 3000);
+    console.log('要素を取得:', loading, mvTitle, mvSubtitle);
+
+    // ページ読み込み完了時の処理
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            // ローディング画面を終了
+            loading.classList.add('loaded');
+
+        }, 3000);
+        // タイトルとサブタイトルを表示（hidden クラスを削除）
+        setTimeout(function () {
+            mvTitle.classList.remove('hidden');
+
+            setTimeout(function () {
+
+                mvSubtitle.classList.remove('hidden');
+
+            }, 800);
+        }, 500);
+    });
 });
+
 
 
 /*******************************************

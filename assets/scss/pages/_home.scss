@@ -24,6 +24,10 @@
             &.loaded {
                 opacity: 0;
                 visibility: hidden;
+
+                .mv_wrapper {
+                    opacity: 1;
+                }
             }
         }
 
@@ -37,11 +41,24 @@
             .mv_title {
                 font-size: 1.75rem;
                 letter-spacing: 7px;
+                transition: visibility 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+                visibility: visible;
+
+                &.hidden {
+                    visibility: hidden;
+                }
+
             }
 
             .mv_subtitle {
                 letter-spacing: 4px;
                 font-family: "Zen Maru Gothic", serif;
+                transition: visibility 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+                visibility: visible;
+
+                &.hidden {
+                    visibility: hidden;
+                }
             }
         }
     }
