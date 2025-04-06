@@ -5,3 +5,6 @@ function add_files() {
     wp_enqueue_script( 'main-script', get_theme_file_uri( '/assets/js/main.js' ));
 }
 add_action('wp_enqueue_scripts', 'add_files');
+
+
+

@@ -55,7 +55,7 @@
 #home .sec01 {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto 100px;
+  margin: 120px auto 100px;
 }
 #home .sec01 .sec01_title {
   margin-bottom: 30px;
@@ -74,7 +74,7 @@
 #home .sec02 .works_list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   width: 80%;
@@ -631,8 +631,8 @@
 #home .about_me .about_text_box {
   width: 90%;
   max-width: 800px;
-  margin: 20px auto 40px;
-  padding: 0 20px 0 20px;
+  margin: 45px auto 40px;
+  padding: 0 20px;
 }
 #home .about_me .about_text_box .about_title {
   font-size: 1.25rem;
@@ -805,7 +805,7 @@
 }
 #home .contact > p {
   text-align: left;
-  width: 800px;
+  width: 730px;
   max-width: 85%;
   margin: 0 auto 50px;
 }

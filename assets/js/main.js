@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const mvTitle = document.querySelector('.mv_title');
     const mvSubtitle = document.querySelector('.mv_subtitle');
 
-    console.log('要素を取得:', loading, mvTitle, mvSubtitle);
-
     // ページ読み込み完了時の処理
     window.addEventListener('load', function () {
         setTimeout(function () {
@@ -43,7 +41,7 @@ humbergur.addEventListener('click', function () {
  *******************************************/
 let work_continuation = document.querySelector('.work_continuation');
 let continuation_button = document.querySelector('.continuation_button');
-let continuation_button_wrapper = document.querySelector('.center_wrapper')
+let continuation_button_wrapper = document.querySelector('.center_wrapper');
 
 continuation_button.addEventListener('click', function () {
     work_continuation.classList.add('active');
@@ -82,10 +80,8 @@ go_to_top_button.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', function () {
     // カテゴリリンクの要素を取得
     const categoryLinks = document.querySelectorAll('.category_link');
-
     // すべての項目要素を取得
     const workItems = document.querySelectorAll('.work_link_wrapper');
-
     // work_continuation セクション
     const workContinuationSection = document.querySelector('.work_continuation');
 
@@ -102,12 +98,9 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', function (e) {
             // デフォルトのハッシュ遷移を防止
             e.preventDefault();
-
             // クリックされたカテゴリを取得
             const href = this.getAttribute('href');
             const category = href.substring(1); // #を除去
-
-            console.log('選択したカテゴリ:', category); // デバッグ用
 
             // URLのハッシュを更新
             window.location.hash = category;
@@ -145,7 +138,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 項目をフィルタリングする関数
     function filterItems(category) {
-        console.log('フィルタリング実行:', category); // デバッグ用
 
         // ALLの場合はすべて表示
         if (category === 'all') {
@@ -165,7 +157,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             const itemCategoryAttr = item.getAttribute('data-category');
-            console.log('アイテムのカテゴリ:', itemCategoryAttr); // デバッグ用
 
             // スペースで区切られた複数カテゴリーに対応
             const itemCategories = itemCategoryAttr.split(/\s+/);
@@ -173,11 +164,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (itemCategories.includes(category)) {
                 // このカテゴリに該当するなら表示
                 item.style.display = '';
-                console.log('表示:', item); // デバッグ用
             } else {
                 // 該当しないなら非表示
                 item.style.display = 'none';
-                console.log('非表示:', item); // デバッグ用
             }
         });
     }
