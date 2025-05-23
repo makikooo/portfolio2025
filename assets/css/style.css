@@ -365,14 +365,14 @@
   #home .work_continuation {
     width: 90%;
     margin: 0 auto;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: 5%;
     text-align: left;
   }
 }
 #home .work_continuation.active {
-  display: block;
+  display: flex;
 }
 #home .work_continuation.last_wrapper {
   margin-bottom: 50px;

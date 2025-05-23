@@ -398,14 +398,14 @@
         @include mq(md) {
             width: 90%;
             margin: 0 auto;
-            display: flex;
+            display: none;
             flex-wrap: wrap;
             gap: 5%;
             text-align: left;
         }
 
         &.active {
-            display: block;
+            display: flex;
         }
 
         &.last_wrapper {
