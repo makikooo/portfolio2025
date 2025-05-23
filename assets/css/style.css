@@ -58,6 +58,11 @@
   max-width: 1200px;
   margin: 120px auto 100px;
 }
+@media screen and (max-width: 768px) {
+  #home .sec01 {
+    margin: 30px auto 40px;
+  }
+}
 #home .sec01 .sec01_title {
   margin-bottom: 30px;
   font-size: 1.25rem;
@@ -644,57 +649,85 @@
 #home .about_me .section_title span {
   font-size: 0.75rem;
 }
-#home .about_me .about_image_box img {
-  width: 100vw;
+#home .about_me .image_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  #home .about_me .image_flex {
+    flex-direction: column;
+  }
+}
+#home .about_me .image_flex .about_image_box {
+  width: 30%;
+}
+@media screen and (max-width: 768px) {
+  #home .about_me .image_flex .about_image_box {
+    width: 100%;
+  }
+}
+#home .about_me .image_flex .about_image_box img {
+  width: 100%;
   height: 300px;
   object-fit: cover;
 }
-#home .about_me .about_text_box {
-  width: 90%;
+#home .about_me .image_flex .about_text_box {
+  width: 66%;
   max-width: 800px;
   margin: 45px auto 40px;
   padding: 0 20px;
 }
-#home .about_me .about_text_box .about_title {
+@media screen and (max-width: 768px) {
+  #home .about_me .image_flex .about_text_box {
+    width: 90%;
+    margin: 30px auto 30px;
+    padding: 0;
+  }
+}
+#home .about_me .image_flex .about_text_box .about_title {
   font-size: 1.25rem;
 }
-#home .about_me .about_text_box p {
+#home .about_me .image_flex .about_text_box p {
   font-size: 1rem;
   font-family: "Zen Maru Gothic", serif;
 }
-#home .about_me .about_text_box .web_site_title {
+#home .about_me .image_flex .about_text_box .web_site_title {
   margin-top: 30px;
   font-size: 1rem;
 }
-#home .about_me .about_text_box .site_table {
+#home .about_me .image_flex .about_text_box .site_table {
   border-spacing: 25px 5px;
 }
 @media screen and (max-width: 768px) {
-  #home .about_me .about_text_box .site_table {
+  #home .about_me .image_flex .about_text_box .site_table {
     display: block;
   }
 }
 @media screen and (max-width: 768px) {
-  #home .about_me .about_text_box .site_table {
+  #home .about_me .image_flex .about_text_box .site_table {
     border-spacing: 0;
   }
 }
-#home .about_me .about_text_box .site_table tr {
+#home .about_me .image_flex .about_text_box .site_table tr {
   text-align: left;
 }
-#home .about_me .about_text_box .site_table tr th {
+#home .about_me .image_flex .about_text_box .site_table tr th {
   font-weight: normal;
 }
 @media screen and (max-width: 768px) {
-  #home .about_me .about_text_box .site_table tr th {
+  #home .about_me .image_flex .about_text_box .site_table tr th {
     display: block;
   }
 }
-#home .about_me .about_text_box .site_table tr td {
+#home .about_me .image_flex .about_text_box .site_table tr td {
   font-family: "Zen Maru Gothic", serif;
 }
 @media screen and (max-width: 768px) {
-  #home .about_me .about_text_box .site_table tr td {
+  #home .about_me .image_flex .about_text_box .site_table tr td {
     display: block;
   }
 }
@@ -792,7 +825,7 @@
 }
 @media screen and (max-width: 768px) {
   #home .contact form .box {
-    width: 250px;
+    width: 80%;
     height: 150px;
   }
 }
