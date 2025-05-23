@@ -83,15 +83,21 @@
 #home .sec02 .works_list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 20px;
-  width: 80%;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto 50px;
 }
+@media screen and (max-width: 768px) {
+  #home .sec02 .works_list {
+    justify-content: center;
+  }
+}
 #home .sec02 .works_list .works_link_item {
-  padding: 10px 15px;
+  width: 150px;
+  height: 40px;
   transition: border-bottom 0.3s ease;
 }
 #home .sec02 .works_list .works_link_item:hover {
@@ -102,9 +108,13 @@
   border-bottom: 2px solid #D0A900;
 }
 #home .sec02 .works_list .works_link_item .works_link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Zen Maru Gothic", serif;
   font-weight: 600;
-  display: block;
 }
 #home .sec02 .works_list .works_link_item.active {
   background-color: #F1DC80;
@@ -702,13 +712,9 @@
 #home .about_me .image_flex .about_text_box .site_table {
   border-spacing: 25px 5px;
 }
-@media screen and (max-width: 768px) {
+@media (width < 901px) {
   #home .about_me .image_flex .about_text_box .site_table {
     display: block;
-  }
-}
-@media screen and (max-width: 768px) {
-  #home .about_me .image_flex .about_text_box .site_table {
     border-spacing: 0;
   }
 }
@@ -718,7 +724,7 @@
 #home .about_me .image_flex .about_text_box .site_table tr th {
   font-weight: normal;
 }
-@media screen and (max-width: 768px) {
+@media (width < 901px) {
   #home .about_me .image_flex .about_text_box .site_table tr th {
     display: block;
   }
@@ -726,7 +732,7 @@
 #home .about_me .image_flex .about_text_box .site_table tr td {
   font-family: "Zen Maru Gothic", serif;
 }
-@media screen and (max-width: 768px) {
+@media (width < 901px) {
   #home .about_me .image_flex .about_text_box .site_table tr td {
     display: block;
   }
