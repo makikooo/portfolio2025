@@ -58,8 +58,9 @@ humbergur.addEventListener('click', function () {
 
     btn.addEventListener('click', () => {
         const worksBox = document.querySelector('#workBox');
-        worksBox.style.display = 'block';
-        btn.style.display = 'none';
+        worksBox.classList.add("active");
+        const centerWrapper02 = document.querySelector('.center_wrapper02');
+        centerWrapper02.style.display = 'none';
     });
 
 })();

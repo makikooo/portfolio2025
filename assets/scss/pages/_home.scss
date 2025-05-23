@@ -406,6 +406,11 @@
 
         &.active {
             display: block;
+
+            @include mq(md) {
+                display: flex;
+                flex-wrap: wrap;
+            }
         }
 
         &.last_wrapper {
@@ -911,4 +916,14 @@
 
 .works_wrapper {
     display: none;
+
+}
+
+.works_wrapper.active {
+    display: block;
+
+    @include mq(md) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

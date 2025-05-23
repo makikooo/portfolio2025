@@ -374,6 +374,12 @@
 #home .work_continuation.active {
   display: block;
 }
+@media screen and (max-width: 768px) {
+  #home .work_continuation.active {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 #home .work_continuation.last_wrapper {
   margin-bottom: 50px;
 }
@@ -826,6 +832,16 @@
 
 .works_wrapper {
   display: none;
+}
+
+.works_wrapper.active {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .works_wrapper.active {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 #detail .sec01 {
