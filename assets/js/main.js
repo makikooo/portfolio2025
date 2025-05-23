@@ -54,7 +54,13 @@ humbergur.addEventListener('click', function () {
  *  トップページ　ワークのつづきを見る2個目
  *******************************************/
 (() => {
+    const btn = document.querySelector('#btn');
 
+    btn.addEventListener('click', () => {
+        const worksBox = document.querySelector('#workBox');
+        worksBox.style.display = 'block';
+        btn.style.display = 'none';
+    });
 
 })();
 
