@@ -213,7 +213,7 @@
                         border: 1px solid #f4d85d;
                         border-radius: 10px;
 
-                        @include mq(lg) {
+                        @media (width < 1000px) {
                             width: 270px;
                             height: auto;
                         }
@@ -288,8 +288,9 @@
                             }
 
                             &>li {
+                                font-size: clamp(14px, 1.5vw, 17px);
+
                                 @include mq(md) {
-                                    font-size: 0.85rem;
                                     margin-bottom: 3px;
                                 }
                             }
@@ -314,11 +315,16 @@
 
                     .work_button {
                         display: block;
-                        width: 100%;
+                        width: 300px;
                         padding: 10px;
+
+                        @media (width < 1000px) {
+                            width: 200px;
+                        }
 
                         @include mq(md) {
                             padding: 1px;
+                            width: 100%;
                         }
 
                         .button_flex {
