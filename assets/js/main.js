@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // 初期化: デフォルトでactiveクラスを持つ「ALL」項目にボーダーを追加
-    document.querySelector('.category_link.active').parentElement.style.borderBottom = '2px solid #C39000';
+    document.querySelector('.category_link.active').parentElement.style.background = '#C39000';
 });
 
 /*******************************************
