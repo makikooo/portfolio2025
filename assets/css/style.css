@@ -372,7 +372,7 @@
   }
 }
 #home .work_continuation.active {
-  display: flex;
+  display: block;
 }
 #home .work_continuation.last_wrapper {
   margin-bottom: 50px;
