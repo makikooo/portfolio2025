@@ -73,10 +73,14 @@
             font-size: 1.25rem;
         }
 
-        .sec01_text {
-            font-size: 1rem;
-            font-family: "Zen Maru Gothic", serif;
-            margin-bottom: 60px;
+        .section_wrapper {
+            width: 100%;
+
+            .sec01_text {
+                font-size: 1rem;
+                font-family: "Zen Maru Gothic", serif;
+                margin-bottom: 60px;
+            }
         }
 
     }
@@ -221,6 +225,13 @@
                             width: 100%;
                             margin: 10px 0;
                             text-align: left;
+                        }
+
+                        @include mq(sm) {
+                            margin: 15px auto 20px;
+                            min-width: 210px;
+                            width: 210px;
+                            max-width: 100%;
                         }
 
                         .work_title {

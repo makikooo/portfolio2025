@@ -61,7 +61,10 @@
   margin-bottom: 30px;
   font-size: 1.25rem;
 }
-#home .sec01 .sec01_text {
+#home .sec01 .section_wrapper {
+  width: 100%;
+}
+#home .sec01 .section_wrapper .sec01_text {
   font-size: 1rem;
   font-family: "Zen Maru Gothic", serif;
   margin-bottom: 60px;
@@ -206,6 +209,14 @@
     width: 100%;
     margin: 10px 0;
     text-align: left;
+  }
+}
+@media screen and (max-width: 480px) {
+  #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box {
+    margin: 15px auto 20px;
+    min-width: 210px;
+    width: 210px;
+    max-width: 100%;
   }
 }
 #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box .work_title {
