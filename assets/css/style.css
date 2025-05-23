@@ -95,6 +95,11 @@
 #home .sec02 .works_list .works_link_item .works_link {
   font-family: "Zen Maru Gothic", serif;
   font-weight: 600;
+  display: block;
+}
+#home .sec02 .works_list .works_link_item.active {
+  background-color: #F1DC80;
+  border-bottom: 2px solid #C39000;
 }
 #home .sec03 {
   width: 100%;
@@ -103,7 +108,9 @@
   #home .sec03 {
     width: 90%;
     margin: 0 auto;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
     text-align: center;
     text-align: left;
   }
@@ -117,7 +124,6 @@
 }
 @media screen and (max-width: 768px) {
   #home .sec03 .work_link_wrapper {
-    display: inline-block;
     width: 44%;
     margin: 0 1% 30px;
     vertical-align: top;
@@ -359,8 +365,9 @@
   #home .work_continuation {
     width: 90%;
     margin: 0 auto;
-    display: block;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
     text-align: left;
   }
 }

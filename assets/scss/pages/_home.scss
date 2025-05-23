@@ -112,7 +112,13 @@
                 .works_link {
                     font-family: "Zen Maru Gothic", serif;
                     font-weight: 600;
+                    display: block;
                 }
+            }
+
+            .works_link_item.active {
+                background-color: #F1DC80;
+                border-bottom: 2px solid #C39000;
             }
         }
     }
@@ -123,7 +129,9 @@
         @include mq(md) {
             width: 90%;
             margin: 0 auto;
-            display: block;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5%;
             text-align: center;
             text-align: left;
         }
@@ -136,7 +144,6 @@
             transition: background-color 0.3s ease;
 
             @include mq(md) {
-                display: inline-block;
                 width: 44%;
                 margin: 0 1% 30px;
                 vertical-align: top;
@@ -391,8 +398,9 @@
         @include mq(md) {
             width: 90%;
             margin: 0 auto;
-            display: block;
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5%;
             text-align: left;
         }
 

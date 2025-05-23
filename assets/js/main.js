@@ -188,63 +188,55 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /*******************************************
- *  トップページ カテゴリーをクリックするとボーダーボトムに色つける
+ *  トップページ カテゴリーをクリックすると背景色に色つける
  *******************************************/
-// カテゴリーリンクのハイライト処理用スクリプト
 document.addEventListener('DOMContentLoaded', function () {
-    // すべてのカテゴリーリンクを取得
     const categoryLinks = document.querySelectorAll('.category_link');
+    const workItems = document.querySelectorAll('.work_link_wrapper');
 
-    // カテゴリーリンクのクリックを処理する関数
-    function handleCategoryClick(e) {
-        // すべての項目からアクティブクラスとボーダーボトムを削除
-        categoryLinks.forEach(link => {
-            link.classList.remove('active');
-            link.parentElement.style.borderBottom = 'none';
+    function filterWorks(category) {
+        workItems.forEach(item => {
+            const categories = item.getAttribute('data-category').split(/\s+/);
+            const isMatch = category === 'all' || categories.includes(category);
+            item.style.display = isMatch ? 'block' : 'none';
         });
-
-        // クリックされたリンクにアクティブクラスを追加し、親要素にボーダーを設定
-        e.target.classList.add('active');
-        e.target.parentElement.style.borderBottom = '2px solid #C39000';
-
-        // href属性からカテゴリーを取得
-        const category = e.target.getAttribute('href').substring(1); // href から # を削除
-
-        // カテゴリーに基づいて作品をフィルタリング（オプション）
-        filterWorks(category);
     }
 
-    // すべてのカテゴリーリンクにクリックイベントリスナーを追加
     categoryLinks.forEach(link => {
-        link.addEventListener('click', handleCategoryClick);
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const category = link.getAttribute('href').substring(1);
+            const clickedLi = link.parentElement;
+
+            // すべてのカテゴリを非アクティブに
+            categoryLinks.forEach(otherLink => {
+                const li = otherLink.parentElement;
+                li.classList.remove('active');
+                li.style.backgroundColor = '';
+                li.style.borderBottom = 'none';
+            });
+
+            // 選択されたカテゴリだけをアクティブに
+            clickedLi.classList.add('active');
+            clickedLi.style.backgroundColor = '#F1DC80';
+            clickedLi.style.borderBottom = '2px solid #C39000';
+
+            // 表示を更新
+            filterWorks(category);
+        });
     });
 
-    // オプション: 選択されたカテゴリーに基づいて作品をフィルタリングする関数
-    function filterWorks(category) {
-        // すべての作品項目を取得
-        const workItems = document.querySelectorAll('.work_link_wrapper');
-
-        // カテゴリーが 'all' の場合はすべての項目を表示
-        if (category === 'all') {
-            workItems.forEach(item => {
-                item.style.display = 'block';
-            });
-            return;
-        }
-
-        // それ以外の場合は data-category 属性によってフィルタリング
-        workItems.forEach(item => {
-            const categories = item.getAttribute('data-category').split(' ');
-            if (categories.includes(category)) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
+    // 初期状態（"ALL" を選択状態にする）
+    const initial = document.querySelector('.category_link.active');
+    if (initial) {
+        const li = initial.parentElement;
+        li.classList.add('active');
+        li.style.backgroundColor = '#F1DC80';
+        li.style.borderBottom = '2px solid #C39000';
+        const category = initial.getAttribute('href').substring(1);
+        filterWorks(category);
     }
-
-    // 初期化: デフォルトでactiveクラスを持つ「ALL」項目にボーダーを追加
-    document.querySelector('.category_link.active').parentElement.style.background = '#C39000';
 });
 
 /*******************************************
