@@ -824,6 +824,10 @@
   display: none important;
 }
 
+.works_wrapper {
+  display: none;
+}
+
 #detail .sec01 {
   width: 90%;
   max-width: 1200px;

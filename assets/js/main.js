@@ -55,16 +55,7 @@ humbergur.addEventListener('click', function () {
  *******************************************/
 (() => {
 
-    let work_link_wrapper_hidden = document.querySelectorAll('.work_link_wrapper.hidden');
-    let continuation_button02 = document.querySelector('.continuation_button02');
-    let continuation_button_wrapper02 = document.querySelector('.center_wrapper02');
 
-    continuation_button02.addEventListener('click', function () {
-        work_link_wrapper_hidden.forEach(function (element) {
-            element.classList.remove('hidden');
-        });
-        continuation_button_wrapper02.classList.add('hidden');
-    });
 })();
 
 /*******************************************
