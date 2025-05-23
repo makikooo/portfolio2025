@@ -46,6 +46,7 @@
 
                 &.hidden {
                     visibility: hidden;
+                    display: none;
                 }
 
             }
@@ -179,7 +180,7 @@
                 }
 
                 .work_wrapper {
-                    flex: 2;
+                    flex-grow: 2;
                     display: flex;
                     justify-content: flex-start;
                     align-items: flex-start;
@@ -274,9 +275,6 @@
                             }
 
                             &>li {
-                                list-style-type: circle;
-                                margin-bottom: 5px;
-
                                 @include mq(md) {
                                     font-size: 0.85rem;
                                     margin-bottom: 3px;

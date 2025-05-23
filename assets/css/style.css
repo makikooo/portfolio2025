@@ -42,6 +42,7 @@
 }
 #home .mv .mv_wrapper .mv_title.hidden {
   visibility: hidden;
+  display: none;
 }
 #home .mv .mv_wrapper .mv_subtitle {
   letter-spacing: 4px;
@@ -159,7 +160,7 @@
   }
 }
 #home .sec03 .work_link_wrapper .link_flex .work_wrapper {
-  flex: 2;
+  flex-grow: 2;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -258,10 +259,6 @@
     flex-direction: column;
     justify-content: flex-start;
   }
-}
-#home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box > ul > li {
-  list-style-type: circle;
-  margin-bottom: 5px;
 }
 @media screen and (max-width: 768px) {
   #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box > ul > li {
