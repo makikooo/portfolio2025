@@ -53,8 +53,8 @@ humbergur.addEventListener('click', function () {
 /*******************************************
  *  トップページ　ワークのつづきを見る2個目
  *******************************************/
-(() => {
-    const btn = document.querySelector('#btn');
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.querySelector('#btnContinuation02');
 
     btn.addEventListener('click', () => {
         const worksBox = document.querySelector('#workBox');
@@ -63,7 +63,7 @@ humbergur.addEventListener('click', function () {
         centerWrapper02.style.display = 'none';
     });
 
-})();
+});
 
 /*******************************************
  *  各ページ(フッター）上に戻るのボタンを押したら時間かけて戻る
