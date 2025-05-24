@@ -21,13 +21,15 @@
             transition: all 0.5s linear;
             z-index: 20000;
 
-            &.loaded {
-                opacity: 0;
-                visibility: hidden;
+        }
 
-                .mv_wrapper {
-                    opacity: 1;
-                }
+        &.loaded {
+            opacity: 0;
+            visibility: hidden;
+            display: none;
+
+            .mv_wrapper {
+                opacity: 1;
             }
         }
 
@@ -144,7 +146,7 @@
     .sec03 {
         width: 100%;
 
-        @include mq(md) {
+        @media (width < 813px) {
             width: 90%;
             margin: 0 auto;
             display: flex;
@@ -161,7 +163,7 @@
             padding-bottom: 20px;
             transition: background-color 0.3s ease;
 
-            @include mq(md) {
+            @media (width < 813px) {
                 width: 44%;
                 margin: 0 1% 30px;
                 vertical-align: top;
@@ -187,7 +189,7 @@
                 margin: 0 auto;
                 gap: 30px;
 
-                @include mq(md) {
+                @media (width < 813px) {
                     display: block;
                     width: 100%;
                 }
@@ -199,7 +201,7 @@
                     align-items: flex-start;
                     gap: 30px;
 
-                    @include mq(md) {
+                    @media (width < 813px) {
                         width: 100%;
                         display: block;
                     }
@@ -218,7 +220,7 @@
                             height: auto;
                         }
 
-                        @include mq(md) {
+                        @media (width < 813px) {
                             width: 100%;
                             height: auto;
                             aspect-ratio: 16 / 10;
@@ -235,7 +237,7 @@
                     .work_box {
                         width: 45%;
 
-                        @include mq(md) {
+                        @media (width < 813px) {
                             width: 100%;
                             margin: 10px 0;
                             text-align: left;
@@ -252,7 +254,7 @@
                             font-size: 1.25rem;
                             margin-bottom: 15px;
 
-                            @include mq(md) {
+                            @media (width < 813px) {
                                 font-size: 1rem;
                                 margin-bottom: 10px;
                             }
@@ -266,7 +268,7 @@
                             margin-bottom: 10px;
                             font-family: "Zen Maru Gothic", serif;
 
-                            @include mq(md) {
+                            @media (width < 813px) {
                                 padding: 3px 10px;
                                 width: auto;
                                 display: inline-block;
@@ -280,7 +282,7 @@
                             flex-direction: column;
                             justify-content: flex-start;
 
-                            @include mq(md) {
+                            @media (width < 813px) {
                                 height: 90px;
                                 display: flex;
                                 flex-direction: column;
@@ -290,7 +292,7 @@
                             &>li {
                                 font-size: clamp(14px, 1.5vw, 17px);
 
-                                @include mq(md) {
+                                @media (width < 813px) {
                                     margin-bottom: 3px;
                                 }
                             }
@@ -307,7 +309,7 @@
                         max-width: 220px;
                     }
 
-                    @include mq(md) {
+                    @media (width < 813px) {
                         width: 100%;
                         display: block;
                         margin: 0 auto;
@@ -322,7 +324,7 @@
                             width: 200px;
                         }
 
-                        @include mq(md) {
+                        @media (width < 813px) {
                             padding: 1px;
                             width: 100%;
                         }
@@ -365,7 +367,7 @@
                         margin-bottom: 20px;
                         border-radius: 10px;
 
-                        @include mq(md) {
+                        @media (width < 813px) {
                             margin-bottom: 10px;
                         }
                     }
@@ -375,7 +377,7 @@
                         border-radius: 10px;
                         background: #fff;
 
-                        @include mq(md) {
+                        @media (width < 813px) {
                             border: #E7D173 solid 1px;
 
                         }
@@ -412,10 +414,6 @@
                     height: 25px;
                 }
             }
-
-            &.hidden {
-                display: none;
-            }
         }
 
     }
@@ -423,7 +421,7 @@
     .work_continuation {
         display: none;
 
-        @include mq(md) {
+        @media (width < 813px) {
             width: 90%;
             margin: 0 auto;
             display: none;
@@ -435,7 +433,7 @@
         &.active {
             display: block;
 
-            @include mq(md) {
+            @media (width < 813px) {
                 display: flex;
                 flex-wrap: wrap;
             }
@@ -452,7 +450,7 @@
             padding-top: 20px;
             transition: background-color 0.3s ease;
 
-            @include mq(md) {
+            @media (width < 813px) {
                 display: inline-block;
                 width: 44%;
                 margin: 0 1% 30px;
@@ -479,7 +477,7 @@
                 margin: 0 auto;
                 gap: 30px;
 
-                @include mq(md) {
+                @media (width < 813px) {
                     display: block;
                     width: 100%;
                 }
@@ -491,7 +489,7 @@
                     align-items: start;
                     gap: 30px;
 
-                    @include mq(md) {
+                    @media (width < 813px) {
                         width: 100%;
                         display: block;
                     }
@@ -510,7 +508,7 @@
                             height: auto;
                         }
 
-                        @include mq(md) {
+                        @media (width < 813px) {
                             width: 100%;
                             height: auto;
                             aspect-ratio: 16 / 10;
@@ -527,7 +525,7 @@
                     .work_box {
                         width: 45%;
 
-                        @include mq(md) {
+                        @media (width < 813px) {
                             width: 100%;
                             margin: 10px 0;
                             text-align: left;
@@ -537,7 +535,7 @@
                             font-size: 1.25rem;
                             margin-bottom: 15px;
 
-                            @include mq(md) {
+                            @media (width < 813px) {
                                 font-size: 1rem;
                                 margin-bottom: 10px;
                             }
@@ -551,7 +549,7 @@
                             margin-bottom: 10px;
                             font-family: "Zen Maru Gothic", serif;
 
-                            @include mq(md) {
+                            @media (width < 813px) {
                                 padding: 3px 10px;
                                 width: auto;
                                 display: inline-block;
@@ -565,7 +563,7 @@
                             flex-direction: column;
                             justify-content: flex-start;
 
-                            @include mq(md) {
+                            @media (width < 813px) {
                                 height: 90px;
                                 display: flex;
                                 flex-direction: column;
@@ -573,10 +571,9 @@
                             }
 
                             &>li {
-                                list-style-type: circle;
                                 margin-bottom: 5px;
 
-                                @include mq(md) {
+                                @media (width < 813px) {
                                     font-size: 0.85rem;
                                     margin-bottom: 3px;
                                 }
@@ -594,7 +591,7 @@
                         max-width: 220px;
                     }
 
-                    @include mq(md) {
+                    @media (width < 813px) {
                         width: 100%;
                         display: block;
                         margin: 0 auto;
@@ -605,7 +602,7 @@
                         width: 100%;
                         padding: 10px;
 
-                        @include mq(md) {
+                        @media (width < 813px) {
                             padding: 1px;
                         }
 
@@ -645,7 +642,7 @@
                         margin-bottom: 20px;
                         border-radius: 10px;
 
-                        @include mq(md) {
+                        @media (width < 813px) {
                             margin-bottom: 10px;
                         }
                     }
@@ -655,7 +652,7 @@
                         border-radius: 10px;
                         background: #fff;
 
-                        @include mq(md) {
+                        @media (width < 813px) {
                             border: #E7D173 solid 1px;
 
                         }
@@ -960,7 +957,7 @@
 
 
 #home .work_continuation .work_link_wrapper.hidden {
-    display: none important;
+    display: none;
 }
 
 .works_wrapper {
@@ -971,7 +968,7 @@
 .works_wrapper.active {
     display: block;
 
-    @include mq(md) {
+    @media(width < 813px) {
         display: flex;
         flex-wrap: wrap;
     }
