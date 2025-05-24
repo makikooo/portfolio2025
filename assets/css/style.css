@@ -533,14 +533,12 @@
   }
 }
 #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box > ul {
-  height: 70px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 @media (width < 813px) {
   #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box > ul {
-    height: 90px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

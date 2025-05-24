@@ -46,7 +46,7 @@ humbergur.addEventListener('click', function () {
 
     continuation_button.addEventListener('click', function () {
         work_continuation.classList.add('active');
-        continuation_button_wrapper.classList.add('hidden');
+        continuation_button_wrapper.style.display = "none";
     });
 })();
 

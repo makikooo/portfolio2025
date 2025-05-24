@@ -558,16 +558,17 @@
                         }
 
                         &>ul {
-                            height: 70px;
+                            // height: 70px;
                             display: flex;
                             flex-direction: column;
                             justify-content: flex-start;
 
                             @media (width < 813px) {
-                                height: 90px;
+                                // height: 90px;
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: flex-start;
+
                             }
 
                             &>li {
