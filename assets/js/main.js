@@ -27,28 +27,36 @@ document.addEventListener('DOMContentLoaded', function () {
 /*******************************************
  *  ハンバーガーメニュー
  *******************************************/
-let humbergur = document.querySelector('.humbergur_box');
-let sp_nav_list = document.querySelector('.sp_nav_list');
+document.addEventListener('DOMContentLoaded', () => {
 
-humbergur.addEventListener('click', function () {
-    humbergur.classList.toggle('active');
-    sp_nav_list.classList.toggle('active');
+    let humbergur = document.querySelector('.humbergur_box');
+    let sp_nav_list = document.querySelector('.sp_nav_list');
+
+    if (humbergur && sp_nav_list) {
+        humbergur.addEventListener('click', () => {
+            humbergur.classList.toggle('active');
+            sp_nav_list.classList.toggle('active');
+        });
+    };
 });
 
 
 /*******************************************
  *  トップページ　ワークのつづきを見る
  *******************************************/
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
+
     let work_continuation = document.querySelector('.work_continuation');
     let continuation_button = document.querySelector('.continuation_button');
     let continuation_button_wrapper = document.querySelector('.center_wrapper');
 
-    continuation_button.addEventListener('click', function () {
-        work_continuation.classList.add('active');
-        continuation_button_wrapper.style.display = "none";
-    });
-})();
+    if (continuation_button) {
+        continuation_button.addEventListener('click', function () {
+            work_continuation.classList.add('active');
+            continuation_button_wrapper.style.display = "none";
+        });
+    }
+});
 
 /*******************************************
  *  トップページ　ワークのつづきを見る2個目
@@ -56,12 +64,15 @@ humbergur.addEventListener('click', function () {
 document.addEventListener('DOMContentLoaded', () => {
     const btn = document.querySelector('#btnContinuation02');
 
-    btn.addEventListener('click', () => {
-        const worksBox = document.querySelector('#workBox');
-        worksBox.classList.add("active");
-        const centerWrapper02 = document.querySelector('.center_wrapper02');
-        centerWrapper02.style.display = 'none';
-    });
+    if (btn) {
+
+        btn.addEventListener('click', () => {
+            const worksBox = document.querySelector('#workBox');
+            worksBox.classList.add("active");
+            const centerWrapper02 = document.querySelector('.center_wrapper02');
+            centerWrapper02.style.display = 'none';
+        });
+    }
 
 });
 
@@ -70,12 +81,15 @@ document.addEventListener('DOMContentLoaded', () => {
  *******************************************/
 let go_to_top_button = document.querySelector('.go_to_top');
 
-go_to_top_button.addEventListener('click', () => {
-    window.scroll({
-        top: 0,
-        behavior: "smooth",
+if (go_to_top_button) {
+
+    go_to_top_button.addEventListener('click', () => {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+        });
     });
-});
+}
 
 /*******************************************
  *  トップページ カテゴリーをクリックするとそのカテゴリーだけのリスト表示にする

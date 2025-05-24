@@ -1,7 +1,14 @@
-<?php
-function add_files() {
-    wp_enqueue_style( 'reset-style', get_theme_file_uri( '/assets/css/reset.css' ));
-    wp_enqueue_style( 'main-style', get_theme_file_uri( '/assets/css/style.css' ));
-    wp_enqueue_script( 'main-script', get_theme_file_uri( '/assets/js/main.js' ));
-}
-add_action('wp_enqueue_scripts', 'add_files');
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="" keywords="" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>唐澤真希子 Web制作・Webデザイン</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico" /> -->
+     <?php wp_head();?>
+</head>
+<body>
