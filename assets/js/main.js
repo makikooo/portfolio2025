@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             mvTitle.classList.add('hidden');
             mvSubtitle.classList.add('hidden');
-        }, 2500);
+        }, 800);
         setTimeout(() => {
             loading.classList.add('loaded');
-        }, 3000);
+        }, 1000);
         setTimeout(() => {
             loading.style.display = 'none';
-        }, 3500);
+        }, 1200);
     });
 });
 
