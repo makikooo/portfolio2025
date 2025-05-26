@@ -747,7 +747,7 @@ body {
             .about_text_box {
                 width: 66%;
                 max-width: 800px;
-                margin: 45px auto 40px;
+                margin: 0 auto 40px;
                 padding: 0 20px;
 
                 @include mq(md) {

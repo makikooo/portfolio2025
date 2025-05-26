@@ -7,22 +7,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const mvTitle = document.querySelector('.mv_title');
     const mvSubtitle = document.querySelector('.mv_subtitle');
 
+    const today = new Date().toISOString().slice(0, 10); // "2025-05-26" の形式
+    const lastShownDate = localStorage.getItem('loadingShownDate');
     // ページ読み込み完了時の処理
     window.addEventListener('load', function () {
-        setTimeout(() => {
-            mvTitle.classList.remove('hidden');
-            mvSubtitle.classList.remove('hidden');
-        }, 20);
-        setTimeout(() => {
-            mvTitle.classList.add('hidden');
-            mvSubtitle.classList.add('hidden');
-        }, 800);
-        setTimeout(() => {
-            loading.classList.add('loaded');
-        }, 1000);
-        setTimeout(() => {
-            loading.style.display = 'none';
-        }, 1200);
+        if (lastShownDate === today) {
+            loading.style.display = "none";
+        } else {
+            setTimeout(() => {
+                mvTitle.classList.remove('hidden');
+                mvSubtitle.classList.remove('hidden');
+            }, 20);
+            setTimeout(() => {
+                mvTitle.classList.add('hidden');
+                mvSubtitle.classList.add('hidden');
+            }, 2500);
+            setTimeout(() => {
+                loading.classList.add('loaded');
+            }, 3000);
+            setTimeout(() => {
+                loading.style.display = 'none';
+                // localStorage.setItem('loadingShownDate', today);
+            }, 3500);
+        }
+
     });
 });
 
