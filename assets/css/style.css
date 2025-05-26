@@ -46,17 +46,16 @@ body {
 #home .mv .mv_wrapper .mv_title {
   font-size: 1.75rem;
   letter-spacing: 7px;
-  transition: visibility 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: visibility 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   visibility: visible;
 }
 #home .mv .mv_wrapper .mv_title.hidden {
   visibility: hidden;
-  display: none;
 }
 #home .mv .mv_wrapper .mv_subtitle {
   letter-spacing: 4px;
   font-family: "Zen Maru Gothic", serif;
-  transition: visibility 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: visibility 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   visibility: visible;
 }
 #home .mv .mv_wrapper .mv_subtitle.hidden {

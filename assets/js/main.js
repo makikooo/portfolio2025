@@ -9,18 +9,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ページ読み込み完了時の処理
     window.addEventListener('load', function () {
-        setTimeout(function () {
+        setTimeout(() => {
             mvTitle.classList.remove('hidden');
             mvSubtitle.classList.remove('hidden');
-        }, 200);
-        setTimeout(function () {
-            // ローディング画面を終了
+        }, 20);
+        setTimeout(() => {
+            mvTitle.classList.add('hidden');
+            mvSubtitle.classList.add('hidden');
+        }, 2500);
+        setTimeout(() => {
             loading.classList.add('loaded');
-            setTimeout(() => {
-                loading.style.display = 'none';
-            }, 1600);
         }, 3000);
-        // タイトルとサブタイトルを表示（hidden クラスを削除）
+        setTimeout(() => {
+            loading.style.display = 'none';
+        }, 3500);
     });
 });
 

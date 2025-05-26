@@ -28,7 +28,6 @@ body {
             left: 0;
             background-color: #fff;
             z-index: 20000;
-
         }
 
         &.loaded {
@@ -51,12 +50,11 @@ body {
             .mv_title {
                 font-size: 1.75rem;
                 letter-spacing: 7px;
-                transition: visibility 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+                transition: visibility 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
                 visibility: visible;
 
                 &.hidden {
                     visibility: hidden;
-                    display: none;
                 }
 
             }
@@ -64,7 +62,7 @@ body {
             .mv_subtitle {
                 letter-spacing: 4px;
                 font-family: "Zen Maru Gothic", serif;
-                transition: visibility 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+                transition: visibility 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
                 visibility: visible;
 
                 &.hidden {
