@@ -825,6 +825,7 @@ body {
   box-sizing: border-box;
   border-radius: 15px;
   border: 1px solid #333;
+  font-family: serif;
 }
 #home .contact form .contact_table tr td input {
   height: 55px;
