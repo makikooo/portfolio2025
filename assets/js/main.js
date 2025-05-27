@@ -114,14 +114,12 @@ if (go_to_top_button) {
  *  トップページ カテゴリーをクリックするとそのカテゴリーだけのリスト表示にする
  *******************************************/
 document.addEventListener('DOMContentLoaded', function () {
-    // カテゴリリンクの要素を取得
     const categoryLinks = document.querySelectorAll('.category_link');
-    // すべての項目要素を取得
     const workItems = document.querySelectorAll('.work_link_wrapper');
-    // work_continuation セクション
     const workContinuationSection = document.querySelector('.work_continuation');
+    const continuationWrappers = document.querySelectorAll('.center_wrapper, .center_wrapper02');
+    const workBox = document.querySelector('#workBox');
 
-    // 初期表示（URLハッシュがあれば、それに対応するカテゴリを表示）
     const initialHash = window.location.hash.substring(1);
     if (initialHash) {
         showContinuationSection();
@@ -129,95 +127,58 @@ document.addEventListener('DOMContentLoaded', function () {
         setActiveLink(initialHash);
     }
 
-    // カテゴリリンクにクリックイベントを設定
     categoryLinks.forEach(link => {
         link.addEventListener('click', function (e) {
-            // デフォルトのハッシュ遷移を防止
             e.preventDefault();
-            // クリックされたカテゴリを取得
             const href = this.getAttribute('href');
-            const category = href.substring(1); // #を除去
+            const category = href.substring(1);
 
-            // URLのハッシュを更新
             window.location.hash = category;
 
-            // 続きのセクションを表示
             showContinuationSection();
-
-            // 項目をフィルタリング
             filterItems(category);
-
-            // アクティブなリンクのスタイルを更新
             setActiveLink(category);
         });
     });
 
-    // 続きのセクションを表示する関数
+    // 「つづきを見る」を隠して、続きを表示
     function showContinuationSection() {
-        // work_continuation を表示
         if (workContinuationSection) {
             workContinuationSection.classList.add('active');
         }
-
-        // 「続きを見る」ボタンを非表示
-        const continuationButtons = document.querySelectorAll('.center_wrapper, .center_wrapper02');
-        continuationButtons.forEach(button => {
-            button.classList.add('hidden');
+        continuationWrappers.forEach(button => {
+            button.style.display = 'none';
         });
-
-        // hidden クラスを持つ要素を一旦すべて表示に戻す
         const hiddenItems = document.querySelectorAll('.work_link_wrapper.hidden');
         hiddenItems.forEach(item => {
             item.classList.remove('hidden');
         });
+        if (workBox) workBox.classList.add('active');
     }
 
-    // 項目をフィルタリングする関数
     function filterItems(category) {
-
-        // ALLの場合はすべて表示
         if (category === 'all') {
             workItems.forEach(item => {
                 item.style.display = '';
             });
             return;
         }
-
-        // 特定カテゴリーのフィルタリング
         workItems.forEach(item => {
-            // data-category属性を確認
             if (!item.hasAttribute('data-category')) {
-                // 属性がない場合は非表示
                 item.style.display = 'none';
                 return;
             }
-
             const itemCategoryAttr = item.getAttribute('data-category');
-
-            // スペースで区切られた複数カテゴリーに対応
             const itemCategories = itemCategoryAttr.split(/\s+/);
-
-            if (itemCategories.includes(category)) {
-                // このカテゴリに該当するなら表示
-                item.style.display = '';
-            } else {
-                // 該当しないなら非表示
-                item.style.display = 'none';
-            }
+            item.style.display = itemCategories.includes(category) ? '' : 'none';
         });
     }
 
-    // アクティブなリンクのスタイルを設定する関数
     function setActiveLink(category) {
         categoryLinks.forEach(link => {
             const href = link.getAttribute('href');
-            const linkCategory = href.substring(1); // #を除去
-
-            if (linkCategory === category) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
+            const linkCategory = href.substring(1);
+            link.classList.toggle('active', linkCategory === category);
         });
     }
 });
