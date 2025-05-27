@@ -43,11 +43,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let humbergur = document.querySelector('.humbergur_box');
     let sp_nav_list = document.querySelector('.sp_nav_list');
+    let nav_links = document.querySelectorAll('.nav_link');
 
     if (humbergur && sp_nav_list) {
         humbergur.addEventListener('click', () => {
             humbergur.classList.toggle('active');
             sp_nav_list.classList.toggle('active');
+        });
+        nav_links.forEach(link => {
+            link.addEventListener('click', () => {
+                sp_nav_list.classList.remove('active');
+                humbergur.classList.remove('active');
+            });
         });
     };
 });
