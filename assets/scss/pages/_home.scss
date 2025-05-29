@@ -959,6 +959,46 @@ body {
         }
     }
 
+    .github_links_section {
+        max-width: 1200px;
+        width: 90%;
+        margin: 40px auto 30px;
+        text-align: center;
+
+        .section_title {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            text-align: left;
+
+            span {
+                font-size: 0.75rem;
+            }
+        }
+
+        .github_links {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 40px auto;
+
+            a {
+                width: 150px;
+                height: 50px;
+                background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
+                border-radius: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1rem;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+
     .hidden {
         display: none;
     }

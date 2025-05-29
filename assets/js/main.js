@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*******************************************
  *  ハンバーガーメニュー
  *******************************************/
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('load', () => {
 
     let humbergur = document.querySelector('.humbergur_box');
     let sp_nav_list = document.querySelector('.sp_nav_list');
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*******************************************
  *  トップページ　ワークのつづきを見る
  *******************************************/
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('load', () => {
 
     let work_continuation = document.querySelector('.work_continuation');
     let continuation_button = document.querySelector('.continuation_button');
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*******************************************
  *  トップページ　ワークのつづきを見る2個目
  *******************************************/
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('load', () => {
     const btn = document.querySelector('#btnContinuation02');
 
     if (btn) {
@@ -113,7 +113,7 @@ if (go_to_top_button) {
 /*******************************************
  *  トップページ カテゴリーをクリックするとそのカテゴリーだけのリスト表示にする
  *******************************************/
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('load', function () {
     const categoryLinks = document.querySelectorAll('.category_link');
     const workItems = document.querySelectorAll('.work_link_wrapper');
     const workContinuationSection = document.querySelector('.work_continuation');
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*******************************************
  *  トップページ カテゴリーをクリックすると背景色に色つける
  *******************************************/
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('load', function () {
     const categoryLinks = document.querySelectorAll('.category_link');
     const workItems = document.querySelectorAll('.work_link_wrapper');
 
@@ -239,30 +239,33 @@ document.addEventListener('DOMContentLoaded', function () {
 /*******************************************
  *  トップページ 利用規約同意チェックすると送信ボタンを押せれる
  *******************************************/
-// 利用規約同意チェックボックスと送信ボタンの要素を取得
-const agreementCheckbox = document.getElementById('agreement');
-const submitButton = document.querySelector('.contact_button');
+document.addEventListener('load', () => {
 
-// 初期状態で送信ボタンを無効化して半透明にする
-if (submitButton) {
-    submitButton.disabled = true;
-    submitButton.style.opacity = '0.5';
-    submitButton.style.cursor = 'not-allowed';
-}
+    // 利用規約同意チェックボックスと送信ボタンの要素を取得
+    const agreementCheckbox = document.getElementById('agreement');
+    const submitButton = document.querySelector('.contact_button');
 
-// チェックボックスの状態が変わった時のイベントハンドラー
-if (agreementCheckbox) {
-    agreementCheckbox.addEventListener('change', function () {
-        if (this.checked) {
-            // チェックされた場合、ボタンを有効化して不透明度を元に戻す
-            submitButton.disabled = false;
-            submitButton.style.opacity = '1';
-            submitButton.style.cursor = 'pointer';
-        } else {
-            // チェックが外れた場合、ボタンを無効化して半透明にする
-            submitButton.disabled = true;
-            submitButton.style.opacity = '0.5';
-            submitButton.style.cursor = 'not-allowed';
-        }
-    });
-}
+    // 初期状態で送信ボタンを無効化して半透明にする
+    if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.style.opacity = '0.5';
+        submitButton.style.cursor = 'not-allowed';
+    }
+
+    // チェックボックスの状態が変わった時のイベントハンドラー
+    if (agreementCheckbox) {
+        agreementCheckbox.addEventListener('change', function () {
+            if (this.checked) {
+                // チェックされた場合、ボタンを有効化して不透明度を元に戻す
+                submitButton.disabled = false;
+                submitButton.style.opacity = '1';
+                submitButton.style.cursor = 'pointer';
+            } else {
+                // チェックが外れた場合、ボタンを無効化して半透明にする
+                submitButton.disabled = true;
+                submitButton.style.opacity = '0.5';
+                submitButton.style.cursor = 'not-allowed';
+            }
+        });
+    }
+});

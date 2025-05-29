@@ -882,6 +882,40 @@ body {
   max-width: 730px;
   margin: 0 auto 50px;
 }
+#home .github_links_section {
+  max-width: 1200px;
+  width: 90%;
+  margin: 40px auto 30px;
+  text-align: center;
+}
+#home .github_links_section .section_title {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  text-align: left;
+}
+#home .github_links_section .section_title span {
+  font-size: 0.75rem;
+}
+#home .github_links_section .github_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 40px auto;
+}
+#home .github_links_section .github_links a {
+  width: 150px;
+  height: 50px;
+  background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
 #home .hidden {
   display: none;
 }
