@@ -826,7 +826,7 @@ body {
   box-sizing: border-box;
   border-radius: 15px;
   border: 1px solid #333;
-  font-family: serif;
+  font-family: "Zen Maru Gothic", serif;
 }
 #home .contact form .contact_table tr td input {
   height: 55px;
@@ -1004,7 +1004,7 @@ body {
   box-sizing: border-box;
   border-radius: 15px;
   border: 1px solid #333;
-  font-family: serif;
+  font-family: "Zen Maru Gothic", serif;
 }
 #contact .contact form .contact_table tr td input {
   height: 55px;

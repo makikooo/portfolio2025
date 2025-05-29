@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*******************************************
  *  ハンバーガーメニュー
  *******************************************/
-document.addEventListener('load', () => {
+window.addEventListener('load', () => {
 
     let humbergur = document.querySelector('.humbergur_box');
     let sp_nav_list = document.querySelector('.sp_nav_list');
@@ -63,7 +63,7 @@ document.addEventListener('load', () => {
 /*******************************************
  *  トップページ　ワークのつづきを見る
  *******************************************/
-document.addEventListener('load', () => {
+window.addEventListener('load', () => {
 
     let work_continuation = document.querySelector('.work_continuation');
     let continuation_button = document.querySelector('.continuation_button');
@@ -80,7 +80,7 @@ document.addEventListener('load', () => {
 /*******************************************
  *  トップページ　ワークのつづきを見る2個目
  *******************************************/
-document.addEventListener('load', () => {
+window.addEventListener('load', () => {
     const btn = document.querySelector('#btnContinuation02');
 
     if (btn) {
@@ -113,7 +113,7 @@ if (go_to_top_button) {
 /*******************************************
  *  トップページ カテゴリーをクリックするとそのカテゴリーだけのリスト表示にする
  *******************************************/
-document.addEventListener('load', function () {
+window.addEventListener('load', function () {
     const categoryLinks = document.querySelectorAll('.category_link');
     const workItems = document.querySelectorAll('.work_link_wrapper');
     const workContinuationSection = document.querySelector('.work_continuation');
@@ -187,7 +187,7 @@ document.addEventListener('load', function () {
 /*******************************************
  *  トップページ カテゴリーをクリックすると背景色に色つける
  *******************************************/
-document.addEventListener('load', function () {
+window.addEventListener('load', function () {
     const categoryLinks = document.querySelectorAll('.category_link');
     const workItems = document.querySelectorAll('.work_link_wrapper');
 
@@ -239,7 +239,7 @@ document.addEventListener('load', function () {
 /*******************************************
  *  トップページ 利用規約同意チェックすると送信ボタンを押せれる
  *******************************************/
-document.addEventListener('load', () => {
+window.addEventListener('load', () => {
 
     // 利用規約同意チェックボックスと送信ボタンの要素を取得
     const agreementCheckbox = document.getElementById('agreement');
