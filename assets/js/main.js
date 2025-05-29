@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 3000);
             setTimeout(() => {
                 loading.style.display = 'none';
-                // localStorage.setItem('loadingShownDate', today);
+                localStorage.setItem('loadingShownDate', today);
             }, 3500);
         }
 
