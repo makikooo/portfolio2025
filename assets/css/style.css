@@ -938,6 +938,166 @@ body {
   }
 }
 
+#contact {
+  margin-top: 80px;
+}
+#contact .contact {
+  max-width: 1200px;
+  width: 90%;
+  margin: 80px auto 30px;
+  text-align: center;
+}
+#contact .contact .section_title {
+  font-size: 1.5rem;
+  margin-bottom: 60px;
+  text-align: left;
+}
+#contact .contact .section_title span {
+  font-size: 0.75rem;
+}
+#contact .contact form .contact_table {
+  border-spacing: 2rem 1rem;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  #contact .contact form .contact_table {
+    border-spacing: 1rem 0.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #contact .contact form .contact_table tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+}
+#contact .contact form .contact_table tr th {
+  text-align: left;
+  width: 180px;
+  vertical-align: top;
+  padding-top: 15px;
+}
+@media screen and (max-width: 768px) {
+  #contact .contact form .contact_table tr th {
+    width: 100%;
+    padding-bottom: 5px;
+    padding-top: 0;
+  }
+}
+#contact .contact form .contact_table tr td {
+  text-align: left;
+  width: calc(100% - 180px);
+}
+@media screen and (max-width: 768px) {
+  #contact .contact form .contact_table tr td {
+    width: 100%;
+  }
+}
+#contact .contact form .contact_table tr td input,
+#contact .contact form .contact_table tr td textarea {
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 1px solid #333;
+  font-family: serif;
+}
+#contact .contact form .contact_table tr td input {
+  height: 55px;
+}
+#contact .contact form .contact_table tr td textarea {
+  height: 255px;
+}
+#contact .contact form .box {
+  width: 650px;
+  height: 250px;
+  border: 1px solid #aaaaaa;
+  overflow-y: scroll;
+  margin: 0 auto 30px;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  #contact .contact form .box {
+    width: 80%;
+    height: 150px;
+  }
+}
+#contact .contact form .box p {
+  margin-bottom: 24px;
+}
+#contact .contact form .box ul {
+  padding-left: 20px;
+  list-style: circle;
+  margin-bottom: 24px;
+}
+#contact .contact form .agreement_flex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+#contact .contact form .agreement_flex .check {
+  margin-right: 10px;
+}
+#contact .contact form button {
+  width: 320px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 55px;
+}
+#contact .contact .send_text {
+  text-align: left;
+  width: 73%;
+  max-width: 730px;
+  margin: 0 auto 50px;
+}
+#contact .github_links_section {
+  max-width: 1200px;
+  width: 90%;
+  margin: 40px auto 30px;
+  text-align: center;
+}
+#contact .github_links_section .section_title {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  text-align: left;
+}
+#contact .github_links_section .section_title span {
+  font-size: 0.75rem;
+}
+#contact .github_links_section .github_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 40px auto;
+}
+#contact .github_links_section .github_links a {
+  width: 150px;
+  height: 50px;
+  background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+#contact .hidden {
+  display: none;
+}
+
 #detail .sec01 {
   width: 90%;
   max-width: 1200px;

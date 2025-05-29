@@ -1,3 +1,189 @@
 @use "../globals/index" as *;
 
+#contact {
+    margin-top: 80px;
 
+    .contact {
+        max-width: 1200px;
+        width: 90%;
+        margin: 80px auto 30px;
+        text-align: center;
+
+        .section_title {
+            font-size: 1.5rem;
+            margin-bottom: 60px;
+            text-align: left;
+
+            span {
+                font-size: 0.75rem;
+            }
+        }
+
+        form {
+            .contact_table {
+                border-spacing: 2rem 1rem;
+                margin-bottom: 30px;
+                width: 100%;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+
+                @include mq(md) {
+                    border-spacing: 1rem 0.8rem;
+                }
+
+                tr {
+                    @include mq(md) {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 1rem;
+                    }
+
+                    th {
+                        text-align: left;
+                        width: 180px;
+                        vertical-align: top;
+                        padding-top: 15px;
+
+                        @include mq(md) {
+                            width: 100%;
+                            padding-bottom: 5px;
+                            padding-top: 0;
+                        }
+                    }
+
+                    td {
+                        text-align: left;
+                        width: calc(100% - 180px);
+
+                        @include mq(md) {
+                            width: 100%;
+                        }
+
+                        input,
+                        textarea {
+                            width: 100%;
+                            padding: 10px 15px;
+                            box-sizing: border-box;
+                            border-radius: 15px;
+                            border: 1px solid #333;
+                            font-family: serif;
+                        }
+
+                        input {
+                            height: 55px;
+                        }
+
+                        textarea {
+                            height: 255px;
+                        }
+
+                    }
+                }
+            }
+
+            .box {
+                width: 650px;
+                height: 250px;
+                border: 1px solid #aaaaaa;
+                overflow-y: scroll;
+                margin: 0 auto 30px;
+                text-align: left;
+
+                @include mq(md) {
+                    width: 80%;
+                    height: 150px;
+                }
+
+                p {
+                    margin-bottom: 24px;
+                }
+
+                ul {
+                    padding-left: 20px;
+                    list-style: circle;
+                    margin-bottom: 24px;
+
+                    li {}
+                }
+            }
+
+            .agreement_flex {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+
+                .check {
+                    margin-right: 10px;
+                }
+            }
+
+
+            .contact_button {}
+
+            button {
+                width: 320px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
+                border-radius: 10px;
+                border: none;
+                cursor: pointer;
+                margin-bottom: 55px;
+            }
+        }
+
+        .send_text {
+            text-align: left;
+            width: 73%;
+            max-width: 730px;
+            margin: 0 auto 50px;
+        }
+    }
+
+    .github_links_section {
+        max-width: 1200px;
+        width: 90%;
+        margin: 40px auto 30px;
+        text-align: center;
+
+        .section_title {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            text-align: left;
+
+            span {
+                font-size: 0.75rem;
+            }
+        }
+
+        .github_links {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 40px auto;
+
+            a {
+                width: 150px;
+                height: 50px;
+                background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
+                border-radius: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1rem;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+}
