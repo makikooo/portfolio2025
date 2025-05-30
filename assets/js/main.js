@@ -1,6 +1,6 @@
 'use strict'
 /*******************************************
- *  ローディング時の文字を徐々に表示する
+ *  ローディング時の文字を徐々に表示する。1日に一回だけ表示
  *******************************************/
 document.addEventListener('DOMContentLoaded', function () {
     const loading = document.querySelector('.loading');
