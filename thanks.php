@@ -22,8 +22,8 @@
                 </a>
                 <nav class="pc_only">
                     <ul class="nav_list">
-                        <li class="nav_item"><a class="nav_link" href="#works">works</a></li>
-                        <li class="nav_item"><a class="nav_link" href="#about">about</a></li>
+                        <li class="nav_item"><a class="nav_link" href="index.html#works">works</a></li>
+                        <li class="nav_item"><a class="nav_link" href="index.html#about">about</a></li>
                         <!-- <li class="nav_item"><a class="nav_link" href="blog.html">blog</a></li> -->
                         <li class="nav_item"><a class="nav_link" href="contact.php">contact</a></li>
                     </ul>
@@ -34,8 +34,8 @@
                     </div>
                     <ul class="sp_nav_list">
                         <li class="nav_item"><a class="nav_link" href="index.html">home</a></li>
-                        <li class="nav_item"><a class="nav_link" href="#works">works</a></li>
-                        <li class="nav_item"><a class="nav_link" href="#about">about</a></li>
+                        <li class="nav_item"><a class="nav_link" href="index.html#works">works</a></li>
+                        <li class="nav_item"><a class="nav_link" href="index.html#about">about</a></li>
                         <!-- <li class="nav_item"><a class="nav_link" href="blog.html">blog</a></li> -->
                         <li class="nav_item"><a class="nav_link" href="contact.php">contact</a></li>
                     </ul>
@@ -47,7 +47,7 @@
                 <h2 class="thanks_title">お問い合わせありがとうございました</h2>
                 <div class="thanks_message">
                     <p>この度は、お問い合わせいただきありがとうございます。</p>
-                    <p>送信いただいた内容を確認の上、4日以内にご返信させていただきます。</p>
+                    <p>送信いただいた内容を確認の上、2日以内にご返信させていただきます。</p>
                     <p>なお、内容によっては返信にお時間をいただく場合がございますので、予めご了承ください。</p>
                 </div>
                 
@@ -75,8 +75,8 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="#works">works</a></li>
-                    <li><a href="#about">about</a></li>
+                    <li><a href="index.html#works">works</a></li>
+                    <li><a href="index.html#about">about</a></li>
                     <li><a href="contact.php">contact</a></li>
                 </ul>
             </nav>
