@@ -1,9 +1,54 @@
 <!DOCTYPE html>
+<?php 
+session_start();
+$error = [];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // 個別にサニタイズして取得
+    $post = [
+        'name' => filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '',
+        'email' => filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL) ?? '',
+        'tel' => filter_input(INPUT_POST, 'tel', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '',
+        'message' => filter_input(INPUT_POST, 'message', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '',
+        'agreement' => filter_input(INPUT_POST, 'agreement', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? ''
+    ];
+
+    // フォームの送信時にエラーをチェックする
+    if ($post['name'] === '') {
+        $error['name'] = 'blank';
+    }
+    if ($post['email'] === '') {
+        $error['email'] = 'blank';
+    } else if (!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
+        $error['email'] = 'email';
+    }
+    if ($post['message'] === '') {
+        $error['message'] = 'blank';
+    }
+    if ($post['agreement'] === '') {
+        $error['agreement'] = 'blank';
+    }
+
+    if (count($error) === 0) {
+        // エラーがないので確認画面に移動
+        $_SESSION['form'] = $post;
+        // デバッグ用（後で削除）
+        // var_dump($post);
+        // var_dump($_SESSION['form']);
+        header('Location: confirm.php');
+        exit();
+    }
+} else {
+    if (isset($_SESSION['form'])) {
+        $post = $_SESSION['form'];
+    }
+}
+?>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="ポートフォリオサイト。Web制作・WordPress制作をしています。">
-    <meta name="keywords" content=”ポートフォリオ,Web制作,WordPress”>
+    <meta name="keywords" content="ポートフォリオ,Web制作,WordPress">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>唐澤真希子 Web制作・Webデザイン</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,32 +61,82 @@
 </head>
 <body>
     <main id="home">
+    <header class="header">
+            <div class="header_content">
+                <a class="logo_link" href="/" >
+                    <h1 class="title_name">KARASAWA MAKIKO</h1>
+                    <p class="sub_title">Web制作・Webデザイン</p>
+                </a>
+                <nav class="pc_only">
+                    <ul class="nav_list">
+                        <li class="nav_item"><a class="nav_link" href="#works">works</a></li>
+                        <li class="nav_item"><a class="nav_link" href="#about">about</a></li>
+                        <!-- <li class="nav_item"><a class="nav_link" href="blog.html">blog</a></li> -->
+                        <li class="nav_item"><a class="nav_link" href="contact.php">contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="nav_sp_only sp_only">
+                    <div class="humbergur_box">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <ul class="sp_nav_list">
+                        <li class="nav_item"><a class="nav_link" href="index.html">home</a></li>
+                        <li class="nav_item"><a class="nav_link" href="#works">works</a></li>
+                        <li class="nav_item"><a class="nav_link" href="#about">about</a></li>
+                        <!-- <li class="nav_item"><a class="nav_link" href="blog.html">blog</a></li> -->
+                        <li class="nav_item"><a class="nav_link" href="contact.php">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
     <section class="contact" id="contact">
             <h3 class="section_title">contact  <span>お問い合わせ</span></h3>
             <p>ご依頼・ご相談や、ホームページのご感想などお気軽にお問い合わせくださいませ。<br>※は必須項目になります</p>
 
-            <form action="">
+            <form action="contact.php" method="POST" novalidate>
+                <!-- デバッグ用（後で削除） -->
+                <?php if (!empty($error)): ?>
+                    <div style="color: red; background: #ffe6e6; padding: 10px; margin: 10px 0;">
+                        <strong>エラーが発生しています：</strong>
+                        <?php foreach ($error as $key => $value): ?>
+                            <br><?php echo htmlspecialchars($key . ': ' . $value, ENT_QUOTES, 'UTF-8'); ?>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
                 <table class="contact_table">
                     <tr>
                         <th><label for="name">※お名前</label></th>
-                        <td><input type="text" id="name"></td>
+                        <td>
+                            <input type="text" id="name" name="name" value="<?php echo isset($post['name']) ? htmlspecialchars($post['name'], ENT_QUOTES, 'UTF-8') : ''; ?>" required>
+                            <?php if (isset($error['name']) && $error['name'] === 'blank'): ?>
+                                <p class="error_msg">※お名前をご記入下さい</p>
+                            <?php endif; ?>
+                        </td>
                     </tr>
                     <tr>
                         <th><label for="email">※メールアドレス</label></th>
                         <td>
-                            <input type="email" name="" id="email" class="serif">
+                            <input type="email" name="email" id="email" class="serif" value="<?php echo isset($post['email']) ? htmlspecialchars($post['email'], ENT_QUOTES, 'UTF-8') : ''; ?>" required>
+                            <?php if (isset($error['email']) && $error['email'] === 'blank'): ?>
+                                <p class="error_msg">※メールアドレスをご記入下さい</p>
+                            <?php elseif (isset($error['email']) && $error['email'] === 'email'): ?>
+                                <p class="error_msg">※正しいメールアドレスをご記入下さい</p>
+                            <?php endif; ?>
                         </td>
                     </tr>
                     <tr>
                         <th><label for="tel">電話番号</label></th>
                         <td>
-                            <input type="tel" name="" id="tel">
+                            <input type="tel" name="tel" id="tel" value="<?php echo isset($post['tel']) ? htmlspecialchars($post['tel'], ENT_QUOTES, 'UTF-8') : ''; ?>">
                         </td>
                     </tr>
                     <tr>
                         <th><label for="massage">※お問い合わせ内容</label></th>
                         <td>
-                            <textarea name="" id="massage"></textarea>
+                            <textarea name="message" id="massage" required><?php echo isset($post['message']) ? htmlspecialchars($post['message'], ENT_QUOTES, 'UTF-8') : ''; ?></textarea>
+                            <?php if (isset($error['message']) && $error['message'] === 'blank'): ?>
+                                <p class="error_msg">※お問い合わせ内容をご記入下さい</p>
+                            <?php endif; ?>
                         </td>
                     </tr>
                 </table>
@@ -105,16 +200,20 @@
                     <input 
                         type="checkbox"
                         id="agreement"
-                        onchange={handleCheckboxChange}
+                        name="agreement"
+                        value="1"
                         class="check"
+                        <?php echo (isset($post['agreement']) && $post['agreement'] === '1') ? 'checked' : ''; ?>
                     >
                     <label for="agreement" class="agreement">
                         上記のプライバシーポリシーに同意します
                     </label>
+                    <?php if (isset($error['agreement']) && $error['agreement'] === 'blank'): ?>
+                        <p class="error_msg">※プライバシーポリシーへの同意が必要です</p>
+                    <?php endif; ?>
                 </div>
                 <button
                     type="submit"
-                    disabled={!isChecked}
                     class="contact_button"    
                 >送信する</button>
             </form>

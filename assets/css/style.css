@@ -777,6 +777,18 @@ body {
 #home .contact .section_title span {
   font-size: 0.75rem;
 }
+#home .contact .to_contact_button {
+  width: 320px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 55px;
+}
 #home .contact form .contact_table {
   border-spacing: 2rem 1rem;
   margin-bottom: 30px;
