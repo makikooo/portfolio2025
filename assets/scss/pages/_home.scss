@@ -108,7 +108,7 @@ body {
         .works_list {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             gap: 20px;
             width: 100%;
@@ -122,14 +122,16 @@ body {
             .works_link_item {
                 width: 150px;
                 height: 40px;
+                background-color: #efe4b5;
                 transition: border-bottom 0.3s ease;
 
                 &:hover {
-                    background-color: #efe4b5;
+                    background-color: #C39000;
                     border-bottom: 2px solid rgba(195, 144, 0, 0.5);
                 }
 
                 &.active-category {
+                    background-color: #C39000;
                     border-bottom: 2px solid #D0A900;
                 }
 
