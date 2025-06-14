@@ -247,6 +247,14 @@ body {
     max-width: 100%;
   }
 }
+@media (width < 480px) {
+  #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box {
+    margin: 15px auto 20px;
+    min-width: 210px;
+    width: 210px;
+    max-width: 100%;
+  }
+}
 #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box .work_title {
   font-size: 1.25rem;
   margin-bottom: 15px;
@@ -515,6 +523,14 @@ body {
     width: 100%;
     margin: 10px 0;
     text-align: left;
+  }
+}
+@media (width < 480px) {
+  #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box {
+    margin: 15px auto 20px;
+    min-width: 210px;
+    width: 210px;
+    max-width: 100%;
   }
 }
 #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box .work_title {

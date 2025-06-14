@@ -260,6 +260,14 @@ body {
                             max-width: 100%;
                         }
 
+                        @media (width < 480px) {
+                            margin: 15px auto 20px;
+                            min-width: 210px;
+                            width: 210px;
+                            max-width: 100%;
+
+                        }
+
                         .work_title {
                             font-size: 1.25rem;
                             margin-bottom: 15px;
@@ -539,6 +547,13 @@ body {
                             width: 100%;
                             margin: 10px 0;
                             text-align: left;
+                        }
+
+                        @media (width < 480px) {
+                            margin: 15px auto 20px;
+                            min-width: 210px;
+                            width: 210px;
+                            max-width: 100%;
                         }
 
                         .work_title {
