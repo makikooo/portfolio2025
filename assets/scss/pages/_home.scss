@@ -248,8 +248,8 @@ body {
                         width: 45%;
 
                         @media (width < 813px) {
-                            width: 100%;
-                            margin: 10px 0;
+                            width: 80%;
+                            margin: 10px auto;
                             text-align: left;
                         }
 
@@ -269,8 +269,12 @@ body {
                         }
 
                         .work_title {
+                            display: inline-block;
                             font-size: 1.25rem;
-                            margin-bottom: 15px;
+                            border-bottom: #C39000 solid 5px;
+                            padding-bottom: 3px;
+                            margin-bottom: 10px;
+                            border-radius: 3px;
 
                             @media (width < 813px) {
                                 font-size: 1rem;
@@ -278,43 +282,37 @@ body {
                             }
                         }
 
-                        &>div {
-                            padding: 5px 20px;
-                            border: 1px solid #E7D173;
-                            width: 150px;
+                        &>div.category {
+                            display: block;
+                            width: 100px;
+                            padding: 5px 10px;
+                            background-color: #E7D173;
                             border-radius: 5px;
-                            margin-bottom: 10px;
+                            margin-bottom: 15px;
                             font-family: "Zen Maru Gothic", serif;
 
                             @media (width < 813px) {
                                 padding: 3px 10px;
-                                width: auto;
-                                display: inline-block;
+                                display: block;
                                 font-size: 0.85rem;
                             }
                         }
 
-                        &>ul {
-                            height: 70px;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: flex-start;
-
-                            @media (width < 813px) {
-                                height: 90px;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: flex-start;
-                            }
-
-                            &>li {
-                                font-size: clamp(14px, 1.5vw, 17px);
-
-                                @media (width < 813px) {
-                                    margin-bottom: 3px;
-                                }
-                            }
+                        .activity {
+                            margin-bottom: 5px;
                         }
+
+                        .code {
+                            display: inline-block;
+                            padding: 5px 10px;
+                            border: #C39000 1px solid;
+                            margin-bottom: 5px;
+                            font-family: "Zen Maru Gothic", serif;
+                            border-radius: 10px;
+                        }
+
+                        .production_date {}
+
                     }
                 }
 

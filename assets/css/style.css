@@ -234,8 +234,8 @@ body {
 }
 @media (width < 813px) {
   #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box {
-    width: 100%;
-    margin: 10px 0;
+    width: 80%;
+    margin: 10px auto;
     text-align: left;
   }
 }
@@ -256,8 +256,12 @@ body {
   }
 }
 #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box .work_title {
+  display: inline-block;
   font-size: 1.25rem;
-  margin-bottom: 15px;
+  border-bottom: #C39000 solid 5px;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  border-radius: 3px;
 }
 @media (width < 813px) {
   #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box .work_title {
@@ -265,43 +269,32 @@ body {
     margin-bottom: 10px;
   }
 }
-#home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box > div {
-  padding: 5px 20px;
-  border: 1px solid #E7D173;
-  width: 150px;
+#home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box > div.category {
+  display: block;
+  width: 100px;
+  padding: 5px 10px;
+  background-color: #E7D173;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: "Zen Maru Gothic", serif;
 }
 @media (width < 813px) {
-  #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box > div {
+  #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box > div.category {
     padding: 3px 10px;
-    width: auto;
-    display: inline-block;
+    display: block;
     font-size: 0.85rem;
   }
 }
-#home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box > ul {
-  height: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+#home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box .activity {
+  margin-bottom: 5px;
 }
-@media (width < 813px) {
-  #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box > ul {
-    height: 90px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-}
-#home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box > ul > li {
-  font-size: clamp(14px, 1.5vw, 17px);
-}
-@media (width < 813px) {
-  #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box > ul > li {
-    margin-bottom: 3px;
-  }
+#home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box .code {
+  display: inline-block;
+  padding: 5px 10px;
+  border: #C39000 1px solid;
+  margin-bottom: 5px;
+  font-family: "Zen Maru Gothic", serif;
+  border-radius: 10px;
 }
 #home .sec03 .work_link_wrapper .link_flex .button_wrapper {
   flex: 1;
