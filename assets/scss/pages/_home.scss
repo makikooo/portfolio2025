@@ -123,6 +123,8 @@ body {
                 width: 150px;
                 height: 40px;
                 background-color: #efe4b5;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
                 transition: border-bottom 0.3s ease;
 
                 &:hover {
