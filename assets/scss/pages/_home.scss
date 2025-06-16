@@ -213,7 +213,8 @@ body {
 
                     @media (width < 813px) {
                         width: 100%;
-                        display: block;
+                        flex-direction: column;
+                        gap: 6px;
                     }
 
                     .work_image {
@@ -231,6 +232,7 @@ body {
                         }
 
                         @media (width < 813px) {
+                            flex-grow: 1;
                             width: 100%;
                             height: auto;
                             aspect-ratio: 16 / 10;
@@ -248,8 +250,9 @@ body {
                         width: 45%;
 
                         @media (width < 813px) {
-                            width: 80%;
-                            margin: 10px auto;
+                            flex-grow: 2;
+                            width: 100%;
+                            margin: 10px 0;
                             text-align: left;
                         }
 
@@ -269,10 +272,7 @@ body {
                         }
 
                         .work_title {
-                            display: inline-block;
                             font-size: 1.25rem;
-                            border-bottom: #C39000 solid 5px;
-                            padding-bottom: 3px;
                             margin-bottom: 10px;
                             border-radius: 3px;
 
@@ -280,20 +280,23 @@ body {
                                 font-size: 1rem;
                                 margin-bottom: 10px;
                             }
+
+                            span {
+                                padding-bottom: 3px;
+                                border-bottom: #C39000 solid 5px;
+                            }
                         }
 
                         &>div.category {
-                            display: block;
-                            width: 100px;
+                            display: inline-block;
                             padding: 5px 10px;
-                            background-color: #E7D173;
+                            background-color: #fbf6dd;
                             border-radius: 5px;
                             margin-bottom: 15px;
                             font-family: "Zen Maru Gothic", serif;
 
                             @media (width < 813px) {
                                 padding: 3px 10px;
-                                display: block;
                                 font-size: 0.85rem;
                             }
                         }
@@ -304,11 +307,16 @@ body {
 
                         .code {
                             display: inline-block;
+                            width: max-content;
                             padding: 5px 10px;
                             border: #C39000 1px solid;
                             margin-bottom: 5px;
                             font-family: "Zen Maru Gothic", serif;
                             border-radius: 10px;
+
+                            @media (width < 1066px) {
+                                width: min-content;
+                            }
                         }
 
                         .production_date {}
@@ -556,53 +564,48 @@ body {
 
                         .work_title {
                             font-size: 1.25rem;
-                            margin-bottom: 15px;
+                            margin-bottom: 10px;
+                            border-radius: 3px;
 
                             @media (width < 813px) {
                                 font-size: 1rem;
                                 margin-bottom: 10px;
                             }
+
+                            span {
+                                padding-bottom: 3px;
+                                border-bottom: #C39000 solid 5px;
+                            }
                         }
 
-                        &>div {
-                            padding: 5px 20px;
-                            border: 0.5px solid #f4d85d;
-                            width: 150px;
+                        &>div.category {
+                            display: inline-block;
+                            padding: 5px 10px;
+                            background-color: #fbf6dd;
                             border-radius: 5px;
-                            margin-bottom: 10px;
+                            margin-bottom: 15px;
                             font-family: "Zen Maru Gothic", serif;
 
                             @media (width < 813px) {
                                 padding: 3px 10px;
-                                width: auto;
-                                display: inline-block;
                                 font-size: 0.85rem;
                             }
                         }
 
-                        &>ul {
-                            // height: 70px;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: flex-start;
+                        .code {
+                            display: inline-block;
+                            width: max-content;
+                            padding: 5px 10px;
+                            border: #C39000 1px solid;
+                            margin-bottom: 5px;
+                            font-family: "Zen Maru Gothic", serif;
+                            border-radius: 10px;
 
-                            @media (width < 813px) {
-                                // height: 90px;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: flex-start;
-
-                            }
-
-                            &>li {
-                                margin-bottom: 5px;
-
-                                @media (width < 813px) {
-                                    font-size: 0.85rem;
-                                    margin-bottom: 3px;
-                                }
+                            @media (width < 1066px) {
+                                width: min-content;
                             }
                         }
+
                     }
                 }
 

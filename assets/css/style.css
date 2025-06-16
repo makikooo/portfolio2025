@@ -196,7 +196,8 @@ body {
 @media (width < 813px) {
   #home .sec03 .work_link_wrapper .link_flex .work_wrapper {
     width: 100%;
-    display: block;
+    flex-direction: column;
+    gap: 6px;
   }
 }
 #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_image {
@@ -216,6 +217,7 @@ body {
 }
 @media (width < 813px) {
   #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_image {
+    flex-grow: 1;
     width: 100%;
     height: auto;
     aspect-ratio: 16/10;
@@ -234,8 +236,9 @@ body {
 }
 @media (width < 813px) {
   #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box {
-    width: 80%;
-    margin: 10px auto;
+    flex-grow: 2;
+    width: 100%;
+    margin: 10px 0;
     text-align: left;
   }
 }
@@ -256,10 +259,7 @@ body {
   }
 }
 #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box .work_title {
-  display: inline-block;
   font-size: 1.25rem;
-  border-bottom: #C39000 solid 5px;
-  padding-bottom: 3px;
   margin-bottom: 10px;
   border-radius: 3px;
 }
@@ -269,11 +269,14 @@ body {
     margin-bottom: 10px;
   }
 }
+#home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box .work_title span {
+  padding-bottom: 3px;
+  border-bottom: #C39000 solid 5px;
+}
 #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box > div.category {
-  display: block;
-  width: 100px;
+  display: inline-block;
   padding: 5px 10px;
-  background-color: #E7D173;
+  background-color: #fbf6dd;
   border-radius: 5px;
   margin-bottom: 15px;
   font-family: "Zen Maru Gothic", serif;
@@ -281,7 +284,6 @@ body {
 @media (width < 813px) {
   #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box > div.category {
     padding: 3px 10px;
-    display: block;
     font-size: 0.85rem;
   }
 }
@@ -290,11 +292,17 @@ body {
 }
 #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box .code {
   display: inline-block;
+  width: max-content;
   padding: 5px 10px;
   border: #C39000 1px solid;
   margin-bottom: 5px;
   font-family: "Zen Maru Gothic", serif;
   border-radius: 10px;
+}
+@media (width < 1066px) {
+  #home .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box .code {
+    width: min-content;
+  }
 }
 #home .sec03 .work_link_wrapper .link_flex .button_wrapper {
   flex: 1;
@@ -528,7 +536,8 @@ body {
 }
 #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box .work_title {
   font-size: 1.25rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  border-radius: 3px;
 }
 @media (width < 813px) {
   #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box .work_title {
@@ -536,41 +545,36 @@ body {
     margin-bottom: 10px;
   }
 }
-#home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box > div {
-  padding: 5px 20px;
-  border: 0.5px solid #f4d85d;
-  width: 150px;
+#home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box .work_title span {
+  padding-bottom: 3px;
+  border-bottom: #C39000 solid 5px;
+}
+#home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box > div.category {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #fbf6dd;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: "Zen Maru Gothic", serif;
 }
 @media (width < 813px) {
-  #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box > div {
+  #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box > div.category {
     padding: 3px 10px;
-    width: auto;
-    display: inline-block;
     font-size: 0.85rem;
   }
 }
-#home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box > ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-@media (width < 813px) {
-  #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box > ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-}
-#home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box > ul > li {
+#home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box .code {
+  display: inline-block;
+  width: max-content;
+  padding: 5px 10px;
+  border: #C39000 1px solid;
   margin-bottom: 5px;
+  font-family: "Zen Maru Gothic", serif;
+  border-radius: 10px;
 }
-@media (width < 813px) {
-  #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box > ul > li {
-    font-size: 0.85rem;
-    margin-bottom: 3px;
+@media (width < 1066px) {
+  #home .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box .code {
+    width: min-content;
   }
 }
 #home .work_continuation .work_link_wrapper .link_flex .button_wrapper {
