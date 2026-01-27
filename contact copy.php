@@ -1,61 +1,10 @@
 <!DOCTYPE html>
 <?php
 session_start();
-
-// ============================================
-// reCAPTCHA v3 設定
-// ============================================
-// define('RECAPTCHA_SECRET_KEY', ''); // ← シークレットキーに置き換え
-define('RECAPTCHA_THRESHOLD', 0.5);
-
-// reCAPTCHA検証関数
-function verify_recaptcha($token)
-{
-    $url = 'https://www.google.com/recaptcha/api/siteverify';
-    $data = [
-        'secret' => RECAPTCHA_SECRET_KEY,
-        'response' => $token,
-        'remoteip' => $_SERVER['REMOTE_ADDR']
-    ];
-
-    $options = [
-        'http' => [
-            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
-            'method' => 'POST',
-            'content' => http_build_query($data)
-        ]
-    ];
-
-    $context = stream_context_create($options);
-    $result = file_get_contents($url, false, $context);
-
-    return json_decode($result, true);
-}
-
-// ============================================
-// フォーム処理
-// ============================================
 $error = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // reCAPTCHA検証
-    $recaptcha_token = filter_input(INPUT_POST, 'recaptcha_token', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '';
-
-    if ($recaptcha_token) {
-        $recaptcha_result = verify_recaptcha($recaptcha_token);
-
-        if (
-            !$recaptcha_result['success'] ||
-            $recaptcha_result['score'] < RECAPTCHA_THRESHOLD ||
-            $recaptcha_result['action'] !== 'submit'
-        ) {
-            $error['recaptcha'] = 'failed';
-        }
-    } else {
-        $error['recaptcha'] = 'blank';
-    }
-
-    // フォームデータの取得
+    // 個別にサニタイズして取得
     $post = [
         'name' => filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '',
         'email' => filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL) ?? '',
@@ -64,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'agreement' => filter_input(INPUT_POST, 'agreement', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? ''
     ];
 
-    // バリデーション
+    // フォームの送信時にエラーをチェックする
     if ($post['name'] === '') {
         $error['name'] = 'blank';
     }
@@ -83,6 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (count($error) === 0) {
         // エラーがないので確認画面に移動
         $_SESSION['form'] = $post;
+        // デバッグ用（後で削除）
+        // var_dump($post);
+        // var_dump($_SESSION['form']);
         header('Location: confirm.php');
         exit();
     }
@@ -106,9 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- reCAPTCHA v3 -->
-    <!-- <script src="https://www.google.com/recaptcha/api.js?render="></script> -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico" /> -->
 </head>
 
 <body>
@@ -123,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <ul class="nav_list">
                         <li class="nav_item"><a class="nav_link" href="index.html#works">works</a></li>
                         <li class="nav_item"><a class="nav_link" href="index.html#about">about</a></li>
+                        <!-- <li class="nav_item"><a class="nav_link" href="blog.html">blog</a></li> -->
                         <li class="nav_item"><a class="nav_link" href="contact.php">contact</a></li>
                     </ul>
                 </nav>
@@ -134,6 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <li class="nav_item"><a class="nav_link" href="index.html">home</a></li>
                         <li class="nav_item"><a class="nav_link" href="index.html#works">works</a></li>
                         <li class="nav_item"><a class="nav_link" href="index.html#about">about</a></li>
+                        <!-- <li class="nav_item"><a class="nav_link" href="blog.html">blog</a></li> -->
                         <li class="nav_item"><a class="nav_link" href="contact.php">contact</a></li>
                     </ul>
                 </nav>
@@ -143,18 +95,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h3 class="section_title">contact <span>お問い合わせ</span></h3>
             <p>ご依頼・ご相談や、ホームページのご感想などお気軽にお問い合わせくださいませ。<br>※は必須項目になります</p>
 
-            <form id="contactForm" action="contact.php" method="POST" novalidate>
+            <form action="contact.php" method="POST" novalidate>
+                <!-- デバッグ用（後で削除） -->
                 <?php if (!empty($error)): ?>
                     <div style="color: red; background: #ffe6e6; padding: 10px; margin: 10px 0;">
                         <strong>エラーが発生しています：</strong>
                         <?php foreach ($error as $key => $value): ?>
-                            <br><?php
-                                if ($key === 'recaptcha') {
-                                    echo 'セキュリティチェックに失敗しました。もう一度お試しください。';
-                                } else {
-                                    echo htmlspecialchars($key . ': ' . $value, ENT_QUOTES, 'UTF-8');
-                                }
-                                ?>
+                            <br><?php echo htmlspecialchars($key . ': ' . $value, ENT_QUOTES, 'UTF-8'); ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
@@ -199,11 +146,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h3 class="privecy">
                         プライバシーポリシー
                     </h3>
-                    <p>最終更新日:2025年4月3日</p>
+                    <p>最終更新日：2025年4月3日</p>
                     <h4 class="privecy_title">1.はじめに</h4>
                     <p>私、唐澤真希子はお客様の個人情報保護の重要性を認識し、個人情報の保護に関する法律、その他の関係法令を遵守するとともに、本プライバシーポリシーに従い、適切な取り扱いおよび保護に努めます。</p>
                     <h4 class="privecy_title">2. 収集する情報</h4>
-                    <p>私が収集する情報には、以下のようなものが含まれます:</p>
+                    <p>私が収集する情報には、以下のようなものが含まれます：</p>
                     <h5 class="privecy_subtitle">2.1 お客様から直接収集する情報</h5>
                     <ul>
                         <li>氏名</li>
@@ -216,11 +163,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <li>IPアドレス</li>
                         <li>クッキー情報</li>
                         <li>位置情報</li>
-                        <li>デバイス情報、ブラウザの種類、OS情報など</li>
+                        <li>デバイス情報（ブラウザの種類、OS情報など</li>
                         <li>サービスの利用状況に関する情報</li>
                     </ul>
                     <h4 class="privecy_title">3. 情報の利用目的</h4>
-                    <p>収集した情報を以下の目的で利用します:</p>
+                    <p>収集した情報を以下の目的で利用します：</p>
                     <ul>
                         <li>お客様へのサービス提供のため</li>
                         <li>お客様からのお問い合わせへの対応のため</li>
@@ -230,7 +177,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <li>規約や法令に違反する行為への対処のため</li>
                     </ul>
                     <h4 class="privecy_title">4. 情報の共有・第三者提供</h4>
-                    <p>以下の場合を除き、お客様の個人情報を第三者に開示または提供いたしません:</p>
+                    <p>以下の場合を除き、お客様の個人情報を第三者に開示または提供いたしません：</p>
                     <ul>
                         <li>お客様の同意がある場合</li>
                         <li>法令に基づく場合</li>
@@ -267,10 +214,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php endif; ?>
                 </div>
 
-                <!-- reCAPTCHAトークンを格納 -->
-                <input type="hidden" id="recaptcha_token" name="recaptcha_token">
-
-                <button type="submit" class="contact_button">送信する</button>
+                <!-- reCAPTCHA-->
+                <button class="g-recaptcha contact_button"
+                    data-sitekey="reCAPTCHA_site_key"
+                    data-callback='onSubmit'
+                    data-action='submit'>送信する
+                </button>
             </form>
             <p class="send_text">
                 お問い合わせのご返信は2日以内(土日祝日以外)を心がけております。ご利用環境、また迷惑メール対策等の設定により、お返事が届かない場合があります。5日経過しても返信のない場合、大変お手数をおかけしますが再度お送りいただくよう、お願い申し上げます。
@@ -294,6 +243,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <ul>
                     <li><a href="index.html#works">works</a></li>
                     <li><a href="index.html#about">about</a></li>
+                    <!-- <li><a href="blog">blog</a></li> -->
                     <li><a href="contact.php">contact</a></li>
                 </ul>
             </nav>
@@ -302,20 +252,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </footer>
     <script src="assets/js/main.js" defer></script>
 
-    <!-- reCAPTCHA v3 JavaScript -->
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        grecaptcha.ready(function() {
-            // grecaptcha.execute('', {
-            action: 'submit'
-        }).then(function(token) {
-            document.getElementById('recaptcha_token').value = token;
-            document.getElementById('contactForm').submit();
-        });
-        });
-        });
+        function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfPglcsAAAAAPoGa5Ym2crp9Bp5mu86fDHY5eub"></script>
+    <script>
+        function onClick(e) {
+            e.preventDefault();
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6LfPglcsAAAAAPoGa5Ym2crp9Bp5mu86fDHY5eub', {
+                    action: 'submit'
+                }).then(function(token) {
+                    // Add your logic to submit to your backend server here.
+                });
+            });
+        }
     </script>
 </body>
 
