@@ -82,7 +82,15 @@ body {
         @include mq(md) {
             margin: 30px auto 40px;
         }
-
+        .section_title{
+          margin-bottom: 30px;
+        }
+        .can {
+          font-weight: normal;
+        }
+        .can:last-of-type {
+          margin-bottom: 60px;
+        }
         .sec01_title {
             margin-bottom: 30px;
             font-size: 1.25rem;

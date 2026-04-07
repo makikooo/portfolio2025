@@ -73,6 +73,15 @@ body {
     margin: 30px auto 40px;
   }
 }
+#home .sec01 .section_title {
+  margin-bottom: 30px;
+}
+#home .sec01 .can {
+  font-weight: normal;
+}
+#home .sec01 .can:last-of-type {
+  margin-bottom: 60px;
+}
 #home .sec01 .sec01_title {
   margin-bottom: 30px;
   font-size: 1.25rem;
@@ -1269,4 +1278,4 @@ body {
   border: #E7D173 solid 4px;
   border-radius: 10px;
   background: #fff;
-}/*# sourceMappingURL=style.css.map */
+}
