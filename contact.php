@@ -5,7 +5,7 @@ session_start();
 // ============================================
 // reCAPTCHA v3 設定
 // ============================================
-// define('RECAPTCHA_SECRET_KEY', ''); // ← シークレットキーに置き換え
+require_once __DIR__ . '/secret.php';
 define('RECAPTCHA_THRESHOLD', 0.5);
 
 // reCAPTCHA検証関数
@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- reCAPTCHA v3 -->
-    <!-- <script src="https://www.google.com/recaptcha/api.js?render="></script> -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfwX6wsAAAAAAXGjYGiwjQXjUHzr6mPxnFPW3Eb"></script>
 </head>
 
 <body>
@@ -308,12 +308,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         e.preventDefault();
 
         grecaptcha.ready(function() {
-            // grecaptcha.execute('', {
+            grecaptcha.execute('6LfwX6wsAAAAAAXGjYGiwjQXjUHzr6mPxnFPW3Eb', {
             action: 'submit'
-        }).then(function(token) {
-            document.getElementById('recaptcha_token').value = token;
-            document.getElementById('contactForm').submit();
-        });
+          }).then(function(token) {
+              document.getElementById('recaptcha_token').value = token;
+              document.getElementById('contactForm').submit();
+          });
         });
         });
     </script>
