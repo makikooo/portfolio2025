@@ -1,6 +1,4 @@
-<?php wp_head(); ?>
-</head>
-<body>
+<?php get_header(); ?>
     <main id="home">
         <header class="header">
             <div class="header_content">
@@ -1581,6 +1579,4 @@
             </div>
         </section>
     </main>
-    <?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>

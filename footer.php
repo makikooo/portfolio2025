@@ -6,10 +6,9 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="works.html">works</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="/#works">works</a></li>
+                    <li><a href="/#about">about</a></li>
+                    <li><a href="<?php echo home_url('/contact.php'); ?>">contact</a></li>
                 </ul>
             </nav>
         </div>
