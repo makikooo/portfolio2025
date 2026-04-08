@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="" keywords="" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>唐澤真希子 Web制作・Webデザイン</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/common.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico" /> -->
-</head>
-<body>
+<?php 
+/*
+ * Template Name: detail_smile_ooh
+ */
+?>
+
+<?php get_header(); ?>
     <main id="detail">
         <header class="header">
             <div class="header_content">
@@ -51,7 +41,7 @@
             <div class="border"></div>
 
             <div class="images_wrapper">
-                <img src="../assets/images/smile-ooh.webp" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/smile-ooh.webp" alt="">
             </div>
             <h5 class="detail_subtitle">SMILE-OOH 様</h5>
             <p class="detail_link"><a target="_blank" href="https://smile-ooh.com/">( https://smile-ooh.com/ )</a></p>
@@ -123,14 +113,14 @@
                 <a class="work_button go_to_site_button" href="https://smile-ooh.com/" target="_blank">
                     <div class="button_flex">
                         <span>TO site</span>
-                        <span><img src="../assets/images/icon02.webp" alt="リンクのアイコン"></span>
+                        <span><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
                     </div>
                     <div class="border"></div>
                 </a>
                 <a class="work_button go_to_works_button" href="../index.html#works">
                     <div class="button_flex">
                         <span>TO works</span>
-                        <span><img src="../assets/images/icon01.webp" alt="リンクのアイコン"></span>
+                        <span><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
                     </div>
                     <div class="border"></div>
                 </a>
@@ -138,23 +128,4 @@
         </section>
         
     </main>
-    <footer class="footer">
-        <div class="go_to_top">上に戻る</div>
-        <div class="footer_flex">
-            <a href="/">
-                <h6 class="footer_name">KARASAWA <br class="sp_only">MAKIKO</h6>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="../index.html#works">works</a></li>
-                    <li><a href="../index.html#about">about</a></li>
-                    <!-- <li><a href="blog">blog</a></li> -->
-                    <li><a href="../index.htmlcontact.php">contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <small class="footer_copy">&copy karasawamakiko portfolio</small>
-    </footer>
-    <script src="../assets/js/main.js" defer></script>
-</body>
-</html>
+  <?php get_footer(); ?>

@@ -142,7 +142,7 @@
                         </div>
                     </div>
                     <div class="button_wrapper">
-                        <a class="work_button detail_button" href="<?php echo get_template_directory_uri(); ?>/detail/smile-ooh.html">
+                        <a class="work_button detail_button" href="/detail_smile-ooh/">
                             <div class="button_flex">
                                 <span>detail</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
