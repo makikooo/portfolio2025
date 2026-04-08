@@ -23,7 +23,7 @@
                         <li class="nav_item"><a class="nav_link" href="#works">works</a></li>
                         <li class="nav_item"><a class="nav_link" href="#about">about</a></li>
                         <!-- <li class="nav_item"><a class="nav_link" href="blog.html">blog</a></li> -->
-                        <li class="nav_item"><a class="nav_link" href="contact.php">contact</a></li>
+                        <li class="nav_item"><a class="nav_link" href="<?php echo get_template_directory_uri(); ?>/contact.php">contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -111,9 +111,9 @@
                             </div>
                             <div class="border"></div>
                         </a> -->
-                        <a class="work_button site_button" target="_blank" href="site/250611-0613_ugokuWeb1-7/index.html">
+                        <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/250611-0613_ugokuWeb1-7/index.html">
                             <div class="button_flex">
-                                <span>TO SITe</span>
+                                <span>TO SITE</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
                             </div>
                             <div class="border"></div>
@@ -212,7 +212,7 @@
                         </div>
                     </div>
                     <div class="button_wrapper">
-                        <a class="work_button detail_button" href="https://happy-smile-design.info/site/portfolio2024/page/about_sle.html">
+                        <a class="work_button detail_button" href="<?php echo get_template_directory_uri(); ?>/site/portfolio2024/page/about_sle.html">
                             <div class="button_flex">
                                 <span>detail</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
@@ -247,14 +247,14 @@
                         </div>
                     </div>
                     <div class="button_wrapper">
-                        <a class="work_button detail_button" href="https://happy-smile-design.info/site/portfolio2024/page/ugoku1-1.html">
+                        <a class="work_button detail_button" href="<?php echo get_template_directory_uri(); ?>/site/portfolio2024/page/ugoku1-1.html">
                             <div class="button_flex">
                                 <span>detail</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
                             </div>
                             <div class="border"></div>
                         </a>
-                        <a class="work_button site_button" target="_blank" href="https://happy-smile-design.info/site/portfolio2024/site/mosya/ugku1-1/index.html">
+                        <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/portfolio2024/site/mosya/ugku1-1/index.html">
                             <div class="button_flex">
                                 <span>TO SITe</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -282,7 +282,7 @@
                         </div>
                     </div>
                     <div class="button_wrapper">
-                        <a class="work_button detail_button" href="https://happy-smile-design.info/site/portfolio2024/page/about_onof.html">
+                        <a class="work_button detail_button" href="<?php echo get_template_directory_uri(); ?>/site/portfolio2024/page/about_onof.html">
                             <div class="button_flex">
                                 <span>detail</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
@@ -362,7 +362,7 @@
                             </div>
                             <div class="border"></div>
                         </a> -->
-                        <a class="work_button site_button" target="_blank" href="site/portfolio2024/index.html">
+                        <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/portfolio2024/index.html">
                             <div class="button_flex">
                                 <span>TO SITe</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -409,7 +409,7 @@
                             </div>
                             <div class="border"></div>
                         </a> -->
-                        <a class="work_button site_button" target="_blank" href="site/portfolio2023/index.html">
+                        <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/portfolio2023/index.html">
                             <div class="button_flex">
                                 <span>TO SITe</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -444,7 +444,7 @@
                             </div>
                             <div class="border"></div>
                         </a> -->
-                        <a class="work_button site_button" target="_blank" href="/site/250111_slider/index.html">
+                        <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/250111_slider/index.html">
                             <div class="button_flex">
                                 <span>TO SITe</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -479,7 +479,7 @@
                             </div>
                             <div class="border"></div>
                         </a> -->
-                        <a class="work_button site_button" target="_blank" href="/site/241120_modal/index.html">
+                        <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/241120_modal/index.html">
                             <div class="button_flex">
                                 <span>TO SITe</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -514,7 +514,7 @@
                             </div>
                             <div class="border"></div>
                         </a> -->
-                        <a class="work_button site_button" target="_blank" href="/site/241116_seito_tabmenu/index.html">
+                        <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/241116_seito_tabmenu/index.html">
                             <div class="button_flex">
                                 <span>TO SITe</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -584,7 +584,7 @@
                             </div>
                             <div class="border"></div>
                         </a> -->
-                        <a class="work_button site_button" target="_blank" href="/site/240914_WebGod_typingGame/index.html">
+                        <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/240914_WebGod_typingGame/index.html">
                             <div class="button_flex">
                                 <span>TO SITe</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -620,7 +620,7 @@
                             </div>
                             <div class="border"></div>
                         </a> -->
-                        <a class="work_button site_button" target="_blank" href="/site/240913_frontendch_slider/index.html">
+                        <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/240913_frontendch_slider/index.html">
                             <div class="button_flex">
                                 <span>TO SITe</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -656,7 +656,7 @@
                             </div>
                             <div class="border"></div>
                         </a> -->
-                        <a class="work_button site_button" target="_blank" href="/site/240826_Ajax_weather/index.html">
+                        <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/240826_Ajax_weather/index.html">
                             <div class="button_flex">
                                 <span>TO SITe</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -700,7 +700,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/240808_seito_app/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/240808_seito_app/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -736,7 +736,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/240626_calender/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/240626_calender/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -772,7 +772,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/230621 _pokemon/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/230621 _pokemon/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -808,7 +808,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/230602_blog/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/230602_blog/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -844,7 +844,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/230601_count/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/230601_count/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -880,7 +880,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/230502_mana_loading/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/230502_mana_loading/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -916,7 +916,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/230411_darkmode/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/230411_darkmode/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -951,7 +951,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/230111_Training/Fluid_image.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/230111_Training/Fluid_image.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -1053,7 +1053,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/221229_hamburger_menu/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/221229_hamburger_menu/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -1088,7 +1088,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank"  href="/site/221221_nyuumon/index.html">
+                            <a class="work_button site_button" target="_blank"  href="<?php echo get_template_directory_uri(); ?>/site/221221_nyuumon/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -1123,7 +1123,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/221117_iSARA/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/221117_iSARA/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -1158,7 +1158,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/221215_WCBCafe/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/221215_WCBCafe/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -1193,7 +1193,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/221110_ayumi_makitown/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/221110_ayumi_makitown/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -1228,7 +1228,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/221109_PHOTO_BOOK/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/221109_PHOTO_BOOK/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -1263,7 +1263,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/221107_ayumi2/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/221107_ayumi2/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -1298,7 +1298,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/221104_ayumi1/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/221104_ayumi1/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -1333,7 +1333,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/221101_ayumi/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/221101_ayumi/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -1368,7 +1368,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/221031_website_seto/">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/221031_website_seto/">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -1403,7 +1403,7 @@
                                 </div>
                                 <div class="border"></div>
                             </a> -->
-                            <a class="work_button site_button" target="_blank" href="/site/221031_wagasi/index.html">
+                            <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/221031_wagasi/index.html">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>

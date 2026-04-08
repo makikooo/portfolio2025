@@ -1,0 +1,620 @@
+# Translation of Plugins - Slider, Gallery, and Carousel by MetaSlider &#8211; Responsive WordPress Slideshows - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Slider, Gallery, and Carousel by MetaSlider &#8211; Responsive WordPress Slideshows - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-06-10 05:07:34+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.0-alpha.11\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Slider, Gallery, and Carousel by MetaSlider &#8211; Responsive WordPress Slideshows - Stable (latest release)\n"
+
+#: ml-slider.php:1781
+msgid "Add slideshow"
+msgstr "スライドショーを追加"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:236
+#: admin/views/pages/parts/slider-settings.php:165
+msgid "100% width"
+msgstr "100% 幅"
+
+#: admin/lib/callout.php:191
+#: metagallery/resources/views/settings/gallery-settings.php:42
+#: metagallery/resources/views/settings/image-settings.php:62
+msgid "Close"
+msgstr "閉じる"
+
+#: admin/slideshows/Themes.php:270
+msgid "We removed your selected theme as it could not be found. Was the folder deleted?"
+msgstr "選択されたテーマが見つかりませんでしたので削除しました。 フォルダーは削除されましたか？"
+
+#: admin/routes/api.php:549
+msgid "This was not a slideshow, so we cannot delete it."
+msgstr "これはスライドショーではなかったので、削除することはできません。"
+
+#: inc/slide/metaslide.image.class.php:452
+msgid "Schedule"
+msgstr "スケジュール"
+
+#: admin/views/slides/tabs/schedule.php:9
+msgid "Get it now!"
+msgstr "今すぐ入手"
+
+#: admin/slideshows/Themes.php:60
+msgid "No themes found."
+msgstr "テーマが見つかりませんでした。"
+
+#: admin/views/pages/parts/toolbar.php:25
+msgid "Add a new slide"
+msgstr "新しいスライドを追加"
+
+#: admin/slideshows/Settings.php:59
+msgid "New Slideshow"
+msgstr "新規スライドショー"
+
+#: ml-slider.php:651
+msgid "Add to slideshow"
+msgstr "スライドショーを追加"
+
+#: admin/slideshows/Settings.php:81 inc/slider/metaslider.class.php:119
+msgid "Previous"
+msgstr "前へ"
+
+#: inc/slide/metaslide.image.class.php:87
+msgid "This isn't an accepted image. Please try again."
+msgstr "これは許可された画像ではありません。 もう一度お試しください。"
+
+#: inc/slide/metaslide.class.php:429 inc/slide/metaslide.class.php:672
+#: inc/slide/metaslide.class.php:673
+msgid "Update slide image"
+msgstr "スライドの画像を更新する"
+
+#: admin/Table.php:72 admin/Table.php:314 inc/slide/metaslide.class.php:417
+msgid "Delete Permanently"
+msgstr "完全に削除する"
+
+#: admin/Table.php:71 admin/Table.php:313 inc/slide/metaslide.class.php:407
+msgid "Restore"
+msgstr "復元"
+
+#: inc/slide/metaslide.class.php:127
+msgid "There was an error updating the image. Please try again"
+msgstr "画像を更新する際にエラーが発生しました。もう一度お試しください。"
+
+#: inc/slide/metaslide.class.php:309
+msgid "There was an error while updating the database. Please try again."
+msgstr "データベースを更新する際にエラーが発生しました。もう一度お試しください。"
+
+#: inc/slide/metaslide.class.php:117
+msgid "The image was successfully updated."
+msgstr "画像を正常に更新しました。"
+
+#: ml-slider.php:693
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ml-slider.php:692
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: ml-slider.php:694
+msgid "Layer Slide"
+msgstr "レイヤースライド"
+
+#: ml-slider.php:691
+msgid "Post Feed"
+msgstr "投稿 Feed"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:605
+msgid "Opacity"
+msgstr "不透明度"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:621
+msgid "Caption speed"
+msgstr "見出しのスピード"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:623
+msgid "Set the fade in speed of the caption"
+msgstr "見出しのフェードイン速度を設定"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:642
+#: admin/views/pages/parts/slider-settings.php:475
+msgid "CSS classes"
+msgstr "CSS クラス"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:655
+#: admin/views/pages/parts/slider-settings.php:488
+msgid "Print CSS"
+msgstr "CSS を出力"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:668
+#: admin/views/pages/parts/slider-settings.php:501
+msgid "Print JS"
+msgstr "JS を出力"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:681
+#: admin/views/pages/parts/slider-settings.php:514
+msgid "No conflict mode"
+msgstr "競合モードなし"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:686
+#: admin/views/pages/parts/slider-settings.php:519
+msgid "Delay adding the flexslider class to the slideshow"
+msgstr "フレックススライダー化を遅延する"
+
+#: admin/Table.php:61 admin/views/pages/parts/slider-settings-legacy.php:707
+#: admin/views/pages/parts/slider-settings.php:534
+msgid "Shortcode"
+msgstr "ショートコード"
+
+#: ml-slider.php:1779
+msgid "Select slideshow to insert into post"
+msgstr "投稿に挿入するスライドショーを選択"
+
+#: ml-slider.php:1816
+msgid "Choose slideshow"
+msgstr "スライドショーを選択"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://www.metaslider.com"
+msgstr "https://www.metaslider.com"
+
+#: ml-slider.php:1826
+msgid "Insert slideshow"
+msgstr "スライドショーを挿入"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: ml-slider.php:503
+msgid "MetaSlider"
+msgstr "Meta Slider"
+
+#: inc/metaslider.widget.class.php:112
+msgid "Title:"
+msgstr "タイトル:"
+
+#: inc/metaslider.widget.class.php:115
+msgid "Select Slider:"
+msgstr "スライダーを選択:"
+
+#: inc/metaslider.widget.class.php:125 ml-slider.php:1831
+#: admin/assets/dist/js/app.js:2
+msgid "No slideshows found"
+msgstr "スライドショーがありません"
+
+#: admin/Pages.php:76 admin/assets/dist/js/app.js:2
+msgid "Caption"
+msgstr "キャプション"
+
+#: admin/Pages.php:77
+msgid "New Window"
+msgstr "新規ウインドウ"
+
+#: admin/Pages.php:75
+msgid "URL"
+msgstr "URL"
+
+#: inc/slide/metaslide.image.class.php:316
+msgid "Image Slide"
+msgstr "画像スライド"
+
+#: inc/slide/metaslide.image.class.php:403
+msgid "General"
+msgstr "一般"
+
+#: inc/slide/metaslide.image.class.php:407
+msgid "SEO"
+msgstr "SEO"
+
+#: inc/slide/metaslide.image.class.php:390
+msgid "Warning: The image data does not exist. Please re-upload the image."
+msgstr "注: 画像データが存在しません。もう一度アップロードしてください。"
+
+#: admin/views/slides/tabs/seo.php:6
+msgid "Image Title Text"
+msgstr "画像タイトルテキスト"
+
+#: admin/views/slides/tabs/seo.php:30
+msgid "Image Alt Text"
+msgstr "画像の代替文字列"
+
+#: ml-slider.php:2181
+msgid "Documentation"
+msgstr "ドキュメンテーション"
+
+#: admin/Pages.php:95
+msgid "Caution: This setting is for advanced developers only. If you're unsure, leave it checked."
+msgstr "注意: この設定は上級の開発者のみ使用できます。もし確信が持てなければチェックしたままにしてください。"
+
+#: ml-slider.php:650
+msgid "Image"
+msgstr "画像"
+
+#: admin/views/pages/parts/toolbar.php:29
+msgid "Add Slide"
+msgstr "スライドを追加"
+
+#: admin/views/pages/settings.php:42
+msgid "Settings"
+msgstr "設定"
+
+#: admin/views/pages/parts/toolbar.php:114
+#: metagallery/resources/views/parts/save-button.php:34
+#: admin/assets/dist/js/app.js:2
+msgid "Save"
+msgstr "保存"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:30
+#: admin/views/pages/parts/slider-settings-legacy.php:495
+#: admin/views/pages/parts/slider-settings.php:34
+msgid "Width"
+msgstr "幅"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:32
+#: admin/views/pages/parts/slider-settings.php:36
+#: admin/assets/js/gutenberg/components/block-edit.js:57
+#: admin/assets/js/gutenberg/components/block-edit.js:82
+msgid "Slideshow width"
+msgstr "スライドショー幅"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:33
+#: admin/views/pages/parts/slider-settings-legacy.php:46
+#: admin/views/pages/parts/slider-settings-legacy.php:365
+#: admin/views/pages/parts/slider-settings.php:37
+#: admin/views/pages/parts/slider-settings.php:50
+#: admin/views/pages/parts/slider-settings.php:294
+msgid "px"
+msgstr "px"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:43
+#: admin/views/pages/parts/slider-settings-legacy.php:511
+#: admin/views/pages/parts/slider-settings.php:47
+msgid "Height"
+msgstr "高さ"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:45
+#: admin/views/pages/parts/slider-settings.php:49
+msgid "Slideshow height"
+msgstr "スライドショーの高さ"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:52
+#: admin/views/pages/parts/slider-settings.php:56
+msgid "Effect"
+msgstr "効果"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:54
+#: admin/views/pages/parts/slider-settings.php:58
+msgid "Slide transition effect"
+msgstr "スライド遷移エフェクト"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:64
+#: admin/views/pages/parts/slider-settings-legacy.php:383
+#: admin/views/pages/parts/slider-settings.php:312
+msgid "Random"
+msgstr "ランダム"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:68
+msgid "Swirl"
+msgstr "回転"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:72
+msgid "Rain"
+msgstr "レイン"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:76
+msgid "Straight"
+msgstr "ストレート"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:84
+msgid "Slice Up"
+msgstr "スライスアップ"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:104
+msgid "Fold"
+msgstr "左から短冊ワイプ"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:100
+#: admin/views/pages/parts/slider-settings.php:68
+msgid "Fade"
+msgstr "フェード"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:116
+msgid "Box Random"
+msgstr "角切りランダムワイプ"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:120
+msgid "Box Rain"
+msgstr "右下へ角切りワイプ"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:124
+msgid "Box Rain Reverse"
+msgstr "左上へ角切りワイプ"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:132
+msgid "Box Rain Grow Reverse"
+msgstr "左上へ角切りワイプ (サイズ増)"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:136
+#: admin/views/pages/parts/slider-settings.php:72
+msgid "Slide"
+msgstr "スライド"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:143
+#: admin/views/pages/parts/slider-settings.php:79
+msgid "Arrows"
+msgstr "矢印"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:148
+#: admin/views/pages/parts/slider-settings.php:84
+msgid "Show the previous/next arrows"
+msgstr "前後への矢印を表示する"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:166
+#: admin/views/pages/parts/slider-settings.php:102
+msgid "Navigation"
+msgstr "ナビゲーション"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:169
+#: admin/views/pages/parts/slider-settings.php:105
+msgid "Show the slide navigation bullets"
+msgstr "ナビゲーション用の点を表示する"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:175
+#: admin/views/pages/parts/slider-settings.php:111
+msgid "Hidden"
+msgstr "非表示"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:178
+#: admin/views/pages/parts/slider-settings.php:114
+msgid "Dots"
+msgstr "点"
+
+#: admin/Table.php:59
+#: metagallery/resources/views/parts/create-gallery-simple.php:28
+#: admin/assets/dist/js/app.js:2
+msgid "Title"
+msgstr "タイトル"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:241
+#: admin/views/pages/parts/slider-settings.php:170
+msgid "Stretch the slideshow output to fill it's parent container"
+msgstr "親コンテナいっぱいに伸縮"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:249
+#: admin/views/pages/parts/slider-settings.php:178
+msgid "Center align"
+msgstr "中央揃え"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:254
+#: admin/views/pages/parts/slider-settings.php:183
+msgid "Center align the slideshow"
+msgstr "スライドショーを中央揃え"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:262
+#: admin/views/pages/parts/slider-settings.php:191
+msgid "Auto play"
+msgstr "自動再生"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:267
+#: admin/views/pages/parts/slider-settings.php:196
+msgid "Transition between slides automatically"
+msgstr "自動トラジション"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:321
+#: admin/views/pages/parts/slider-settings.php:250
+msgid "Smart Crop ensures your responsive slides are cropped to a ratio that results in a consistent slideshow size"
+msgstr "自動切り抜きを使うと、レスポンシブスライドがスライドショーのサイズに合った比率で切り抜きされます"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:342
+#: admin/views/pages/parts/slider-settings.php:271
+msgid "Carousel mode"
+msgstr "カルーセル・モード"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:358
+#: admin/views/pages/parts/slider-settings.php:287
+msgid "Carousel margin"
+msgstr "カルーセルマージン"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:361
+#: admin/views/pages/parts/slider-settings.php:290
+msgid "Pixel margin between slides in carousel."
+msgstr "カルーセル内のスライドの間隔 (px) 。"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:388
+#: admin/views/pages/parts/slider-settings.php:317
+msgid "Randomise the order of the slides"
+msgstr "スライドの順番をランダムにする"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:396
+#: admin/views/pages/parts/slider-settings.php:325
+msgid "Hover pause"
+msgstr "停止ボタン表示"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:401
+#: admin/views/pages/parts/slider-settings.php:330
+msgid "Pause the slideshow when hovering over slider, then resume when no longer hovering."
+msgstr "スライダーをポイントしたときにスライド ショーを一時停止し、ホバリングを再開する。"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:409
+#: admin/views/pages/parts/slider-settings.php:338
+msgid "Reverse"
+msgstr "逆戻り"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:414
+#: admin/views/pages/parts/slider-settings.php:343
+msgid "Reverse the animation direction"
+msgstr "アニメーション方向反転"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:440
+#: admin/views/pages/parts/slider-settings.php:369
+msgid "Slide delay"
+msgstr "スライドの遅延"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:442
+#: admin/views/pages/parts/slider-settings.php:371
+msgid "How long to display each slide, in milliseconds"
+msgstr "各画像の表示時間 (ミリ秒)"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:460
+#: admin/views/pages/parts/slider-settings.php:389
+msgid "Animation speed"
+msgstr "アニメーションの速度"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:462
+#: admin/views/pages/parts/slider-settings.php:391
+msgid "Set the speed of animations, in milliseconds"
+msgstr "ミリ秒単位でアニメーションの速度を設定します。"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:480
+#: admin/views/pages/parts/slider-settings-legacy.php:482
+msgid "Number of slices"
+msgstr "スライスの数"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:492
+#: admin/views/pages/parts/slider-settings-legacy.php:497
+#: admin/views/pages/parts/slider-settings-legacy.php:508
+#: admin/views/pages/parts/slider-settings-legacy.php:513
+msgid "Number of squares"
+msgstr "スクエアの数"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:519
+#: admin/views/pages/parts/slider-settings.php:404
+msgid "Slide direction"
+msgstr "スライドの方向"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:521
+#: admin/views/pages/parts/slider-settings.php:406
+msgid "Select the sliding direction"
+msgstr "スライドの方向を選択"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:528
+#: admin/views/pages/parts/slider-settings.php:413
+msgid "Horizontal"
+msgstr "水平方向"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:535
+#: admin/views/pages/parts/slider-settings.php:420
+msgid "Vertical"
+msgstr "垂直方向"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:546
+#: admin/views/pages/parts/slider-settings.php:431
+msgid "Easing"
+msgstr "イージング"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:558
+#: admin/views/pages/parts/slider-settings.php:443
+msgid "Previous text"
+msgstr "前のテキスト"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:560
+#: admin/views/pages/parts/slider-settings.php:445
+msgid "Set the text for the 'previous' direction item"
+msgstr "「前へ」 項目のテキストを設定します。"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:571
+#: admin/views/pages/parts/slider-settings.php:456
+msgid "Next text"
+msgstr "次のテキスト"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:573
+#: admin/views/pages/parts/slider-settings.php:458
+msgid "Set the text for the 'next' direction item"
+msgstr "「次へ」項目のテキストの設定します。"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:589
+msgid "Square delay"
+msgstr "スクエアの表示遅延"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:591
+msgid "Delay between squares in ms"
+msgstr "スクエアの遅延速度を秒単位で設定する"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:307
+#: admin/views/pages/parts/slider-settings.php:236
+msgid "Disabled"
+msgstr "無効"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:300
+#: admin/views/pages/parts/slider-settings.php:229
+msgid "Standard"
+msgstr "標準"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:288
+#: admin/views/pages/parts/slider-settings.php:217
+msgid "Image Crop"
+msgstr "画像の切り抜き"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:293
+#: admin/views/pages/parts/slider-settings.php:222
+msgid "Smart Crop"
+msgstr "スマート切り抜き"
+
+#: admin/views/slides/tabs/crop.php:5
+msgid "Crop Position"
+msgstr "切り抜きの位置"
+
+#: inc/slide/metaslide.image.class.php:85
+msgid "Failed to add slide. Slide is not an image."
+msgstr "スライドの追加に失敗しました。スライドは画像ではありません。"
+
+#: admin/Pages.php:86
+msgid "Select replacement image"
+msgstr "代替画像を選択"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:314
+#: admin/views/pages/parts/slider-settings.php:243
+msgid "Disabled (Smart Pad)"
+msgstr "無効 (Smart Pad)"
+
+#: admin/views/slides/tabs/crop.php:7
+msgid "Top Left"
+msgstr "左上"
+
+#: admin/views/slides/tabs/crop.php:8
+msgid "Top Center"
+msgstr "上中央"
+
+#: admin/views/slides/tabs/crop.php:9
+msgid "Top Right"
+msgstr "右上"
+
+#: admin/views/slides/tabs/crop.php:10
+msgid "Center Left"
+msgstr "中央左"
+
+#: admin/views/slides/tabs/crop.php:11
+msgid "Center Center"
+msgstr "中央/中央"
+
+#: admin/views/slides/tabs/crop.php:12
+msgid "Center Right"
+msgstr "中央右"
+
+#: admin/views/slides/tabs/crop.php:13
+msgid "Bottom Left"
+msgstr "左下"
+
+#: admin/views/slides/tabs/crop.php:14
+msgid "Bottom Center"
+msgstr "下中央"
+
+#: admin/views/slides/tabs/crop.php:15
+msgid "Bottom Right"
+msgstr "右下"
+
+#: inc/slide/metaslide.image.class.php:440
+msgid "Crop"
+msgstr "切り抜き"
+
+#: admin/views/pages/parts/slider-settings-legacy.php:347
+#: admin/views/pages/parts/slider-settings.php:276
+msgid "Display multiple slides at once. Slideshow output will be 100% wide."
+msgstr "一度に複数のスライドを表示します。スライド ショーの出力は、100%幅になります。"
+
+#: admin/views/pages/parts/toolbar.php:60
+msgid "Add a new slideshow"
+msgstr "新しいスライドショーを追加"
