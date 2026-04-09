@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- reCAPTCHA v3 -->
-    <script src="https://www.google.com/recaptcha/api.js?render=6LfwX6wsAAAAAAXGjYGiwjQXjUHzr6mPxnFPW3Eb"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LehHK4sAAAAAGxZlAo0bd8wC3QAD6Ee1kacAYq0"></script>
 </head>
 
 <body>
@@ -308,7 +308,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         e.preventDefault();
 
         grecaptcha.ready(function() {
-            grecaptcha.execute('6LfwX6wsAAAAAAXGjYGiwjQXjUHzr6mPxnFPW3Eb', {
+            grecaptcha.execute('6LehHK4sAAAAAGxZlAo0bd8wC3QAD6Ee1kacAYq0', {
             action: 'submit'
           }).then(function(token) {
               document.getElementById('recaptcha_token').value = token;
