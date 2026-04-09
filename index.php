@@ -41,18 +41,14 @@
         </section>
         <section class="sec01">
             <h3 class="section_title">SKILLS  <span>出来ること</span></h3>
-            <h4 class="can zenmaru">Webコーダー｜HTML / CSS / JavaScript / WordPress</h4>
-            <h4 class="can zenmaru">LP・企業サイトのコーディング / UI実装 / WordPress対応</h4>
-
             <div class="section_wrapper">
-
                 <h4 class="sec01_title">01 Web development</h4>
                 <p class="sec01_text">
-                    HTML・CSSを用いてデザインを忠実に再現し、JavaScriptを活用してサイトに動きを付けることが可能です。アニメーションを取り入れることで世界観を表現し、Webデザインの魅力を一層引き立てることを目指しています。コーディングにおいては、読みやすさを重視し、誰が見ても理解しやすいコードを書くよう心掛けています。 
+                    HTML・CSSを用いてデザインを忠実に再現し、JavaScriptを活用してサイトに動きを付けます。LP・企業サイトのコーディングからUI実装・WordPress対応まで、読みやすく誰が見ても理解しやすいコードを心掛けています。
                 </p>
                 <h4 class="sec01_title">02 Web Design</h4>
                 <p class="sec01_text">
-                    Webサイトを手掛けており、細部までこだわって最高のクオリティを追求しています。視覚的な美しさだけでなく、情報設計や機能性にも十分に配慮し、使いやすさを重視したデザインを提供します。見た目が優れているだけでなく、実際に役立ち、さらにユーザーに寄り添ったデザインを心がけています。 
+                    ユーザーが使いやすいと感じるデザインを意識しながら、クライアント様の意向を大切にしています。細部にまでこだわり、実際に役立つWebサイト制作を心掛けています。
                 </p>
             </div>
         </section>
