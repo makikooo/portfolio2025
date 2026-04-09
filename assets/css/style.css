@@ -775,9 +775,9 @@ body {
     display: block;
   }
 }
-#home .about_me > a {
+#home .about_me .image_flex .about_text_box > a {
   width: 300px;
-  margin: 40px auto 60px;
+  margin: 40px 20% 60px auto;
   padding: 20px;
   display: flex;
   justify-content: space-around;
@@ -786,7 +786,7 @@ body {
   background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
   font-weight: 600;
 }
-#home .about_me > a img {
+#home .about_me .image_flex .about_text_box > a img {
   width: 20px;
 }
 #home .contact {

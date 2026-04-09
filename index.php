@@ -1,33 +1,5 @@
 <?php get_header(); ?>
     <main id="home">
-        <header class="header">
-            <div class="header_content">
-                <a class="logo_link" href="/" >
-                    <h1 class="title_name">KARASAWA MAKIKO</h1>
-                    <p class="sub_title">Web制作・Webデザイン</p>
-                </a>
-                <nav class="pc_only">
-                    <ul class="nav_list">
-                        <li class="nav_item"><a class="nav_link" href="#works">works</a></li>
-                        <li class="nav_item"><a class="nav_link" href="#about">about</a></li>
-                        <!-- <li class="nav_item"><a class="nav_link" href="<?php echo get_template_directory_uri(); ?>/blog.html">blog</a></li> -->
-                        <li class="nav_item"><a class="nav_link" href="<?php echo get_template_directory_uri(); ?>/contact.php">contact</a></li>
-                    </ul>
-                </nav>
-                <nav class="nav_sp_only sp_only">
-                    <div class="humbergur_box">
-                        <span></span><span></span><span></span>
-                    </div>
-                    <ul class="sp_nav_list">
-                        <li class="nav_item"><a class="nav_link" href="/">home</a></li>
-                        <li class="nav_item"><a class="nav_link" href="#works">works</a></li>
-                        <li class="nav_item"><a class="nav_link" href="#about">about</a></li>
-                        <!-- <li class="nav_item"><a class="nav_link" href="blog.html">blog</a></li> -->
-                        <li class="nav_item"><a class="nav_link" href="<?php echo get_template_directory_uri(); ?>/contact.php">contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
         <section class="mv loading">
             <div class="mv_wrapper">
                 <h2 class="mv_title hidden">
@@ -1414,7 +1386,7 @@
         </section>
         <section class="about_me" id="about">
             <h3 class="section_title">about me  <span>わたしについて</span></h3>
-
+            
             <div class="image_flex">
 
                 <div class="about_image_box">
@@ -1424,17 +1396,12 @@
                     <h5 class="about_title">
                         PROFILE
                     </h5>
-                        <p>美容師として働いていた経験を経て、現在は就労継続支援A型事業所を利用しながら在宅で働いています。職業訓練の一環でWeb制作に出会い、「自分の手で誰かの役に立つものを作れる」という喜びに強く惹かれ、フロントエンド分野の学習を本格的にスタートしました。HTML/CSSの基礎から始め、JavaScriptやWordPressの実装なども独学や実務を通じて身につけてきました。</p><br>
-                        <p>これまでに、デザインカンプをもとにしたコーディングや、タブ切り替え・アコーディオン・スライダーなどの動きのあるUI実装に取り組んできました。
-
-また、見た目の再現だけでなく、ユーザーにとって使いやすいUI/UXを意識し、アクセシビリティやSEOにも配慮したコーディングを心がけています。</p><br>
-                        <p>現在はPHP / Laravelを中心にバックエンドの学習を進めており、フォーム処理やデータベース連携などにも対応できるよう取り組んでいます。将来的には、フロントエンドからバックエンドまで一貫して携われるフルスタックエンジニアを目指しています。</p>
-                    <!-- <p>
-                        また、前職ではサブリーダーとしてプロジェクトの進行管理やメンバーひとりひとりとのコミュニケーションを大切にし、チーム全体の士気を高めながら業務効率化にも取り組んできた経験があります。
-                    </p> -->
-                    <!-- <p>
-                        iPhoneでの写真撮影が趣味で、特に自然や日常の風景を捉えることが好きです。光や影の変化、瞬間の美しさを見つけて写真に収めることで、日々の中にある特別な瞬間を残すことに楽しみを感じています。
-                    </p> -->
+                    
+                    <p>
+                      美容師からエンジニアへ——遠回りした分だけ、見えてくるものがありました。<br>
+                      そのすべてが「人に寄り添うものづくり」につながっています。
+                    </p>
+                    
                     <h5 class="web_site_title">
                         運営サイト
                     </h5>
@@ -1456,9 +1423,9 @@
                             </td>
                         </tr>
                     </table>
+                    <a href="/about-me/">わたしについて 詳しくはこちら<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp"></a>
                 </div>
             </div>
-            <!-- <a href="about.html">詳しくはこちら<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp"></a> -->
         </section>
 
         <section class="contact" id="contact">

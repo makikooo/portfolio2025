@@ -826,23 +826,20 @@ body {
                         }
                     }
                 }
-            }
-        }
-
-
-        &>a {
-            width: 300px;
-            margin: 40px auto 60px;
-            padding: 20px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-radius: 15px;
-            background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
-            font-weight: 600;
-
-            img {
-                width: 20px;
+                & > a {
+                  width: 300px;
+                  margin: 40px 20% 60px auto;
+                  padding: 20px;
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  border-radius: 15px;
+                  background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
+                  font-weight: 600;
+                img {
+                    width: 20px;
+                }
+              }
             }
         }
     }

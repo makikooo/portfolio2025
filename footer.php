@@ -7,8 +7,8 @@
             <nav>
                 <ul>
                     <li><a href="/#works">works</a></li>
-                    <li><a href="/#about">about</a></li>
-                    <li><a href="<?php echo home_url('/contact.php'); ?>">contact</a></li>
+                    <li><a href="/about-me/">about</a></li>
+                    <li><a href="<?php echo get_template_directory_uri(); ?>/contact.php">contact</a></li>
                 </ul>
             </nav>
         </div>
