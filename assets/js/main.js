@@ -28,15 +28,15 @@ document.addEventListener('DOMContentLoaded', function () {
       // null（未保存）か 'true'（保存済み）か
       sessionStorage.setItem('visited', 'true');
       setTimeout(() => {
-          mvTitle.classList.remove('hidden');
-          mvSubtitle.classList.remove('hidden');
+        mvTitle.classList.remove('hidden');
+        mvSubtitle.classList.remove('hidden');
       }, 20);
       setTimeout(() => {
-          mvTitle.classList.add('hidden');
-          mvSubtitle.classList.add('hidden');
+        mvTitle.classList.add('hidden');
+        mvSubtitle.classList.add('hidden');
       }, 2500);
       setTimeout(() => {
-          loading.classList.add('loaded');
+        loading.classList.add('loaded');
       }, 3000);
       setTimeout(() => {
         loading.style.display = "none";
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
       // コンタクトページから戻ってきた時はスキップ
       loading.style.display = "none";   
     }
-
   });
 });
 
