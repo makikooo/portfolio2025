@@ -1468,7 +1468,7 @@
         <section class="contact" id="contact">
             <h3 class="section_title">contact  <span>お問い合わせ</span></h3>
             <p>ご依頼・ご相談や、ホームページのご感想などお気軽にお問い合わせくださいませ。</p><br>
-            <a class="to_contact_button" href="contact.php">コンタクトページへ</a>
+            <a class="to_contact_button" href="<?php echo get_template_directory_uri(); ?>/contact.php">コンタクトページへ</a>
             <!-- <form action="">
                 <table class="contact_table">
                     <tr>
