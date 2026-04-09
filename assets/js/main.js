@@ -1,37 +1,52 @@
 'use strict'
 /*******************************************
- *  ローディング時の文字を徐々に表示する。1日に一回だけ表示
+ *  ローディング時の文字を徐々に表示する。
+ *  リロード、または初回アクセスの時だけ表示。
  *******************************************/
 document.addEventListener('DOMContentLoaded', function () {
-    const loading = document.querySelector('.loading');
-    const mvTitle = document.querySelector('.mv_title');
-    const mvSubtitle = document.querySelector('.mv_subtitle');
+  const loading = document.querySelector('.loading');
+  const mvTitle = document.querySelector('.mv_title');
+  const mvSubtitle = document.querySelector('.mv_subtitle');
 
-    const today = new Date().toISOString().slice(0, 10); // "2025-05-26" の形式
-    const lastShownDate = localStorage.getItem('loadingShownDate');
-    // ページ読み込み完了時の処理
-    window.addEventListener('load', function () {
-        if (lastShownDate === today) {
-            loading.style.display = "none";
-        } else {
-            setTimeout(() => {
-                mvTitle.classList.remove('hidden');
-                mvSubtitle.classList.remove('hidden');
-            }, 20);
-            setTimeout(() => {
-                mvTitle.classList.add('hidden');
-                mvSubtitle.classList.add('hidden');
-            }, 2500);
-            setTimeout(() => {
-                loading.classList.add('loaded');
-            }, 3000);
-            setTimeout(() => {
-                loading.style.display = 'none';
-                localStorage.setItem('loadingShownDate', today);
-            }, 3500);
-        }
+  // ページ読み込み完了時の処理
+  window.addEventListener('load', function () {
+    // ナビゲーションの種類を取得
+    // ブラウザにどうやってこのページに来たかを聞いている。
+    // 帰ってくる値は文字列で3種類[navigate][reload][back_forward] 
+    // [0]?.typeの?.はもし結果が取得できなかった場合にエラーにならないようにする。undefinedを返して終わり
+    const navType = performance.getEntriesByType('navigation')[0]?.type; 
+    // リロードしてきた → isReload は true  それ以外 → isReload は false
+    const isReload = navType === "reload";
+    // sessionStorage という、ブラウザが持っているタブを開いている間だけ使えるデータ置き場から 'visited' というキーの値を取り出してる。
+    // まだセットされてない → null が返る（＝ falsy）
+    // セットされている    → 'true' が返る（＝ truthy）
+    const hasVisited = sessionStorage.getItem('visited'); //
 
-    });
+    // リロード、または初回アクセスの時だけローディングを表示
+    if (isReload || !hasVisited) {
+      // sessionStorage にデータを保存
+      // null（未保存）か 'true'（保存済み）か
+      sessionStorage.setItem('visited', 'true');
+      setTimeout(() => {
+          mvTitle.classList.remove('hidden');
+          mvSubtitle.classList.remove('hidden');
+      }, 20);
+      setTimeout(() => {
+          mvTitle.classList.add('hidden');
+          mvSubtitle.classList.add('hidden');
+      }, 2500);
+      setTimeout(() => {
+          loading.classList.add('loaded');
+      }, 3000);
+      setTimeout(() => {
+        loading.style.display = "none";
+      }, 3500);
+    } else {
+      // コンタクトページから戻ってきた時はスキップ
+      loading.style.display = "none";   
+    }
+
+  });
 });
 
 
