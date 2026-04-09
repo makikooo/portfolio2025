@@ -1,3 +1,6 @@
 secret.php
 .DS_Store
 .vscode/
+wp-includes/
+wp-admin/
+wp-content/plugins/

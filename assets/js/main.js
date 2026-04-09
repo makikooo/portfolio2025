@@ -126,7 +126,8 @@ if (go_to_top_button) {
 }
 
 /*******************************************
- *  トップページ カテゴリーをクリックするとそのカテゴリーだけのリスト表示にする
+ *  トップページ カテゴリーをクリックすると
+ *  そのカテゴリーだけのリスト表示にする
  *******************************************/
 window.addEventListener('load', function () {
     const categoryLinks = document.querySelectorAll('.category_link');
@@ -135,11 +136,15 @@ window.addEventListener('load', function () {
     const continuationWrappers = document.querySelectorAll('.center_wrapper, .center_wrapper02');
     const workBox = document.querySelector('#workBox');
 
+    // window.location.hash はURLの # 以降を取得します。
+    // .substring(1) で先頭の # を除去します。
     const initialHash = window.location.hash.substring(1);
+    // #がついている時だけ処理を実行
     if (initialHash) {
-        showContinuationSection();
-        filterItems(initialHash);
-        setActiveLink(initialHash);
+      const category = initialHash === 'works' ? 'all' : initialHash;
+      showContinuationSection(); // 続きを見るボタンを隠して全カードを展開
+      filterItems(category); // categoryに一致するカードだけ表示
+      setActiveLink(category); // 対応するカテゴリボタンをアクティブ状態にする
     }
 
     categoryLinks.forEach(link => {
