@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   margin: 0;
@@ -974,6 +975,82 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
+}
+
+#about {
+  margin-top: 100px;
+  background-color: #FEF9F6;
+}
+#about .sec01 {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto 50px;
+}
+#about .sec01 .title_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 40px;
+}
+#about .sec01 .title_wrapper .image_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  /* 回転するテキストのSVG */
+}
+#about .sec01 .title_wrapper .image_wrapper .rotating-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: spin-left 8s linear infinite;
+}
+#about .sec01 .title_wrapper .image_wrapper {
+  /* 左回りのアニメーション */
+}
+@keyframes spin-left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+#about .sec01 .title_wrapper .image_wrapper {
+  /* 円形の写真 */
+}
+#about .sec01 .title_wrapper .image_wrapper .circle-photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#about .sec01 .title_wrapper .image_wrapper .circle-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+#about .sec01 .title_wrapper .text_wrapper p {
+  font-size: 24px;
+}
+#about .sec01 .title_wrapper .text_wrapper .roma_name {
+  font-size: 41px;
+}
+#about .sec01 .title_wrapper .text_wrapper .kanji_name {
+  font-size: 40px;
+}
+#about .sec01 .title_wrapper .text_wrapper .skill {
+  color: #C39000;
+  font-size: 24px;
 }
 
 #contact {

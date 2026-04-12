@@ -4,8 +4,37 @@
  */
 ?>
 <?php get_header(); ?>
-    <main id="detail">        
-        <section class="sec01">
+    <main id="about">
+      <section class="sec01">
+        <div class="title_wrapper">
+          <div class="image_wrapper">
+            <svg class="rotating-text" viewBox="0 0 320 320" width="320" height="320">
+              <defs>
+                <path id="circle-path"
+                d="M 160,160 m -120,0 a 120,120 0 1,1 240,0 a 120,120 0 1,1 -240,0"/>
+              </defs>
+              <text font-size="15" font-family="sans-serif"
+              fill="#C39000" letter-spacing="7.5" font-weight="600">
+                <textPath href="#circle-path" startOffset="0%">
+                  THANK YOU FOR VISITING MY PORTFOLIO SITE ✦✦✦ 
+                </textPath>
+              </text>
+            </svg>
+            
+            <div class="circle-photo">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/aboutme.webp" alt="プロフィール写真">
+            </div>
+          </div>
+
+          <div class="text_wrapper">
+            <p>Front Engineer</p>
+            <h2 class="roma_name">KARASAWA MAKIKO</h2>
+            <h3 class="kanji_name">唐澤 真希子</h3>
+            <p class="skill">HTML / CSS / JavaScript</p>
+          </div>
+        </div>
+      </section>        
+        <section class="sec02">
             <h3 class="section_title">ABOUT ME  <span>わたしについて</span></h3>
             <!-- <h4 class="detail_section_title">SMILE-OOH様のワードプレスを新規作成</h4>
             <div class="border"></div>
