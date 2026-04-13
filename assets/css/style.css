@@ -977,39 +977,51 @@ body {
   }
 }
 
-#about {
+#about-page {
   margin-top: 100px;
-  background-color: #FEF9F6;
 }
-#about .sec01 {
+#about-page .sec01 {
   width: 90%;
   max-width: 1000px;
   margin: 30px auto 50px;
 }
-#about .sec01 .title_wrapper {
+#about-page .sec01 .title_wrapper {
   display: flex;
   justify-content: center;
   align-items: start;
   gap: 40px;
 }
-#about .sec01 .title_wrapper .image_wrapper {
+@media screen and (max-width: 796px) {
+  #about-page .sec01 .title_wrapper {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+}
+#about-page .sec01 .title_wrapper .image_wrapper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 150px;
   height: 150px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec01 .title_wrapper .image_wrapper {
+    margin: 0 auto;
+  }
+}
+#about-page .sec01 .title_wrapper .image_wrapper {
   /* 回転するテキストのSVG */
 }
-#about .sec01 .title_wrapper .image_wrapper .rotating-text {
+#about-page .sec01 .title_wrapper .image_wrapper .rotating-text {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  animation: spin-left 8s linear infinite;
+  animation: spin-left 9s linear infinite;
 }
-#about .sec01 .title_wrapper .image_wrapper {
+#about-page .sec01 .title_wrapper .image_wrapper {
   /* 左回りのアニメーション */
 }
 @keyframes spin-left {
@@ -1020,37 +1032,450 @@ body {
     transform: rotate(-360deg);
   }
 }
-#about .sec01 .title_wrapper .image_wrapper {
+#about-page .sec01 .title_wrapper .image_wrapper {
   /* 円形の写真 */
 }
-#about .sec01 .title_wrapper .image_wrapper .circle-photo {
+#about-page .sec01 .title_wrapper .image_wrapper .circle-photo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
-  border-radius: 50%;
   overflow: hidden;
 }
-#about .sec01 .title_wrapper .image_wrapper .circle-photo img {
+#about-page .sec01 .title_wrapper .image_wrapper .circle-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
 }
-#about .sec01 .title_wrapper .text_wrapper p {
-  font-size: 24px;
+#about-page .sec01 .title_wrapper .text_wrapper {
+  margin-bottom: 20px;
 }
-#about .sec01 .title_wrapper .text_wrapper .roma_name {
-  font-size: 41px;
+#about-page .sec01 .title_wrapper .text_wrapper p {
+  font-size: 20px;
 }
-#about .sec01 .title_wrapper .text_wrapper .kanji_name {
-  font-size: 40px;
+@media screen and (max-width: 796px) {
+  #about-page .sec01 .title_wrapper .text_wrapper p {
+    font-size: 16px;
+  }
 }
-#about .sec01 .title_wrapper .text_wrapper .skill {
+#about-page .sec01 .title_wrapper .text_wrapper .roma_name {
+  font-size: 32px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec01 .title_wrapper .text_wrapper .roma_name {
+    font-size: 24px;
+  }
+}
+#about-page .sec01 .title_wrapper .text_wrapper .kanji_name {
+  font-size: 27px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec01 .title_wrapper .text_wrapper .kanji_name {
+    font-size: 18px;
+  }
+}
+#about-page .sec01 .title_wrapper .text_wrapper .skill {
   color: #C39000;
   font-size: 24px;
+  font-family: "Zen Maru Gothic", serif;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec01 .title_wrapper .text_wrapper .skill {
+    font-size: 20px;
+  }
+}
+#about-page .sec01 .about_sub_titile {
+  width: 90%;
+  max-width: 637px;
+  margin: 20px auto 50px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec01 .about_sub_titile {
+    margin-bottom: 40px;
+  }
+}
+#about-page .sec01 .section_border {
+  width: 168px;
+  margin: 0 auto 50px;
+  border: none;
+  border-top: 3px solid #C39000;
+  border-radius: 999px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec01 .section_border {
+    margin-bottom: 40px;
+    border-top: 2px solid #C39000;
+  }
+}
+#about-page .sec01 .aim {
+  margin: 0 auto 37px;
+  width: 540px;
+  max-width: 80%;
+  text-align: center;
+}
+#about-page .sec01 .skill_flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 140px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec01 .skill_flex {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 60px;
+  }
+}
+#about-page .sec01 .skill_flex .skill_title {
+  text-align: center;
+  padding: 8px 30px;
+  background-color: #FFF1C9;
+  border: 1px solid #FFC00D;
+  border-radius: 20px;
+  font-family: "Zen Maru Gothic", serif;
+}
+#about-page .sec02 {
+  width: 90%;
+  max-width: 1260px;
+  margin: 0 auto 75px;
+}
+#about-page .sec02 .section_title {
+  color: #C39000;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec02 .section_title {
+    font-size: 20px;
+  }
+}
+#about-page .sec02 .section_title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #C39000;
+  border-radius: 999px;
+  margin-top: 15px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec02 .section_title::after {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec02 .section_title {
+    margin-bottom: 40px;
+  }
+}
+#about-page .sec02 .sec02_wrapper {
+  width: 1000px;
+  max-width: 90%;
+  margin: 0 auto 75px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec02 .sec02_wrapper {
+    margin-bottom: 40px;
+  }
+}
+#about-page .sec02 .sec02_wrapper > p {
+  margin-bottom: 35px;
+}
+#about-page .sec02 .sec02_wrapper .point {
+  position: relative;
+  padding: 20px 35px 30px;
+  background-color: #FFFBEE;
+  margin-bottom: 35px;
+}
+#about-page .sec02 .sec02_wrapper .point::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background-color: #C39000;
+  border-radius: 999px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec02 .sec02_wrapper .point::after {
+    width: 5px;
+  }
+}
+#about-page .sec02 .sec02_wrapper .goal {
+  background-color: #FEF7E3;
+  border: 1.5px solid #FFC00D;
+  border-radius: 20px;
+  padding: 40px 50px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec02 .sec02_wrapper .goal {
+    padding: 20px 20px;
+  }
+}
+#about-page .sec02 .sec02_wrapper .goal h3 {
+  color: #C39000;
+  margin-bottom: 18px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec02 .sec02_wrapper .goal h3 {
+    margin-bottom: 10px;
+  }
+}
+#about-page .sec02 .sec02_wrapper .goal > p {
+  line-height: 32px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec02 .sec02_wrapper .goal > p {
+    line-height: 30px;
+  }
+}
+#about-page .sec03 {
+  width: 90%;
+  max-width: 1260px;
+  margin: 0 auto 75px;
+}
+#about-page .sec03 .section_title {
+  color: #C39000;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec03 .section_title {
+    font-size: 20px;
+  }
+}
+#about-page .sec03 .section_title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #C39000;
+  border-radius: 999px;
+  margin-top: 15px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec03 .section_title::after {
+    margin-top: 10px;
+  }
+}
+#about-page .sec03 .sec03_flex {
+  width: 1000px;
+  max-width: 90%;
+  margin: 60px auto 35px;
+  display: flex;
+  justify-self: center;
+  align-items: stretch;
+  gap: 60px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec03 .sec03_flex {
+    margin: 40px auto;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+#about-page .sec03 .sec03_flex .card {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #C39000;
+  padding: 40px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec03 .sec03_flex .card {
+    padding: 20px 15px;
+  }
+}
+#about-page .sec03 .sec03_flex .card__number {
+  font-family: "Zen Maru Gothic", serif;
+  color: #C39000;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec03 .sec03_flex .card__number {
+    margin-bottom: 10px;
+  }
+}
+#about-page .sec03 .sec03_flex .card__title {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec03 .sec03_flex .card__title {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
+#about-page .sec03 .sec03_flex .card__text {
+  line-height: 32px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec03 .sec03_flex .card__text {
+    line-height: 24px;
+  }
+}
+#about-page .sec03 .skill-section {
+  width: 1000px;
+  max-width: 90%;
+  margin: 0 auto 35px;
+  border: 1px solid #C39000;
+  border-radius: 20px;
+  padding: 24px 32px;
+}
+#about-page .sec03 .skill-section .slill-section__title {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+#about-page .sec03 .skill-section .skill-item {
+  margin-bottom: 24px;
+}
+#about-page .sec03 .skill-section .skill-item__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+#about-page .sec03 .skill-section .skill-item__header .skill-item__name {
+  font-size: 16px;
+}
+#about-page .sec03 .skill-section .skill-item__header .skill-item__level {
+  font-size: 14px;
+  color: #999;
+}
+#about-page .sec03 .skill-section .skill-item__bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #FFF1C9;
+  border-radius: 999px;
+}
+#about-page .sec03 .skill-section .skill-item__bar-bg .skill-item__bar {
+  width: var(--bar-width);
+  height: 100%;
+  background-color: #C39000;
+  border-radius: 999px;
+}
+#about-page .sec03 .skill-up-section {
+  width: 1000px;
+  max-width: 90%;
+  margin: 0 auto 75px;
+  background-color: #FFFAEF;
+  border: 1px solid #C39000;
+  border-radius: 20px;
+  padding: 35px 45px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec03 .skill-up-section {
+    padding: 25px;
+  }
+}
+#about-page .sec03 .skill-up-section .skill-up-title {
+  font-weight: medium;
+  color: #C39000;
+  margin-bottom: 35px;
+}
+#about-page .sec03 .skill-up-section .skill-up-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec03 .skill-up-section .skill-up-wrapper {
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
+#about-page .sec03 .skill-up-section .skill-up-wrapper .skill-up {
+  padding: 5px 28px;
+  border: 1px solid #FFC00D;
+  background-color: #FFF1C9;
+  border-radius: 20px;
+  font-family: "Zen Maru Gothic", serif;
+}
+#about-page .sec04 {
+  width: 90%;
+  max-width: 1260px;
+  margin: 0 auto 75px;
+}
+#about-page .sec04 .section_title {
+  color: #C39000;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec04 .section_title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+#about-page .sec04 .section_title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #C39000;
+  border-radius: 999px;
+  margin-top: 15px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec04 .section_title::after {
+    margin-top: 10px;
+  }
+}
+#about-page .sec04 .sec04_grid {
+  width: 1000px;
+  max-width: 90%;
+  display: grid;
+  margin: 40px auto 60px;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 60px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec04 .sec04_grid {
+    gap: 20px;
+    grid-template-columns: 1fr;
+    margin: 20px auto 40px;
+  }
+}
+#about-page .sec04 .sec04_grid .tool__card {
+  padding: 25px 45px;
+  background: #FEF7E3;
+  border: 1px solid #C39000;
+  border-radius: 30px;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec04 .sec04_grid .tool__card {
+    padding: 10px 15px;
+    border-radius: 20px;
+  }
+}
+#about-page .sec04 .sec04_grid .tool__card-title {
+  font-family: "Zen Maru Gothic", serif;
+  color: #C39000;
+  font-size: 20px;
+  font-weight: medium;
+}
+@media screen and (max-width: 796px) {
+  #about-page .sec04 .sec04_grid .tool__card-title {
+    font-size: 18px;
+  }
+}
+#about-page .sec04 .sec04_grid .tool__card-tools {
+  font-family: "Zen Maru Gothic", serif;
+}
+#about-page .sec04 .tool__border {
+  width: 500px;
+  margin: 0 auto 50px;
+  border: none;
+  border-top: 0.5px solid #C39000;
+  border-radius: 999px;
+}
+#about-page .sec04 .text {
+  width: 710px;
+  max-width: 80%;
+  margin: 0 auto 100px;
+}
+#about-page .sec04 .thank {
+  width: 330px;
+  max-width: 100%;
+  margin: 0 auto 120px;
+  font-weight: bold;
 }
 
 #contact {
