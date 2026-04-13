@@ -1679,10 +1679,15 @@ body {
   font-family: "Zen Maru Gothic", serif;
   font-size: 1.25rem;
   background: #EFE4B5;
+  border: 1px solid #C39000;
   display: inline-block;
   margin: 30px auto 15px;
   padding: 10px 30px;
   border-radius: 15px;
+  transition: background 0.4s;
+}
+#detail .sec01 .detail_subtitle:hover {
+  background: #fdf8e0;
 }
 #detail .sec01 .detail_link {
   text-align: center;
