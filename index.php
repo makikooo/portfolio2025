@@ -164,13 +164,13 @@
             </div>
             <!-- ここまで１サイト紹介終わり -->
             <!-- ここから１サイト紹介始まり -->
-            <div class="work_link_wrapper" data-category="webdesign website">
+            <div class="work_link_wrapper" data-category="webdesign website wordpress">
                 <div class="link_flex">
                     <div class="work_wrapper">
                         <img loading="lazy" class="work_image" src="<?php echo get_template_directory_uri(); ?>/assets/images/work01.webp" alt="制作内容のイメージ画像">
                         <div class="work_box">
                             <h5 class="work_title"><span>わたしたちのSLE</span></h5>
-                            <div class="category">HP・Webデザイン</div>
+                            <div class="category">Webデザイン・WordPress</div>
                             <p class="activity">個人活動</p>
                             <p class="production_date">制作日 2021年から</p>
                             <p class="code">
@@ -180,7 +180,7 @@
                         </div>
                     </div>
                     <div class="button_wrapper">
-                        <a class="work_button detail_button" href="<?php echo get_template_directory_uri(); ?>/site/portfolio2024/page/about_sle.html">
+                        <a class="work_button detail_button" href="/our-sle/">
                             <div class="button_flex">
                                 <span>detail</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
