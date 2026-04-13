@@ -1670,6 +1670,10 @@ body {
   overflow-y: scroll;
   border-radius: 15px;
 }
+#detail .sec01 .images_wrapper img {
+  display: inline-block;
+  text-align: center;
+}
 #detail .sec01 .detail_subtitle {
   text-align: center;
   font-family: "Zen Maru Gothic", serif;

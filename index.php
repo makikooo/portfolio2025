@@ -145,13 +145,13 @@
                         </div>
                     </div>
                     <div class="button_wrapper">
-                        <!-- <a class="work_button detail_button" href="">
+                        <a class="work_button detail_button" href="/shinsulity/">
                             <div class="button_flex">
                                 <span>detail</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
                             </div>
                             <div class="border"></div>
-                        </a> -->
+                        </a>
                         <a class="work_button site_button" target="_blank" href="https://shinsulity.idms.or.jp/">
                             <div class="button_flex">
                                 <span>TO SITe</span>
@@ -287,13 +287,13 @@
                         </div>
                     </div>
                     <div class="button_wrapper">
-                        <!-- <a class="work_button detail_button" href="">
+                        <a class="work_button detail_button" href="/illastration-school/">
                             <div class="button_flex">
                                 <span>detail</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
                             </div>
                             <div class="border"></div>
-                        </a> -->
+                        </a>
                         <a class="work_button site_button" target="_blank" href="https://illust-school.com/">
                             <div class="button_flex">
                                 <span>TO SITe</span>

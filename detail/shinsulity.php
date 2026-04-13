@@ -1,6 +1,6 @@
 <?php 
 /*
- * Template Name: detail_smile_ooh
+ * Template Name: shinsulity
  */
 ?>
 
@@ -8,19 +8,19 @@
   <main id="detail">  
     <section class="sec01">
         <h3 class="section_title">detail  <span>内容</span></h3>
-        <h4 class="detail_section_title">SMILE-OOH様のワードプレスを新規作成</h4>
+        <h4 class="detail_section_title">WordPressでLP新規作成</h4>
         <div class="border"></div>
 
         <div class="images_wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/smile-ooh.webp" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shinsulity.webp" alt="">
         </div>
-        <h5 class="detail_subtitle">SMILE-OOH 様</h5>
-        <p class="detail_link"><a target="_blank" href="https://smile-ooh.com/">( https://smile-ooh.com/ )</a></p>
+        <h5 class="detail_subtitle">シンスリティ体質改善研究所 様</h5>
+        <p class="detail_link"><a target="_blank" href="https://shinsulity.idms.or.jp/">( https://shinsulity.idms.or.jp/ )</a></p>
         
         
         <h6 class="detail_title">対応内容サイト構成</h6>
         <p class="detail_text">
-            HTMLコーディング / レスポンシブWEBデザイン（スマホ・タブレット対応）/ WordPress / PHP
+            WordPress / JavaScript
         </p>
 
         <h6 class="detail_title">制作 概要</h6>
@@ -28,11 +28,11 @@
         <table class="content_table">
             <tr>
                 <th>ご依頼内容</th>
-                <td>WordPressを使い新規HP制作のご依頼いただきました。</td>
+                <td>WordPressを使い新規LP制作のご依頼いただきました。</td>
             </tr>
             <tr>
                 <th>ページ数</th>
-                <td>トップページ含み4ページ</td>
+                <td>1ページ</td>
             </tr>
             <tr>
                 <th>制作期間</th>
@@ -50,7 +50,7 @@
         </p>
         <h6 class="detail_title">スキル</h6>
         <p class="detail_text">
-            HTML、CSS、JavaScript、WordPress、PHP
+            CSS、JavaScript、WordPress
         </p>
         <h6 class="detail_title">使用ツール</h6>
         <p class="detail_text">
@@ -58,7 +58,8 @@
         </p>
         <h6 class="detail_title">工夫した点や、作品のポイント</h6>
         <p class="detail_text">
-            CSSで画像の形を変えることのに工夫しました。
+            画像ベースのコーディングでした。<br>
+            JavaScriptでスライダーを自動再生しないように作るのに工夫しました。
         </p>
         <dl>
             <dt>【マルチデバイス対応】</dt>
@@ -70,18 +71,10 @@
             <dt>【HTMLタグの最適化】</dt>
             <dd>タイトルや見出し、重要なキーワードなどに適切なHTMLタグを使用し、検索エンジンがサイトの内容を正確に理解できるようコーディングを行いました。</dd>
             
-            <!-- <dt>【Google Search Consoleの活用】</dt>
-            <dd>全ページが正しくインデックス（登録）されるよう、サイトマップを作成し、Google Search Consoleを用いて送信・管理を行いました。</dd> -->
-            
-            <!-- <dt>【Google Analyticsの導入】</dt>
-            <dd>訪問者数や各ページの閲覧数、流入経路などを把握できるよう、Google Analyticsを導入。得られたデータは、今後のサイト運営や改善施策の検討に活用します。</dd> -->
-            
-            <!-- <dt>【ページ表示速度の最適化】</dt>
-            <dd>次世代画像形式（WebP）の使用・HTML・CSS・JavaScriptファイルの圧縮・キャッシュ設定による読み込み速度の向上。これらを実施し、Google Speed Insightsを活用してパフォーマンスを検証・改善しました。</dd> -->
         </dl>    
 
         <div class="button_wrapper">
-            <a class="work_button go_to_site_button" href="https://smile-ooh.com/" target="_blank">
+            <a class="work_button go_to_site_button" href="https://shinsulity.idms.or.jp/" target="_blank">
                 <div class="button_flex">
                     <span>TO site</span>
                     <span><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>

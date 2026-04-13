@@ -35,8 +35,11 @@
             scroll-behavior: smooth;
             overflow-y: scroll;
             border-radius: 15px;
-
-            img {}
+            
+            img {
+              display: inline-block;
+              text-align: center;
+            }
         }
 
         .detail_subtitle {
