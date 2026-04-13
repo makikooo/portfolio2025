@@ -164,7 +164,7 @@
             </div>
             <!-- ここまで１サイト紹介終わり -->
             <!-- ここから１サイト紹介始まり -->
-            <div class="work_link_wrapper" data-category="webdesign website wordpress">
+            <div class="work_link_wrapper" data-category="webdesign wordpress">
                 <div class="link_flex">
                     <div class="work_wrapper">
                         <img loading="lazy" class="work_image" src="<?php echo get_template_directory_uri(); ?>/assets/images/work01.webp" alt="制作内容のイメージ画像">
@@ -271,7 +271,7 @@
 
 
             <!-- ここから１サイト紹介始まり -->
-            <div class="work_link_wrapper" data-category="webdesign website wordpress">
+            <div class="work_link_wrapper" data-category="webdesign wordpress">
                 <div class="link_flex">
                     <div class="work_wrapper">
                         <img loading="lazy" class="work_image" src="<?php echo get_template_directory_uri(); ?>/assets/images/work03.webp" alt="制作内容のイメージ画像">
