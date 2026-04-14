@@ -60,7 +60,7 @@
                         <div class="work_box">
                             <h5 class="work_title">
                                 <span>
-                                模写・架空企業サイト
+                                コーポレートサイト 模写
                                 </span>                           
                             </h5>
                             <div class="category">LP</div>
@@ -1398,9 +1398,11 @@
                     </h5>
                     
                     <p>
-                      美容師からエンジニアへ——遠回りした分だけ、見えてくるものがありました。<br>
-                      コードを書くとき、いつも意識しているのは「使う人の気持ち」です。<br>
-                      そのすべてが「人に寄り添うものづくり」につながっています。
+                      美容師として働く中で、「目の前の人に本当に喜んでもらうこと」に向き合ってきました。<br>
+                      その想いは、エンジニアに転身した今も変わっていません。<br>
+                      <br>
+                      遠回りに見えるキャリアですが、経験があるからこそ、ユーザー視点で考える開発ができると考えています。<br>
+                      コードの先にいる“人”を意識し、使う人に寄り添うプロダクトをつくり続けます。
                     </p>
                     
                     <h5 class="web_site_title">
@@ -1424,7 +1426,7 @@
                             </td>
                         </tr>
                     </table>
-                    <a href="/about-me/">わたしについて 詳しくはこちら<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp"></a>
+                    <a class="go-to-about-me" href="/about-me/">わたしについて 詳しくはこちら<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp"></a>
                 </div>
             </div>
         </section>
