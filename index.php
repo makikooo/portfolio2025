@@ -60,7 +60,7 @@
                         <div class="work_box">
                             <h5 class="work_title">
                                 <span>
-                                コーポレートサイト 模写
+                                架空コーポレートサイト
                                 </span>                           
                             </h5>
                             <div class="category">LP</div>
