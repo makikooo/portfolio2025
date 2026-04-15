@@ -323,13 +323,13 @@
                         </div>
                     </div>
                     <div class="button_wrapper">
-                        <!-- <a class="work_button detail_button" href="http://">
+                        <a class="work_button detail_button" href="/portfolio2024_detail/">
                             <div class="button_flex">
                                 <span>detail</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
                             </div>
                             <div class="border"></div>
-                        </a> -->
+                        </a>
                         <a class="work_button site_button" target="_blank" href="<?php echo get_template_directory_uri(); ?>/site/portfolio2024/index.html">
                             <div class="button_flex">
                                 <span>TO SITe</span>
@@ -946,13 +946,13 @@
                             </div>
                         </div>
                         <div class="button_wrapper">
-                            <!-- <a class="work_button detail_button" href="<?php echo get_template_directory_uri(); ?>/detail/smile-ooh.html">
+                            <a class="work_button detail_button" href="/yakiniku/">
                                 <div class="button_flex">
                                     <span>detail</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
                                 </div>
                                 <div class="border"></div>
-                            </a> -->
+                            </a>
                             <a class="work_button site_button" target="_blank" href="https://happy-smile-design.info/yakiniku_dummy/">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
@@ -970,7 +970,7 @@
                         <div class="work_wrapper">
                             <img loading="lazy" class="work_image" src="<?php echo get_template_directory_uri(); ?>/assets/images/work37.webp" alt="制作内容のイメージ画像">
                             <div class="work_box">
-                                <h5 class="work_title"><span>架空喫茶店サイト</span></h5>
+                                <h5 class="work_title"><span>架空喫茶店サイト No.1</span></h5>
                                 <div class="category">WordPress</div>
                                 <p class="activity">グループ活動</p>
                                 <p class="production_date">制作日 2022年12月</p>
@@ -980,14 +980,14 @@
                             </div>
                         </div>
                         <div class="button_wrapper">
-                            <!-- <a class="work_button detail_button" href="http://">
+                            <a class="work_button detail_button" href="/coffee01/">
                                 <div class="button_flex">
                                     <span>detail</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
                                 </div>
                                 <div class="border"></div>
-                            </a> -->
-                            <a class="work_button site_button" target="_blank" href="https://www.happy-smile-design.info/coffee_dummy/">
+                            </a>
+                            <a class="work_button site_button" target="_blank" href="https://happy-smile-design.info/coffee_dummy/">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
@@ -1004,7 +1004,7 @@
                         <div class="work_wrapper">
                             <img loading="lazy" class="work_image" src="<?php echo get_template_directory_uri(); ?>/assets/images/work39.webp" alt="制作内容のイメージ画像">
                             <div class="work_box">
-                                <h5 class="work_title"><span>架空コーヒーショップサイト</span></h5>
+                                <h5 class="work_title"><span>架空喫茶店サイト No.2</span></h5>
                                 <div class="category">WordPress</div>
                                 <p class="activity">グループ活動</p>
                                 <p class="production_date">制作日 2022年12月</p>
@@ -1014,14 +1014,14 @@
                             </div>
                         </div>
                         <div class="button_wrapper">
-                            <!-- <a class="work_button detail_button" href="http://">
+                            <a class="work_button detail_button" href="/coffee02/">
                                 <div class="button_flex">
                                     <span>detail</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
                                 </div>
                                 <div class="border"></div>
-                            </a> -->
-                            <a class="work_button site_button" target="_blank" href="https://www.happy-smile-design.info/cafe_dummy/">
+                            </a>
+                            <a class="work_button site_button" target="_blank" href="https://happy-smile-design.info/cafe_dummy/">
                                 <div class="button_flex">
                                     <span>TO SITe</span>
                                     <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
