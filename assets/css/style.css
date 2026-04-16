@@ -108,13 +108,13 @@ body {
     gap: 20px;
   }
 }
-#home .works .work_card {
+#home .works .works_wrapper .work_card {
   background-color: #FEF1B8;
   border-radius: 50px;
   display: flex;
   flex-direction: column;
 }
-#home .works .work_card .thumnail {
+#home .works .works_wrapper .work_card .thumnail {
   width: calc(100% - 4px);
   aspect-ratio: 3/2;
   object-fit: cover;
@@ -124,16 +124,16 @@ body {
   border-width: 50px 0 0 50px;
 }
 @media screen and (max-width: 768px) {
-  #home .works .work_card .thumnail {
+  #home .works .works_wrapper .work_card .thumnail {
     aspect-ratio: 16/9;
   }
 }
-#home .works .work_card .skill_wrapper {
+#home .works .works_wrapper .work_card .skill_wrapper {
   flex: 1;
   margin: 0 auto 25px;
   width: 90%;
 }
-#home .works .work_card .skill_wrapper .category {
+#home .works .works_wrapper .work_card .skill_wrapper .category {
   display: inline-block;
   padding: 10px 30px;
   background-color: #fff;
@@ -141,26 +141,26 @@ body {
   margin-bottom: 15px;
   font-family: "Zen Maru Gothic", serif;
 }
-#home .works .work_card .skill_wrapper .website_name {
+#home .works .works_wrapper .work_card .skill_wrapper .website_name {
   font-family: "Zen Maru Gothic", serif;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 15px;
 }
-#home .works .work_card .skill_wrapper .skills {
+#home .works .works_wrapper .work_card .skill_wrapper .skills {
   font-family: "Zen Maru Gothic", serif;
 }
-#home .works .work_card .botton_wrapper {
+#home .works .works_wrapper .work_card .botton_wrapper {
   width: 90%;
   margin: 0 auto;
 }
-#home .works .work_card .botton_wrapper .word_border {
+#home .works .works_wrapper .work_card .botton_wrapper .word_border {
   background-color: #848080;
   border-radius: 9999px;
   width: 90%;
   margin: 0 auto;
 }
-#home .works .work_card .botton_wrapper .go_to_site {
+#home .works .works_wrapper .work_card .botton_wrapper .go_to_site {
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -168,15 +168,15 @@ body {
   align-items: center;
   padding: 24px;
 }
-#home .works .work_card .botton_wrapper .go_to_site .botton_text {
+#home .works .works_wrapper .work_card .botton_wrapper .go_to_site .botton_text {
   font-weight: 700;
   font-size: 18px;
 }
-#home .works .work_card .botton_wrapper .go_to_site .arrow {
+#home .works .works_wrapper .work_card .botton_wrapper .go_to_site .arrow {
   width: 14px;
   height: 14px;
 }
-#home .works .work_card .botton_wrapper .go_to_site .angle {
+#home .works .works_wrapper .work_card .botton_wrapper .go_to_site .angle {
   transform: rotate(-45deg);
 }
 #home .about_me .image_flex {

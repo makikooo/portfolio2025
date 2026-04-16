@@ -116,76 +116,85 @@ body {
           grid-template-columns: 1fr 1fr;
           gap: 20px;
         }
-      }
-      .work_card {
-        background-color: #FEF1B8;
-        border-radius: 50px;
-        display: flex;
-        flex-direction: column;
-        
-        .thumnail {
-          width: calc(100% - 4px);
-          aspect-ratio: 3 / 2; // PCは少し縦長に
-          object-fit: cover;
-          object-position: center top; // 上側を基準にトリミング
-          margin: 2px auto 15px;
-          display: block;
-          border-width: 50px 0 0 50px;
-          @include mq(md) {
-            aspect-ratio: 16 / 9; //スマホは横長に
+        .work_card {
+          background-color: #FEF1B8;
+          border-radius: 50px;
+          display: flex;
+          flex-direction: column;
+          
+          .thumnail {
+            width: calc(100% - 4px);
+            aspect-ratio: 3 / 2; // PCは少し縦長に
+            object-fit: cover;
+            object-position: center top; // 上側を基準にトリミング
+            margin: 2px auto 15px;
+            display: block;
+            border-width: 50px 0 0 50px;
+            @include mq(md) {
+              aspect-ratio: 16 / 9; //スマホは横長に
+            }
           }
-        }
-        .skill_wrapper {
-          flex: 1; // 余白をここで吸収する
-          margin: 0 auto 25px;
-          width: 90%;
-          .category {
-            display: inline-block;
-            padding: 10px 30px;
-            background-color: #fff;
-            border-radius: 20px;
-            margin-bottom: 15px;
-            font-family: "Zen Maru Gothic", serif;
+          .skill_wrapper {
+            flex: 1; // 余白をここで吸収する
+            margin: 0 auto 25px;
+            width: 90%;
+            .category {
+              display: inline-block;
+              padding: 10px 30px;
+              background-color: #fff;
+              border-radius: 20px;
+              margin-bottom: 15px;
+              font-family: "Zen Maru Gothic", serif;
+            }
+            .website_name {
+              font-family: "Zen Maru Gothic", serif;
+              font-size: 20px;
+              font-weight: 700;
+              margin-bottom: 15px;
+            }
+            .skills {
+              font-family: "Zen Maru Gothic", serif;
+            }
           }
-          .website_name {
-            font-family: "Zen Maru Gothic", serif;
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 15px;
-          }
-          .skills {
-            font-family: "Zen Maru Gothic", serif;
-          }
-        }
-        .botton_wrapper {
-          width: 90%;
-          margin: 0 auto;
-          .word_border {
-            background-color: #848080;
-            border-radius: 9999px;
+          .botton_wrapper {
             width: 90%;
             margin: 0 auto;
+            .word_border {
+              background-color: #848080;
+              border-radius: 9999px;
+              width: 90%;
+              margin: 0 auto;
+            }
+            .go_to_site {
+              width: 100%;
+              margin: 0 auto;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 24px;
+              
+              .botton_text {
+                font-weight: 700;
+                font-size: 18px;
+              }
+              .arrow {
+                width: 14px;
+                height: 14px;
+              }
+              .angle {
+                transform: rotate(-45deg);
+              }
+            }
           }
-          .go_to_site {
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px;
-            
-            .botton_text {
-              font-weight: 700;
-              font-size: 18px;
-            }
-            .arrow {
-              width: 14px;
-              height: 14px;
-            }
-            .angle {
-              transform: rotate(-45deg);
-            }
-          }
+        }
+      }
+      .go_to_detail_works {
+        
+        .button_text {
+          
+        }
+        .arrow {
+          
         }
       }
     }
