@@ -6,7 +6,7 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="/#works">works</a></li>
+                    <li><a href="/works/">works</a></li>
                     <li><a href="/about-me/">about</a></li>
                     <li><a href="<?php echo get_template_directory_uri(); ?>/contact.php">contact</a></li>
                 </ul>

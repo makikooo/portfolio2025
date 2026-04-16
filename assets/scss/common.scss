@@ -278,3 +278,28 @@ body {
         font-size: 0.5rem;
     }
 }
+
+// タイトル
+.title_wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .section_title {
+    color: #C39000;
+    @media screen and (max-width: 796px) {
+      font-size: 20px;
+    }
+    &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: #C39000;
+      border-radius: 999px;
+      margin-top: 15px;
+      @media screen and (max-width: 796px) {
+        margin-top: 10px;
+      }
+    }
+  }    
+}

@@ -250,3 +250,30 @@ body {
 .footer .footer_copy {
   font-size: 0.5rem;
 }
+
+.title_wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.title_wrapper .section_title {
+  color: #C39000;
+}
+@media screen and (max-width: 796px) {
+  .title_wrapper .section_title {
+    font-size: 20px;
+  }
+}
+.title_wrapper .section_title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #C39000;
+  border-radius: 999px;
+  margin-top: 15px;
+}
+@media screen and (max-width: 796px) {
+  .title_wrapper .section_title::after {
+    margin-top: 10px;
+  }
+}
