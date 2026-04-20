@@ -85,7 +85,7 @@
                   <img class="angle arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
                 </a>
                 <hr class="word_border">
-                <a href="https://happy-smile-design.info/wp-content/themes/portfolio/site/portfolio2024/page/about_onof.html" class="go_to_site">
+                <a href="/design-school/" class="go_to_site">
                   <p class="botton_text">サイト紹介を見る</p>
                   <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
                 </a>

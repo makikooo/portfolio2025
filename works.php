@@ -232,7 +232,7 @@
                         </div>
                     </div>
                     <div class="button_wrapper">
-                        <a class="work_button detail_button" href="<?php echo get_template_directory_uri(); ?>/site/portfolio2024/page/about_onof.html">
+                        <a class="work_button detail_button" href="<?php echo get_template_directory_uri(); ?>/design-school/">
                             <div class="button_flex">
                                 <span>detail</span>
                                 <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
