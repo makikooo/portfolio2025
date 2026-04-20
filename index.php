@@ -34,7 +34,7 @@
               <div class="skill_wrapper">
                 <h4 class="category">WordPress</h4>
                 <h5 class="website_name">わたしたちのSLE</h5>
-                <p class="skills">HTML / CSS / JavaScript / jQuery / Chart.js / WordPress / PHP</p>
+                <p class="skills">Webデザイン / HTML / CSS / JavaScript / jQuery / Chart.js / WordPress / PHP</p>
               </div>
               <div class="botton_wrapper">
                 <hr class="word_border">
@@ -70,14 +70,14 @@
                 </a>
               </div>
             </article>
-            
-            <article class="work_card">
+            <!-- デザインスクール大津様 -->
+            <article class="work_card sp_display">
               <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/thumnail-design-school.webp" alt="デザインスクール大津様のサムネイル">
               <div class="skill_wrapper">
                 <h4 class="category">LP</h4>
                 <h5 class="website_name">デザインスクール大津様</h5>
                 <p class="skills">HTML / CSS / JavaScript /GSAP</p>
-              </div>
+              </div>  
               <div class="botton_wrapper">
                 <hr class="word_border">
                 <a href="https://onof-design.com/" target="_blank" class="go_to_site">
@@ -91,14 +91,13 @@
                 </a>
               </div>
             </article>
-            
+            <!-- イラストレーションスクール様 -->
             <article class="work_card">
               <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/thumnail-illustration-school.webp" alt="イラストレーションスクール様のサムネイル">
               <div class="skill_wrapper">
                 <h4 class="category">WordPress</h4>
                 <h5 class="website_name">イラストレーションスクール様</h5>
-                <p class="skills">HTML / CSS / JavaScript / GSAP<br>
-                  チーム実務
+                <p class="skills">Webデザイン / HTML / CSS / JavaScript / GSAP<br>チーム実務
                 </p>
               </div>
               <div class="botton_wrapper">

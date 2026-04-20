@@ -97,58 +97,66 @@ body {
 }
 #home .works .works_wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: stretch;
   gap: 30px;
   margin-bottom: 100px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   #home .works .works_wrapper {
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 25px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #home .works .works_wrapper {
+    grid-template-columns: 1fr;
   }
 }
 #home .works .works_wrapper .work_card {
-  background-color: #FEF1B8;
-  border-radius: 50px;
   display: flex;
   flex-direction: column;
+  background-color: #FEF1B8;
+  border-radius: 50px;
 }
 #home .works .works_wrapper .work_card .thumnail {
-  width: calc(100% - 4px);
+  width: calc(100% - 10px);
   aspect-ratio: 3/2;
   object-fit: cover;
   object-position: center top;
-  margin: 2px auto 15px;
+  margin: 5px auto 15px;
   display: block;
-  border-width: 50px 0 0 50px;
-}
-@media screen and (max-width: 768px) {
-  #home .works .works_wrapper .work_card .thumnail {
-    aspect-ratio: 16/9;
-  }
+  border-radius: 50px 50px 0 0;
 }
 #home .works .works_wrapper .work_card .skill_wrapper {
+  display: flex;
+  flex-direction: column;
   flex: 1;
-  margin: 0 auto 25px;
-  width: 90%;
 }
 #home .works .works_wrapper .work_card .skill_wrapper .category {
   display: inline-block;
   padding: 10px 30px;
   background-color: #fff;
   border-radius: 20px;
-  margin-bottom: 15px;
+  margin: 0 5% 15px;
   font-family: "Zen Maru Gothic", serif;
+  align-self: start;
 }
 #home .works .works_wrapper .work_card .skill_wrapper .website_name {
   font-family: "Zen Maru Gothic", serif;
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin: 0 5% 15px;
+}
+@media screen and (max-width: 960px) {
+  #home .works .works_wrapper .work_card .skill_wrapper .website_name {
+    font-size: 18px;
+  }
 }
 #home .works .works_wrapper .work_card .skill_wrapper .skills {
   font-family: "Zen Maru Gothic", serif;
+  margin: 0 5% 25px;
+  flex: 1;
 }
 #home .works .works_wrapper .work_card .botton_wrapper {
   width: 90%;
@@ -178,6 +186,36 @@ body {
 }
 #home .works .works_wrapper .work_card .botton_wrapper .go_to_site .angle {
   transform: rotate(-45deg);
+}
+#home .works .works_wrapper .sp_display {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  #home .works .works_wrapper .sp_display {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  #home .works .works_wrapper .sp_display {
+    display: none;
+  }
+}
+#home .works .go_to_detail_works {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4d85d;
+  border-radius: 20px;
+  padding: 25px;
+  width: 300px;
+  margin: 0 auto;
+}
+#home .works .go_to_detail_works .button_text {
+  font-weight: 700;
+}
+#home .works .go_to_detail_works .arrow {
+  width: 20px;
+  height: 20px;
 }
 #home .about_me .image_flex {
   display: flex;

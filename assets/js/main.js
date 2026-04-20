@@ -289,3 +289,74 @@ window.addEventListener('load', () => {
     }
 });
 
+/*******************************************
+ *  ホームページ work_cardのskillsの高さを揃える
+ *******************************************/
+// work_cardの website_name と skills の高さを揃える関数
+function equalizeSkillsHeight() {
+  const wrapper = document.querySelector('.works_wrapper');
+
+  // .works_wrapper内の全.work_cardを取得し、display:noneのカードを除外
+  // offsetParent が null = 非表示の要素
+  const cards = Array.from(wrapper.querySelectorAll('.work_card'))
+    .filter(card => card.offsetParent !== null);
+  
+  // カードが1枚もなければ何もしない
+  if (cards.length === 0) return;
+
+  // 一度全カードの website_name と skills の minHeight をリセット
+  // リサイズ時に古い値が残らないようにするため
+  cards.forEach(card => {
+    ['website_name', 'skills'].forEach(cls => {
+      const el = card.querySelector('.' + cls);
+      if (el) el.style.minHeight = '';
+    });
+  });
+
+  // カラム数を計算（wrapper幅 ÷ カード1枚の幅 を四捨五入）
+  // 例：wrapperが1200px、カードが400px → 3カラム
+  const columnCount = Math.round(wrapper.offsetWidth / cards[0].offsetWidth);
+
+  // カラム数ずつカードをグループ化して行ごとに処理
+  for (let i = 0; i < cards.length; i += columnCount) {
+    
+    // 同じ行のカードを取り出す（例：3カラムなら0〜2、3〜5...）
+    const row = cards.slice(i, i + columnCount);
+
+    // 同じ行の website_name の中で一番高いものを取得
+    const maxNameHeight = Math.max(...row.map(card => {
+      const el = card.querySelector('.website_name');
+      return el ? el.offsetHeight : 0;
+    }));
+    // 同じ行の全カードの website_name に最大高さを設定
+    row.forEach(card => {
+      const el = card.querySelector('.website_name');
+      if (el) el.style.minHeight = maxNameHeight + 'px';
+    });
+
+    // 同じ行の skills の中で一番高いものを取得
+    // ※website_nameを揃えた後に計算する（高さが変わるため）
+    const maxSkillsHeight = Math.max(...row.map(card => {
+      const el = card.querySelector('.skills');
+      return el ? el.offsetHeight : 0;
+    }));
+    // 同じ行の全カードの skills に最大高さを設定
+    row.forEach(card => {
+      const el = card.querySelector('.skills');
+      if (el) el.style.minHeight = maxSkillsHeight + 'px';
+    });
+  }
+}
+
+// ページ読み込み時、ローディングアニメーション完了後（3600ms）に実行
+// ローディング中はカードが非表示でoffsetHeightが0になるため遅らせる
+window.addEventListener('load', () => {
+  if (!document.querySelector('.works_wrapper')) return;
+  setTimeout(equalizeSkillsHeight, 3600);
+});
+
+// 画面リサイズ時に再実行（カラム数が変わるため）
+window.addEventListener('resize',() => {
+  if (!document.querySelector('.works_wrapper')) return;
+  equalizeSkillsHeight();
+});

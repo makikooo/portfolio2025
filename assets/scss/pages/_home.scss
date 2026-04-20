@@ -108,54 +108,61 @@ body {
       margin-bottom: 60px;
       .works_wrapper {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         align-items: stretch; // カードの高さを揃える
         gap: 30px;
         margin-bottom: 100px;
-        @include mq(md) {
+        @include mq(lg) {
           grid-template-columns: 1fr 1fr;
-          gap: 20px;
+          gap: 25px;
         }
+        @include mq(sm) {
+          grid-template-columns: 1fr;
+        }
+        
         .work_card {
-          background-color: #FEF1B8;
-          border-radius: 50px;
           display: flex;
           flex-direction: column;
-          
+          background-color: #FEF1B8;
+          border-radius: 50px;          
           .thumnail {
-            width: calc(100% - 4px);
-            aspect-ratio: 3 / 2; // PCは少し縦長に
+            width: calc(100% - 10px);
+            aspect-ratio: 3 / 2; // 少し縦長に
             object-fit: cover;
             object-position: center top; // 上側を基準にトリミング
-            margin: 2px auto 15px;
+            margin: 5px auto 15px;
             display: block;
-            border-width: 50px 0 0 50px;
-            @include mq(md) {
-              aspect-ratio: 16 / 9; //スマホは横長に
-            }
-          }
-          .skill_wrapper {
-            flex: 1; // 余白をここで吸収する
-            margin: 0 auto 25px;
-            width: 90%;
+            border-radius: 50px 50px 0 0;
+          } 
+          .skill_wrapper{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
             .category {
               display: inline-block;
               padding: 10px 30px;
               background-color: #fff;
               border-radius: 20px;
-              margin-bottom: 15px;
+              margin: 0 5% 15px;
               font-family: "Zen Maru Gothic", serif;
+              align-self: start;
             }
             .website_name {
               font-family: "Zen Maru Gothic", serif;
               font-size: 20px;
               font-weight: 700;
-              margin-bottom: 15px;
+              margin: 0 5% 15px;
+              @include mq(lg) {
+                font-size: 18px;
+              }
             }
             .skills {
               font-family: "Zen Maru Gothic", serif;
+              margin: 0 5% 25px;
+              flex: 1;
             }
-          }
+          }           
           .botton_wrapper {
             width: 90%;
             margin: 0 auto;
@@ -187,14 +194,32 @@ body {
             }
           }
         }
+        .sp_display {
+          display: none;
+          @include mq(lg) {
+            display: block;
+          }
+          @include mq(sm) {
+            display: none;
+          }
+        }
       }
       .go_to_detail_works {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f4d85d;
+        border-radius: 20px;
+        padding: 25px;
+        width: 300px;
+        margin: 0 auto;
         
         .button_text {
-          
+          font-weight: 700;
         }
         .arrow {
-          
+          width: 20px;
+          height: 20px;
         }
       }
     }
