@@ -204,11 +204,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f4d85d;
-  border-radius: 20px;
-  padding: 25px;
-  width: 300px;
-  margin: 0 auto;
 }
 #home .works .go_to_detail_works .button_text {
   font-weight: 700;
@@ -216,6 +211,7 @@ body {
 #home .works .go_to_detail_works .arrow {
   width: 20px;
   height: 20px;
+  color: #484742;
 }
 #home .about_me .image_flex {
   display: flex;

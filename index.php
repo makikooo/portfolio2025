@@ -114,7 +114,7 @@
               </div>
             </article>
           </div>
-          <a class="go_to_detail_works" href="/detail-works/">
+          <a class="go_to_detail_works button" href="/detail-works/">
               <span class="button_text">すべての作品を見る</span>
               <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
           </a>

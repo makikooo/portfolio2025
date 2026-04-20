@@ -277,3 +277,16 @@ body {
     margin-top: 10px;
   }
 }
+
+.button {
+  width: 320px;
+  margin: 0 auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 25px;
+  background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
