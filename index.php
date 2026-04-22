@@ -162,9 +162,12 @@
                             </td>
                         </tr>
                     </table>
-                    <a class="go-to-about-me" href="/about-me/">わたしについて 詳しくはこちら<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp"></a>
                 </div>
             </div>
+            <a class="go-to-about-me button" href="/about-me/">
+              <span>わたしについて 詳しく</span>
+              <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
+            </a>
         </section>
 
         <section class="title_wrapper">
@@ -172,7 +175,10 @@
         </section>
         <section class="contact" id="contact">
             <p>ご依頼・ご相談や、ホームページのご感想などお気軽にお問い合わせくださいませ。</p><br>
-            <a class="to_contact_button" href="<?php echo get_template_directory_uri(); ?>/contact.php">コンタクトページへ</a>
+            <a class="to_contact_button button" href="<?php echo get_template_directory_uri(); ?>/contact.php">
+              <span>コンタクトページへ</span>
+              <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
+            </a>
             <!-- <form action="">
                 <table class="contact_table">
                     <tr>
@@ -278,10 +284,13 @@
         </section>
         <section class="title_wrapper">
           <h3 class="section_title">CODE <span>このサイトのコード</span></h3>
+          <a class="button" href="https://github.com/makikooo/portfolio2025" target="_blank">
+            <span>GitHub</span>
+            <img class="angle" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
+          </a>
         </section>
         <section class="github_links_section">
             <div class="github_links">
-                <a href="https://github.com/makikooo/portfolio2025" target="_blank">GitHub</a>
             </div>
         </section>
     </main>

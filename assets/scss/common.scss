@@ -308,12 +308,22 @@ body {
 .button {
   width: 320px;
   margin: 0 auto;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   padding: 15px 25px;
   background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
   border-radius: 20px;
   border: none;
   cursor: pointer;
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 600;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  .angle {
+    transform: rotate(-45deg);
+  }
 }

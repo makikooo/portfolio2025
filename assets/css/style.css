@@ -291,23 +291,16 @@ body {
     display: block;
   }
 }
-#home .about_me .image_flex .about_text_box .go-to-about-me {
-  width: 300px;
-  margin: 40px 20% 60px auto;
-  padding: 20px;
+#home .about_me .go-to-about-me {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 15px;
-  background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
-  font-weight: 600;
+  margin: 40px auto 60px;
 }
 @media screen and (max-width: 796px) {
-  #home .about_me .image_flex .about_text_box .go-to-about-me {
-    margin: 0 auto;
+  #home .about_me .go-to-about-me {
+    margin: 30px auto;
   }
 }
-#home .about_me .image_flex .about_text_box .go-to-about-me img {
+#home .about_me .go-to-about-me img {
   width: 20px;
 }
 #home .contact {
@@ -317,15 +310,6 @@ body {
   text-align: center;
 }
 #home .contact .to_contact_button {
-  width: 320px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
   margin-bottom: 55px;
 }
 #home .contact form .contact_table {

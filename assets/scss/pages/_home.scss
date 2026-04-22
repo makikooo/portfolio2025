@@ -300,24 +300,17 @@ body {
                         }
                     }
                 }
-                .go-to-about-me {
-                  width: 300px;
-                  margin: 40px 20% 60px auto;
-                  padding: 20px;
-                  display: flex;
-                  justify-content: space-around;
-                  align-items: center;
-                  border-radius: 15px;
-                  background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
-                  font-weight: 600;
-                  @media screen and (max-width: 796px) {
-                    margin: 0 auto;
-                  }
-                  img {
-                      width: 20px;
-                  }
-                }
             }
+        }
+        .go-to-about-me {
+          display: flex;
+          margin: 40px auto 60px;
+          @media screen and (max-width: 796px) {
+            margin: 30px auto;
+          }
+          img {
+              width: 20px;
+          }
         }
     }
 
@@ -329,15 +322,6 @@ body {
 
         
         .to_contact_button {
-            width: 320px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            padding: 15px;
-            background: linear-gradient(to bottom, #f4d85d, #efe4b5, #f4d85d);
-            border-radius: 10px;
-            border: none;
-            cursor: pointer;
             margin-bottom: 55px;
         }
 
