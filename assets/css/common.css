@@ -41,7 +41,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   body {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -261,7 +261,7 @@ body {
 }
 @media screen and (max-width: 796px) {
   .title_wrapper .section_title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 .title_wrapper .section_title::after {

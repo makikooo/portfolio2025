@@ -13,7 +13,7 @@
       justify-content: center;
       align-items: start;
       gap: 40px;
-      @media screen and (max-width: 796px) {
+      @include mq(md) {
         flex-direction: column-reverse;
         gap: 0;
       }
@@ -24,7 +24,7 @@
         align-items: center;
         width: 150px;
         height: 150px;
-        @media screen and (max-width: 796px) {
+        @include mq(md) {
           margin: 0 auto;
         }
         /* 回転するテキストのSVG */
@@ -64,29 +64,29 @@
       .text_wrapper {
         margin-bottom: 20px;
         p {
-          font-size: 20px;
-          @media screen and (max-width: 796px){
-            font-size: 16px;
+          font-size: 1.25rem;
+          @include mq(md){
+            font-size: 1rem;
           }
         }
         .roma_name {
-          font-size: 32px;
-          @media screen and (max-width: 796px) {
-            font-size: 24px;
+          font-size: 2rem;
+          @include mq(md) {
+            font-size: 1.5rem;
           }
         }
         .kanji_name {
-          font-size: 27px;
-          @media screen and (max-width: 796px) {
-            font-size: 18px;
+          font-size: 1.6875rem;
+          @include mq(md) {
+            font-size: 1.125rem;
           }
         }
         .skill {
           color: #C39000;
-          font-size: 24px;
+          font-size: 1.5rem;
           font-family: "Zen Maru Gothic", serif;
-          @media screen and (max-width: 796px) {
-            font-size: 20px;
+          @include mq(md) {
+            font-size: 1.25rem;
           }
         }
       }
@@ -95,7 +95,7 @@
       width: 90%;
       max-width: 637px;
       margin: 20px auto 50px;
-      @media screen and (max-width: 796px) {
+      @include mq(md) {
         margin-bottom: 40px;
       }
     }
@@ -105,7 +105,7 @@
       border: none;
       border-top: 3px solid #C39000;
       border-radius: 999px;
-      @media screen and (max-width: 796px) {
+      @include mq(md) {
         margin-bottom: 40px;
         border-top: 2px solid #C39000;
       }
@@ -121,17 +121,18 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 25px;
       margin-bottom: 140px;
-      @media screen and (max-width: 796px) {
+      @include mq(md) {
         grid-template-columns: 1fr 1fr;
         margin-bottom: 60px;
       }
       .skill_title {
         text-align: center;
         padding: 8px 30px;
-        background-color: #FFF1C9;
+        background-color: #fbf7eb;
         border: 1px solid #FFC00D;
         border-radius: 20px;
         font-family: "Zen Maru Gothic", serif;
+        animation: up 1.4s ease forwards;
       }
     }
   }
@@ -142,8 +143,8 @@
     
     .section_title {
       color: #C39000;
-      @media screen and (max-width: 796px) {
-        font-size: 20px;
+      @include mq(md) {
+        font-size: 1.25rem;
       }
       &::after {
         content: '';
@@ -152,11 +153,11 @@
         background-color: #C39000;
         border-radius: 999px;
         margin-top: 15px;
-        @media screen and (max-width: 796px) {
+        @include mq(md) {
           margin-top: 10px;
         }
       }
-      @media screen and (max-width: 796px) {
+      @include mq(md) {
         margin-bottom: 40px;
       }
     }
@@ -164,7 +165,7 @@
       width: 1000px;
       max-width: 90%;
       margin: 0 auto 75px;
-      @media screen and (max-width: 796px) {
+      @include mq(md) {
         margin-bottom: 40px;
       }
       & > p {
@@ -184,7 +185,7 @@
           height: 100%;
           background-color: #C39000;
           border-radius: 999px;
-          @media screen and (max-width: 796px) {
+          @include mq(md) {
             width: 5px;
           }
         }
@@ -194,19 +195,19 @@
         border: 1.5px solid #FFC00D;
         border-radius: 20px;
         padding: 40px 50px;
-        @media screen and (max-width: 796px) {
+        @include mq(md) {
           padding: 20px 20px;
         }
         h3 {
           color: #C39000;
           margin-bottom: 18px;
-          @media screen and (max-width: 796px) {
+          @include mq(md) {
             margin-bottom: 10px;
           }
         }
         & > p {
           line-height: 32px;
-          @media screen and (max-width: 796px) {
+          @include mq(md) {
             line-height: 30px;
           }
         }
@@ -219,8 +220,8 @@
     margin: 0 auto 75px;
     .section_title {
       color: #C39000;
-      @media screen and (max-width: 796px) {
-        font-size: 20px;
+      @include mq(md) {
+        font-size: 1.25rem;
       }
       &::after {
         content: '';
@@ -229,7 +230,7 @@
         background-color: #C39000;
         border-radius: 999px;
         margin-top: 15px;
-        @media screen and (max-width: 796px) {
+        @include mq(md) {
           margin-top: 10px;
         }
       }
@@ -242,7 +243,7 @@
       justify-self: center;
       align-items: stretch;
       gap: 60px;
-      @media screen and (max-width: 796px) {
+      @include mq(md) {
         margin: 40px auto;
         flex-direction: column;
         gap: 25px;
@@ -254,30 +255,30 @@
         border: 1px solid #C39000;
         padding: 40px;
         border-radius: 20px;
-        @media screen and (max-width: 796px) {
+        @include mq(md) {
           padding: 20px 15px;
         }
         &__number {
           font-family: "Zen Maru Gothic", serif;
           color: #C39000;
           margin-bottom: 16px;
-          @media screen and (max-width: 796px) {
+          @include mq(md) {
             margin-bottom: 10px;
           }
         }
         &__title {
           font-family: "Zen Maru Gothic", serif;
           font-weight: bold;
-          font-size: 32px;
+          font-size: 2rem;
           margin-bottom: 25px;
-          @media screen and (max-width: 796px) {
+          @include mq(md) {
             margin-bottom: 10px;
-            font-size: 20px;
+            font-size: 1.25rem;
           }
         }
         &__text {
           line-height: 32px;
-          @media screen and (max-width: 796px) {
+          @include mq(md) {
             line-height: 24px;
           }
         }
@@ -301,10 +302,10 @@
           justify-content: space-between;
           margin-bottom: 8px;
           .skill-item__name {
-            font-size: 16px;
+            font-size: 1rem;
           }
           .skill-item__level {
-            font-size: 14px;
+            font-size: 0.875rem;
             color: #999;
           }
         }
@@ -330,7 +331,7 @@
       border: 1px solid #C39000;
       border-radius: 20px;
       padding: 35px 45px;
-      @media screen and (max-width: 796px) {
+      @include mq(md) {
         padding: 25px;
       }
       .skill-up-title {
@@ -344,7 +345,7 @@
         justify-content: center;
         align-items: center;
         gap: 40px;
-        @media screen and (max-width: 796px) {
+        @include mq(md) {
           gap: 20px;
           justify-content: space-between;
         }
@@ -367,8 +368,8 @@
     
     .section_title {
       color: #C39000;
-      @media screen and (max-width: 796px) {
-        font-size: 20px;
+      @include mq(md) {
+        font-size: 1.25rem;
         margin-bottom: 30px;
       }
       &::after {
@@ -378,7 +379,7 @@
         background-color: #C39000;
         border-radius: 999px;
         margin-top: 15px;
-        @media screen and (max-width: 796px) {
+        @include mq(md) {
           margin-top: 10px;
         }
       }
@@ -390,7 +391,7 @@
       margin: 40px auto 60px;
       grid-template-columns: 1fr 1fr;
       gap: 30px 60px;
-      @media screen and (max-width: 796px) {
+      @include mq(md) {
         gap: 20px;
         grid-template-columns: 1fr;
         margin: 20px auto 40px;
@@ -400,7 +401,7 @@
         background: #FEF7E3;
         border: 1px solid #C39000;
         border-radius: 30px;
-        @media screen and (max-width: 796px) {
+        @include mq(md) {
           padding: 10px 15px;
           border-radius: 20px;
         }
@@ -408,10 +409,10 @@
       .tool__card-title {
         font-family: "Zen Maru Gothic", serif;
         color: #C39000;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: medium;
-        @media screen and (max-width: 796px) {
-          font-size: 18px;
+        @include mq(md) {
+          font-size: 1.125rem;
         }
       }
       .tool__card-tools {

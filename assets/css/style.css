@@ -144,13 +144,13 @@ body {
 }
 #home .works .works_wrapper .work_card .skill_wrapper .website_name {
   font-family: "Zen Maru Gothic", serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   margin: 0 5% 15px;
 }
 @media screen and (max-width: 960px) {
   #home .works .works_wrapper .work_card .skill_wrapper .website_name {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 #home .works .works_wrapper .work_card .skill_wrapper .skills {
@@ -178,7 +178,7 @@ body {
 }
 #home .works .works_wrapper .work_card .botton_wrapper .go_to_site .botton_text {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 #home .works .works_wrapper .work_card .botton_wrapper .go_to_site .arrow {
   width: 14px;
@@ -266,7 +266,7 @@ body {
 #home .about_me .image_flex .about_text_box .site_table {
   border-spacing: 25px 5px;
 }
-@media (width < 901px) {
+@media screen and (max-width: 960px) {
   #home .about_me .image_flex .about_text_box .site_table {
     display: block;
     border-spacing: 0;
@@ -278,7 +278,7 @@ body {
 #home .about_me .image_flex .about_text_box .site_table tr th {
   font-weight: normal;
 }
-@media (width < 901px) {
+@media screen and (max-width: 960px) {
   #home .about_me .image_flex .about_text_box .site_table tr th {
     display: block;
   }
@@ -286,7 +286,7 @@ body {
 #home .about_me .image_flex .about_text_box .site_table tr td {
   font-family: "Zen Maru Gothic", serif;
 }
-@media (width < 901px) {
+@media screen and (max-width: 960px) {
   #home .about_me .image_flex .about_text_box .site_table tr td {
     display: block;
   }
@@ -295,7 +295,7 @@ body {
   display: flex;
   margin: 40px auto 60px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #home .about_me .go-to-about-me {
     margin: 30px auto;
   }
@@ -458,7 +458,7 @@ body {
   align-items: start;
   gap: 40px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec01 .title_wrapper {
     flex-direction: column-reverse;
     gap: 0;
@@ -472,7 +472,7 @@ body {
   width: 150px;
   height: 150px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec01 .title_wrapper .image_wrapper {
     margin: 0 auto;
   }
@@ -521,37 +521,37 @@ body {
   margin-bottom: 20px;
 }
 #about-page .sec01 .title_wrapper .text_wrapper p {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec01 .title_wrapper .text_wrapper p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 #about-page .sec01 .title_wrapper .text_wrapper .roma_name {
-  font-size: 32px;
+  font-size: 2rem;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec01 .title_wrapper .text_wrapper .roma_name {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 #about-page .sec01 .title_wrapper .text_wrapper .kanji_name {
-  font-size: 27px;
+  font-size: 1.6875rem;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec01 .title_wrapper .text_wrapper .kanji_name {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 #about-page .sec01 .title_wrapper .text_wrapper .skill {
   color: #C39000;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Zen Maru Gothic", serif;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec01 .title_wrapper .text_wrapper .skill {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 #about-page .sec01 .about_sub_titile {
@@ -559,7 +559,7 @@ body {
   max-width: 637px;
   margin: 20px auto 50px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec01 .about_sub_titile {
     margin-bottom: 40px;
   }
@@ -571,7 +571,7 @@ body {
   border-top: 3px solid #C39000;
   border-radius: 999px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec01 .section_border {
     margin-bottom: 40px;
     border-top: 2px solid #C39000;
@@ -589,7 +589,7 @@ body {
   gap: 25px;
   margin-bottom: 140px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec01 .skill_flex {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 60px;
@@ -598,10 +598,11 @@ body {
 #about-page .sec01 .skill_flex .skill_title {
   text-align: center;
   padding: 8px 30px;
-  background-color: #FFF1C9;
+  background-color: #fbf7eb;
   border: 1px solid #FFC00D;
   border-radius: 20px;
   font-family: "Zen Maru Gothic", serif;
+  animation: up 1.4s ease forwards;
 }
 #about-page .sec02 {
   width: 90%;
@@ -611,9 +612,9 @@ body {
 #about-page .sec02 .section_title {
   color: #C39000;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec02 .section_title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 #about-page .sec02 .section_title::after {
@@ -624,12 +625,12 @@ body {
   border-radius: 999px;
   margin-top: 15px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec02 .section_title::after {
     margin-top: 10px;
   }
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec02 .section_title {
     margin-bottom: 40px;
   }
@@ -639,7 +640,7 @@ body {
   max-width: 90%;
   margin: 0 auto 75px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec02 .sec02_wrapper {
     margin-bottom: 40px;
   }
@@ -663,7 +664,7 @@ body {
   background-color: #C39000;
   border-radius: 999px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec02 .sec02_wrapper .point::after {
     width: 5px;
   }
@@ -674,7 +675,7 @@ body {
   border-radius: 20px;
   padding: 40px 50px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec02 .sec02_wrapper .goal {
     padding: 20px 20px;
   }
@@ -683,7 +684,7 @@ body {
   color: #C39000;
   margin-bottom: 18px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec02 .sec02_wrapper .goal h3 {
     margin-bottom: 10px;
   }
@@ -691,7 +692,7 @@ body {
 #about-page .sec02 .sec02_wrapper .goal > p {
   line-height: 32px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec02 .sec02_wrapper .goal > p {
     line-height: 30px;
   }
@@ -704,9 +705,9 @@ body {
 #about-page .sec03 .section_title {
   color: #C39000;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec03 .section_title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 #about-page .sec03 .section_title::after {
@@ -717,7 +718,7 @@ body {
   border-radius: 999px;
   margin-top: 15px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec03 .section_title::after {
     margin-top: 10px;
   }
@@ -731,7 +732,7 @@ body {
   align-items: stretch;
   gap: 60px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec03 .sec03_flex {
     margin: 40px auto;
     flex-direction: column;
@@ -745,7 +746,7 @@ body {
   padding: 40px;
   border-radius: 20px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec03 .sec03_flex .card {
     padding: 20px 15px;
   }
@@ -755,7 +756,7 @@ body {
   color: #C39000;
   margin-bottom: 16px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec03 .sec03_flex .card__number {
     margin-bottom: 10px;
   }
@@ -763,19 +764,19 @@ body {
 #about-page .sec03 .sec03_flex .card__title {
   font-family: "Zen Maru Gothic", serif;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 2rem;
   margin-bottom: 25px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec03 .sec03_flex .card__title {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 #about-page .sec03 .sec03_flex .card__text {
   line-height: 32px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec03 .sec03_flex .card__text {
     line-height: 24px;
   }
@@ -801,10 +802,10 @@ body {
   margin-bottom: 8px;
 }
 #about-page .sec03 .skill-section .skill-item__header .skill-item__name {
-  font-size: 16px;
+  font-size: 1rem;
 }
 #about-page .sec03 .skill-section .skill-item__header .skill-item__level {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #999;
 }
 #about-page .sec03 .skill-section .skill-item__bar-bg {
@@ -828,7 +829,7 @@ body {
   border-radius: 20px;
   padding: 35px 45px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec03 .skill-up-section {
     padding: 25px;
   }
@@ -845,7 +846,7 @@ body {
   align-items: center;
   gap: 40px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec03 .skill-up-section .skill-up-wrapper {
     gap: 20px;
     justify-content: space-between;
@@ -866,9 +867,9 @@ body {
 #about-page .sec04 .section_title {
   color: #C39000;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec04 .section_title {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 30px;
   }
 }
@@ -880,7 +881,7 @@ body {
   border-radius: 999px;
   margin-top: 15px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec04 .section_title::after {
     margin-top: 10px;
   }
@@ -893,7 +894,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 30px 60px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec04 .sec04_grid {
     gap: 20px;
     grid-template-columns: 1fr;
@@ -906,7 +907,7 @@ body {
   border: 1px solid #C39000;
   border-radius: 30px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec04 .sec04_grid .tool__card {
     padding: 10px 15px;
     border-radius: 20px;
@@ -915,12 +916,12 @@ body {
 #about-page .sec04 .sec04_grid .tool__card-title {
   font-family: "Zen Maru Gothic", serif;
   color: #C39000;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: medium;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #about-page .sec04 .sec04_grid .tool__card-title {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 #about-page .sec04 .sec04_grid .tool__card-tools {
@@ -1269,9 +1270,9 @@ body {
 #works-page .sec01 .section_title {
   color: #C39000;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #works-page .sec01 .section_title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 #works-page .sec01 .section_title::after {
@@ -1282,7 +1283,7 @@ body {
   border-radius: 999px;
   margin-top: 15px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
   #works-page .sec01 .section_title::after {
     margin-top: 10px;
   }
@@ -1454,7 +1455,7 @@ body {
     max-width: 100%;
   }
 }
-@media (width < 480px) {
+@media screen and (max-width: 480px) {
   #works-page .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box {
     margin: 15px auto 20px;
     min-width: 210px;
@@ -1503,7 +1504,7 @@ body {
   font-family: "Zen Maru Gothic", serif;
   border-radius: 10px;
 }
-@media (width < 1066px) {
+@media screen and (max-width: 960px) {
   #works-page .sec03 .work_link_wrapper .link_flex .work_wrapper .work_box .code {
     width: min-content;
   }
@@ -1530,7 +1531,7 @@ body {
   width: 300px;
   padding: 10px;
 }
-@media (width < 1000px) {
+@media screen and (max-width: 960px) {
   #works-page .sec03 .work_link_wrapper .link_flex .button_wrapper .work_button {
     width: 200px;
   }
@@ -1580,7 +1581,7 @@ body {
   border-radius: 10px;
   background: #fff;
 }
-@media (width < 813px) {
+@media screen and (max-width: 960px) {
   #works-page .sec03 .work_link_wrapper .link_flex .button_wrapper .site_button {
     border: #E7D173 solid 1px;
   }
@@ -1730,7 +1731,7 @@ body {
     text-align: left;
   }
 }
-@media (width < 480px) {
+@media screen and (max-width: 480px) {
   #works-page .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box {
     margin: 15px auto 20px;
     min-width: 210px;
@@ -1776,7 +1777,7 @@ body {
   font-family: "Zen Maru Gothic", serif;
   border-radius: 10px;
 }
-@media (width < 1066px) {
+@media screen and (max-width: 960px) {
   #works-page .work_continuation .work_link_wrapper .link_flex .work_wrapper .work_box .code {
     width: min-content;
   }

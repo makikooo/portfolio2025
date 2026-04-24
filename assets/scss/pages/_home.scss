@@ -150,11 +150,11 @@ body {
             }
             .website_name {
               font-family: "Zen Maru Gothic", serif;
-              font-size: 20px;
+              font-size: 1.25rem;
               font-weight: 700;
               margin: 0 5% 15px;
               @include mq(lg) {
-                font-size: 18px;
+                font-size: 1.125rem;
               }
             }
             .skills {
@@ -182,7 +182,7 @@ body {
               
               .botton_text {
                 font-weight: 700;
-                font-size: 18px;
+                font-size: 1.125rem;
               }
               .arrow {
                 width: 14px;
@@ -275,7 +275,7 @@ body {
                 .site_table {
                     border-spacing: 25px 5px;
 
-                    @media (width < 901px) {
+                    @include mq(lg) {
                         display: block;
                         border-spacing: 0;
                     }
@@ -286,7 +286,7 @@ body {
                         th {
                             font-weight: normal;
 
-                            @media (width < 901px) {
+                            @include mq(lg) {
                                 display: block;
                             }
                         }
@@ -294,7 +294,7 @@ body {
                         td {
                             font-family: "Zen Maru Gothic", serif;
 
-                            @media (width < 901px) {
+                            @include mq(lg) {
                                 display: block;
                             }
                         }
@@ -305,7 +305,7 @@ body {
         .go-to-about-me {
           display: flex;
           margin: 40px auto 60px;
-          @media screen and (max-width: 796px) {
+          @include mq(md) {
             margin: 30px auto;
           }
           img {

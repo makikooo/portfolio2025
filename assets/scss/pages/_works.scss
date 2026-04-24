@@ -9,8 +9,8 @@
     margin: 0 auto 75px;
     .section_title {
       color: #C39000;
-      @media screen and (max-width: 796px) {
-        font-size: 20px;
+      @include mq(md) {
+        font-size: 1.25rem;
       }
       &::after {
         content: '';
@@ -19,7 +19,7 @@
         background-color: #C39000;
         border-radius: 999px;
         margin-top: 15px;
-        @media screen and (max-width: 796px) {
+        @include mq(md) {
           margin-top: 10px;
         }
       }
@@ -189,7 +189,7 @@
                             max-width: 100%;
                         }
 
-                        @media (width < 480px) {
+                        @include mq(sm) {
                             margin: 15px auto 20px;
                             min-width: 210px;
                             width: 210px;
@@ -240,7 +240,7 @@
                             font-family: "Zen Maru Gothic", serif;
                             border-radius: 10px;
 
-                            @media (width < 1066px) {
+                            @include mq(lg) {
                                 width: min-content;
                             }
                         }
@@ -267,7 +267,7 @@
                         width: 300px;
                         padding: 10px;
 
-                        @media (width < 1000px) {
+                        @include mq(lg) {
                             width: 200px;
                         }
 
@@ -324,7 +324,7 @@
                         border-radius: 10px;
                         background: #fff;
 
-                        @media (width < 813px) {
+                        @include mq(lg) {
                             border: #E7D173 solid 1px;
 
                         }
@@ -476,7 +476,7 @@
                             text-align: left;
                         }
 
-                        @media (width < 480px) {
+                        @include mq(sm) {
                             margin: 15px auto 20px;
                             min-width: 210px;
                             width: 210px;
@@ -522,7 +522,7 @@
                             font-family: "Zen Maru Gothic", serif;
                             border-radius: 10px;
 
-                            @media (width < 1066px) {
+                            @include mq(lg) {
                                 width: min-content;
                             }
                         }
