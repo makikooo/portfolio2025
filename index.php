@@ -30,11 +30,11 @@
           <div class="works_wrapper">
             <!-- わたしたちのSLEのカード -->
             <article class="work_card">
-              <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/thumnail-sle.webp" alt="わたしたちのSLEのサムネイル">
+              <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/renewal-our-sle.webp" alt="わたしたちのSLEのサムネイル">
               <div class="skill_wrapper">
                 <h4 class="category">WordPress</h4>
                 <h5 class="website_name">わたしたちのSLE</h5>
-                <p class="skills">Webデザイン / HTML / CSS / JavaScript / jQuery / Chart.js / WordPress / PHP</p>
+                <p class="skills">Webデザイン / HTML / CSS / JavaScript / WordPress / PHP</p>
               </div>
               <div class="botton_wrapper">
                 <hr class="word_border">
@@ -43,7 +43,7 @@
                   <img class="angle arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
                 </a>
                 <hr class="word_border">
-                <a href="/our-sle/" class="go_to_site">
+                <a href="/detail_our_sle/" class="go_to_site">
                   <p class="botton_text">サイト紹介を見る</p>
                   <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
                 </a>

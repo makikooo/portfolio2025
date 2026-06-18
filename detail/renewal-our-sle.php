@@ -1,6 +1,6 @@
 <?php 
 /*
- * Template Name: our-sle
+ * Template Name: renewal-our-sle
  */
 ?>
 
@@ -12,15 +12,15 @@
         <div class="border"></div>
 
         <div class="images_wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/our-sle.webp" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/renewal-our-sle-toppage.webp" alt="">
         </div>
-        <a target="_blank" href="https://our-sle.info/main/" class="detail_subtitle">わたしの運営サイト 2025年まで</a>
-        <p class="detail_link"><a target="_blank" href="https://our-sle.info/main/">( https://our-sle.info/main/ )</a></p>
+        <a target="_blank" href="https://our-sle.info/" class="detail_subtitle">わたしの運営サイト</a>
+        <p class="detail_link"><a target="_blank" href="https://our-sle.info/">( https://our-sle.info/ )</a></p>
         
         
         <h6 class="detail_title">対応内容 サイト構成</h6>
         <p class="detail_text">
-            プランニング / ロゴデザイン / レスポンシブWEBデザイン（スマホ・タブレット対応）/ HTMLコーディング / WordPress / チームワーク
+            プランニング / ロゴデザイン / レスポンシブWEBデザイン（スマホ・タブレット対応）/ HTMLコーディング / WordPress
         </p>
 
         <h6 class="detail_title">制作概要</h6>
@@ -38,40 +38,31 @@
             <dt>【作品のポイント】</dt>
             <dd>
               コンバージョンは仲間と話せるオープンチャットへの誘導です<br>
-              私が管理するオープンチャットは430名集まりました
+              私が管理するオープンチャットは450名集まりました
             </dd>
             
-            <dt>【作品のビジュアル】</dt>
-            <dd>サイトのTopページビジュアルはデザイナーの娘に線画をかいてもらいました</dd>
-            
             <dt>【公開年月日】</dt>
-            <dd>2021年公開</dd>
+            <dd>2026年6月17日リニューアル公開</dd>
             
             <dt>【制作期間】</dt>
-            <dd>2021年から現在に至り全面的な改修を2度行っています</dd>
+            <dd>2025年からデザインを始めました</dd>
             
             <dt>【使用したスキル】</dt>
             <dd>罹患したばかりの患者さんが不安になることを少しでも気持ちが安らぐように実体験や患者仲間からのアンケートを行いグラフでグラフで集計をしています。<br>
                   レスポンスデザイン対応しています。<br>
-                  HTMLとCSSを一から作り、JQueryとJavaScriptを勉強しながらコーディングしています</dd>   
-        </dl>
-
-        <h6 class="detail_title">活動内容</h6>
-        <dl>
-            <dt>【グループ活動】</dt>
-            <dd>ヒーロー画像は娘が作成しました。それ以外はわたしが担当しています。</dd>
+                  HTMLとCSSを一から作り、JavaScriptとPHPをコーディングしています</dd>   
         </dl>
         
         <h6 class="detail_title">スキル</h6>
         <p class="detail_text">
-            HTML、CSS、JavaScript、JQuery、Chart.js、WordPress、PHP
+            HTML、CSS、JavaScript、WordPress、PHP
         </p>
 
         <h6 class="detail_title">使用ツール</h6>
-        <p class="detail_text">PhotoShop / Illustrator / XDから figma へ移行 / VScode / GitHub / Treesource</p>
+        <p class="detail_text">figma / VScode / Claude / GitHub / Treesource</p>
             
         <div class="button_wrapper">
-          <a class="work_button go_to_site_button" href="https://our-sle.info/main/" target="_blank">
+          <a class="work_button go_to_site_button" href="https://our-sle.info/" target="_blank">
             <div class="button_flex">
                 <span>TO site</span>
                 <span><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
