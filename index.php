@@ -166,11 +166,33 @@
                 </a>
               </div>
             </article>
+            
+            <!-- みにっちゃのカード -->
+            <article class="work_card">
+              <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/miniccha.webp" alt="みにっちゃのサムネイル">
+              <div class="skill_wrapper">
+                <h4 class="category">WordPress・運用</h4>
+                <h5 class="website_name">みにっちゃ</h5>
+                <p class="skills">Webデザイン / WordPress / HTML / PHP / CSS / JavaScript </p>
+              </div>
+              <div class="botton_wrapper">
+                <hr class="word_border">
+                <a href="https://miniccha0709.cloudfree.jp/" target="_blank" class="go_to_site">
+                  <p class="botton_text">アプリを見る</p>
+                  <img class="angle arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
+                </a>
+                <hr class="word_border">
+                <a href="/detail-miniccha/" class="go_to_site">
+                  <p class="botton_text">サイト紹介を見る</p>
+                  <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
+                </a>
+              </div>
+            </article>
           </div>
-          <a class="go_to_detail_ai button" href="/detail-ai-coding/">
+          <!-- <a class="go_to_detail_ai button" href="/detail-ai-coding/">
               <span class="button_text">すべての作品を見る</span>
               <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
-          </a>
+          </a> -->
         </section>
   
         <section class="about_me title_wrapper" id="about">
@@ -200,10 +222,34 @@
                     <table class="site_table">
                         <tr>
                             <th>
+                                <a href="https://miniccha0709.cloudfree.jp/">みにっちゃ様：ミニチュアフード</a>
+                            </th>
+                            <td>
+                                <a href="https://miniccha0709.cloudfree.jp/">https://miniccha0709.cloudfree.jp/</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <a href="https://our-sle.info/">私たちのSLE</a>
                             </th>
                             <td>
                                 <a href="https://our-sle.info/">https://our-sle.info </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a href="https://bleeding-tracker.vercel.app/">からだの記録アプリ</a>
+                            </th>
+                            <td>
+                                <a href="https://bleeding-tracker.vercel.app/">https://bleeding-tracker.vercel.app/</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a href="https://cf817051.cloudfree.jp/">マキコのメモ</a>
+                            </th>
+                            <td>
+                                <a href="https://cf817051.cloudfree.jp/">https://cf817051.cloudfree.jp/</a>
                             </td>
                         </tr>
                         <tr>
