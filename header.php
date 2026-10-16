@@ -23,8 +23,8 @@
                     <ul class="nav_list">
                         <li class="nav_item"><a class="nav_link" href="/works/">works</a></li>
                         <li class="nav_item"><a class="nav_link" href="/about-me/">about</a></li>
-                        <!-- <li class="nav_item"><a class="nav_link" href="<?php echo get_template_directory_uri(); ?>/blog.html">blog</a></li> -->
-                        <li class="nav_item"><a class="nav_link" href="<?php echo get_template_directory_uri(); ?>/contact.php">contact</a></li>
+                        <!-- <li class="nav_item"><a class="nav_link" href="<?php echo esc_url(get_template_directory_uri()); ?>/blog.html">blog</a></li> -->
+                        <li class="nav_item"><a class="nav_link" href="<?php echo esc_url(get_template_directory_uri()); ?>/contact.php">contact</a></li>
                     </ul>
                 </nav>
                 <nav class="nav_sp_only sp_only">
@@ -36,7 +36,7 @@
                         <li class="nav_item"><a class="nav_link" href="/works/">works</a></li>
                         <li class="nav_item"><a class="nav_link" href="/about-me/">about</a></li>
                         <!-- <li class="nav_item"><a class="nav_link" href="blog.html">blog</a></li> -->
-                        <li class="nav_item"><a class="nav_link" href="<?php echo get_template_directory_uri(); ?>/contact.php">contact</a></li>
+                        <li class="nav_item"><a class="nav_link" href="<?php echo esc_url(get_template_directory_uri()); ?>/contact.php">contact</a></li>
                     </ul>
                 </nav>
             </div>

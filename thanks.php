@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . '/inc/form-security.php';
+form_bootstrap();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo filemtime(__DIR__ . '/assets/css/style.css'); ?>">
 </head>
 <body>
     <main id="thanks">

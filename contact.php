@@ -1,96 +1,80 @@
 <?php
-session_start();
+require_once __DIR__ . '/secret.php';
+require_once __DIR__ . '/inc/form-security.php';
 
 // ============================================
 // reCAPTCHA v3 設定
 // ============================================
-require_once __DIR__ . '/secret.php';
-define('RECAPTCHA_THRESHOLD', 0.5);
+const RECAPTCHA_SITE_KEY = '6LehHK4sAAAAAGxZlAo0bd8wC3QAD6Ee1kacAYq0';
+const RECAPTCHA_THRESHOLD = 0.5;
 
-// reCAPTCHA検証関数
-function verify_recaptcha($token)
-{
-    $url = 'https://www.google.com/recaptcha/api/siteverify';
-    $data = [
-        'secret' => RECAPTCHA_SECRET_KEY,
-        'response' => $token,
-        'remoteip' => $_SERVER['REMOTE_ADDR']
-    ];
-
-    $options = [
-        'http' => [
-            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
-            'method' => 'POST',
-            'content' => http_build_query($data)
-        ]
-    ];
-
-    $context = stream_context_create($options);
-    $result = file_get_contents($url, false, $context);
-
-    return json_decode($result, true);
-}
+form_bootstrap();
 
 // ============================================
 // フォーム処理
 // ============================================
 $error = [];
+$post = ['name' => '', 'email' => '', 'tel' => '', 'message' => '', 'agreement' => ''];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // reCAPTCHA検証
-    $recaptcha_token = filter_input(INPUT_POST, 'recaptcha_token', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '';
-
-    if ($recaptcha_token) {
-        $recaptcha_result = verify_recaptcha($recaptcha_token);
-
-        if (
-            !$recaptcha_result['success'] ||
-            $recaptcha_result['score'] < RECAPTCHA_THRESHOLD ||
-            $recaptcha_result['action'] !== 'submit'
-        ) {
-            $error['recaptcha'] = 'failed';
-        }
-    } else {
-        $error['recaptcha'] = 'blank';
-    }
-
-    // フォームデータの取得
+    // フォームデータの取得（エスケープは出力時に行う）
     $post = [
-        'name' => filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '',
-        'email' => filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL) ?? '',
-        'tel' => filter_input(INPUT_POST, 'tel', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '',
-        'message' => filter_input(INPUT_POST, 'message', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '',
-        'agreement' => filter_input(INPUT_POST, 'agreement', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? ''
+        'name' => form_input('name'),
+        'email' => form_input('email'),
+        'tel' => form_input('tel'),
+        'message' => form_input('message', true),
+        'agreement' => form_input('agreement'),
     ];
+
+    if (!csrf_verify()) {
+        // CSRF対策：正規の画面以外からの送信
+        $error['security'] = 'csrf';
+    } elseif (form_input('website') !== '') {
+        // ボット対策：人間には見えない入力欄に値が入っている
+        $error['security'] = 'bot';
+    } elseif (rate_limit_exceeded()) {
+        $error['security'] = 'rate';
+    } elseif (!verify_recaptcha($_POST['recaptcha_token'] ?? '', 'submit')) {
+        $error['security'] = 'recaptcha';
+    }
 
     // バリデーション
     if ($post['name'] === '') {
         $error['name'] = 'blank';
+    } elseif (mb_strlen($post['name']) > FORM_MAX_LENGTH['name']) {
+        $error['name'] = 'length';
     }
     if ($post['email'] === '') {
         $error['email'] = 'blank';
-    } else if (!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
+    } elseif (mb_strlen($post['email']) > FORM_MAX_LENGTH['email'] || !filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
         $error['email'] = 'email';
+    }
+    if ($post['tel'] !== '' && !preg_match('/\A[0-9+\-() ]{1,' . FORM_MAX_LENGTH['tel'] . '}\z/', $post['tel'])) {
+        $error['tel'] = 'format';
     }
     if ($post['message'] === '') {
         $error['message'] = 'blank';
+    } elseif (mb_strlen($post['message']) > FORM_MAX_LENGTH['message']) {
+        $error['message'] = 'length';
     }
-    if ($post['agreement'] === '') {
+    if ($post['agreement'] !== '1') {
         $error['agreement'] = 'blank';
     }
 
     if (count($error) === 0) {
         // エラーがないので確認画面に移動
+        session_regenerate_id(true);
         $_SESSION['form'] = $post;
-        header('Location: confirm.php');
+        header('Location: confirm.php', true, 303);
         exit();
     }
 } else {
-    if (isset($_SESSION['form'])) {
-        $post = $_SESSION['form'];
+    if (isset($_SESSION['form']) && is_array($_SESSION['form'])) {
+        $post = array_merge($post, $_SESSION['form']);
     }
 }
 ?>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -104,10 +88,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo filemtime(__DIR__ . '/assets/css/style.css'); ?>">
 
     <!-- reCAPTCHA v3 -->
-    <script src="https://www.google.com/recaptcha/api.js?render=6LehHK4sAAAAAGxZlAo0bd8wC3QAD6Ee1kacAYq0"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=<?php echo h(RECAPTCHA_SITE_KEY); ?>"></script>
 </head>
 
 <body>
@@ -142,16 +126,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h3 class="section_title">contact <span>お問い合わせ</span></h3>
             <p>ご依頼・ご相談や、ホームページのご感想などお気軽にお問い合わせくださいませ。<br>※は必須項目になります</p>
 
-            <form id="contactForm" action="contact.php" method="POST" novalidate>
+            <form id="contactForm" action="contact.php" method="POST" novalidate data-sitekey="<?php echo h(RECAPTCHA_SITE_KEY); ?>">
                 <?php if (!empty($error)): ?>
                     <div style="color: red; background: #ffe6e6; padding: 10px; margin: 10px 0;">
                         <strong>エラーが発生しています：</strong>
                         <?php foreach ($error as $key => $value): ?>
                             <br><?php
-                                if ($key === 'recaptcha') {
-                                    echo 'セキュリティチェックに失敗しました。もう一度お試しください。';
+                                if ($key === 'security' && $value === 'rate') {
+                                    echo '短時間に送信が繰り返されたため、受付を一時停止しています。しばらく時間をおいてお試しください。';
+                                } elseif ($key === 'security') {
+                                    echo 'セキュリティチェックに失敗しました。ページを再読み込みしてもう一度お試しください。';
                                 } else {
-                                    echo htmlspecialchars($key . ': ' . $value, ENT_QUOTES, 'UTF-8');
+                                    echo h($key . ': ' . $value);
                                 }
                                 ?>
                         <?php endforeach; ?>
@@ -161,16 +147,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <tr>
                         <th><label for="name">※お名前</label></th>
                         <td>
-                            <input type="text" id="name" name="name" value="<?php echo isset($post['name']) ? htmlspecialchars($post['name'], ENT_QUOTES, 'UTF-8') : ''; ?>" required>
+                            <input type="text" id="name" name="name" value="<?php echo h($post['name']); ?>" maxlength="<?php echo FORM_MAX_LENGTH['name']; ?>" autocomplete="name" required>
                             <?php if (isset($error['name']) && $error['name'] === 'blank'): ?>
                                 <p class="error_msg">※お名前をご記入下さい</p>
+                            <?php elseif (isset($error['name']) && $error['name'] === 'length'): ?>
+                                <p class="error_msg">※お名前は<?php echo FORM_MAX_LENGTH['name']; ?>文字以内でご記入下さい</p>
                             <?php endif; ?>
                         </td>
                     </tr>
                     <tr>
                         <th><label for="email">※メールアドレス</label></th>
                         <td>
-                            <input type="email" name="email" id="email" class="serif" value="<?php echo isset($post['email']) ? htmlspecialchars($post['email'], ENT_QUOTES, 'UTF-8') : ''; ?>" required>
+                            <input type="email" name="email" id="email" class="serif" value="<?php echo h($post['email']); ?>" maxlength="<?php echo FORM_MAX_LENGTH['email']; ?>" autocomplete="email" required>
                             <?php if (isset($error['email']) && $error['email'] === 'blank'): ?>
                                 <p class="error_msg">※メールアドレスをご記入下さい</p>
                             <?php elseif (isset($error['email']) && $error['email'] === 'email'): ?>
@@ -181,15 +169,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <tr>
                         <th><label for="tel">電話番号</label></th>
                         <td>
-                            <input type="tel" name="tel" id="tel" value="<?php echo isset($post['tel']) ? htmlspecialchars($post['tel'], ENT_QUOTES, 'UTF-8') : ''; ?>">
+                            <input type="tel" name="tel" id="tel" value="<?php echo h($post['tel']); ?>" maxlength="<?php echo FORM_MAX_LENGTH['tel']; ?>" autocomplete="tel">
+                            <?php if (isset($error['tel'])): ?>
+                                <p class="error_msg">※電話番号は半角数字とハイフンでご記入下さい</p>
+                            <?php endif; ?>
                         </td>
                     </tr>
                     <tr>
                         <th><label for="massage">※お問い合わせ内容</label></th>
                         <td>
-                            <textarea name="message" id="massage" required><?php echo isset($post['message']) ? htmlspecialchars($post['message'], ENT_QUOTES, 'UTF-8') : ''; ?></textarea>
+                            <textarea name="message" id="massage" maxlength="<?php echo FORM_MAX_LENGTH['message']; ?>" required><?php echo h($post['message']); ?></textarea>
                             <?php if (isset($error['message']) && $error['message'] === 'blank'): ?>
                                 <p class="error_msg">※お問い合わせ内容をご記入下さい</p>
+                            <?php elseif (isset($error['message']) && $error['message'] === 'length'): ?>
+                                <p class="error_msg">※お問い合わせ内容は<?php echo FORM_MAX_LENGTH['message']; ?>文字以内でご記入下さい</p>
                             <?php endif; ?>
                         </td>
                     </tr>
@@ -257,7 +250,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         name="agreement"
                         value="1"
                         class="check"
-                        <?php echo (isset($post['agreement']) && $post['agreement'] === '1') ? 'checked' : ''; ?>>
+                        <?php echo $post['agreement'] === '1' ? 'checked' : ''; ?>>
                     <label for="agreement" class="agreement">
                         上記のプライバシーポリシーに同意します
                     </label>
@@ -268,6 +261,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <!-- reCAPTCHAトークンを格納 -->
                 <input type="hidden" id="recaptcha_token" name="recaptcha_token">
+                <!-- CSRF対策トークン -->
+                <input type="hidden" name="csrf_token" value="<?php echo h(csrf_token()); ?>">
+                <!-- ボット対策（人間には表示されない入力欄） -->
+                <div style="position:absolute;left:-9999px;" aria-hidden="true">
+                    <label for="website">このフィールドは空のままにしてください</label>
+                    <input type="text" id="website" name="website" value="" tabindex="-1" autocomplete="off">
+                </div>
 
                 <button type="submit" class="contact_button">送信する</button>
             </form>
@@ -279,7 +279,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <section class="github_links_section">
             <h4 class="section_title">CODE <span>このサイトのコード</span></h4>
             <div class="github_links">
-                <a href="https://github.com/makikooo/portfolio2025" target="_blank">GitHub</a>
+                <a href="https://github.com/makikooo/portfolio2025" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </section>
     </main>
@@ -302,20 +302,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="assets/js/main.js" defer></script>
 
     <!-- reCAPTCHA v3 JavaScript -->
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        grecaptcha.ready(function() {
-            grecaptcha.execute('6LehHK4sAAAAAGxZlAo0bd8wC3QAD6Ee1kacAYq0', {
-            action: 'submit'
-          }).then(function(token) {
-              document.getElementById('recaptcha_token').value = token;
-              document.getElementById('contactForm').submit();
-          });
-        });
-        });
-    </script>
+    <script src="assets/js/contact.js" defer></script>
 </body>
 
 </html>

@@ -1,0 +1,383 @@
+@use "globals" as *;
+
+// ============================================
+// ホバーエフェクト（全ページ共通）
+// ・マウス操作できる端末のみ（スマホでホバーが残らないように）
+// ・キーボード操作（:focus-visible）でも同じ見た目にする
+// ・「視差効果を減らす」設定のユーザーには動きを付けない
+// ============================================
+
+$hoverGold: #D0A900;
+$hoverGoldDark: #C39000;
+$hoverGoldLight: #E7D173;
+$hoverEase: cubic-bezier(0.22, 1, 0.36, 1);
+$hoverShadow: 0 14px 30px -12px rgba(195, 144, 0, 0.55);
+
+// ホバーとキーボードフォーカスをまとめて書くためのmixin
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+  &:focus-visible {
+    @content;
+  }
+}
+
+// 矢印アイコンを少し動かす
+@mixin arrow-move($x: 4px, $rotate: false) {
+  @if $rotate {
+    transform: rotate(-45deg) translateX($x);
+  } @else {
+    transform: translateX($x);
+  }
+}
+
+a,
+button {
+  &:focus-visible {
+    outline: 2px solid $hoverGold;
+    outline-offset: 3px;
+  }
+}
+
+// ---------- ヘッダー ----------
+// ロゴ：文字間がふわっと広がる
+.header .header_content .logo_link .title_name {
+  transition: letter-spacing 0.5s $hoverEase, color 0.4s;
+}
+.header .header_content .logo_link {
+  @include hover {
+    .title_name {
+      letter-spacing: 0.06em;
+      color: $hoverGoldDark;
+    }
+  }
+}
+
+// ナビの丸ボタン：下から金色が満ちて、少し浮き上がる
+.header .header_content .nav_list .nav_item {
+  overflow: hidden;
+  transition: transform 0.4s $hoverEase, box-shadow 0.4s $hoverEase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, $hoverGold, $hoverGoldLight);
+    transform: translateY(100%);
+    transition: transform 0.45s $hoverEase;
+  }
+
+  .nav_link {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+
+  @include hover {
+    transform: translateY(-4px);
+    box-shadow: $hoverShadow;
+
+    &::before {
+      transform: translateY(0);
+    }
+    .nav_link {
+      color: #fff;
+    }
+  }
+  // リンクにフォーカスしたときも同じ見た目にする
+  &:focus-within {
+    transform: translateY(-4px);
+    box-shadow: $hoverShadow;
+
+    &::before {
+      transform: translateY(0);
+    }
+    .nav_link {
+      color: #fff;
+    }
+  }
+}
+
+// スマホメニューのリンク
+.sp_nav_list li a {
+  transition: color 0.3s;
+  @include hover {
+    color: $hoverGoldDark;
+  }
+}
+
+// ---------- フッター ----------
+// ナビ：中央から白い下線が伸びる
+.footer .footer_flex nav ul li a {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 1px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.4s $hoverEase;
+  }
+
+  @include hover {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.footer .footer_flex .footer_name {
+  transition: letter-spacing 0.5s $hoverEase;
+}
+.footer .footer_flex a {
+  @include hover {
+    .footer_name {
+      letter-spacing: 0.06em;
+    }
+  }
+}
+
+// 「上に戻る」：反転して上にぴょんと浮く
+.footer .go_to_top {
+  cursor: pointer;
+  transition: transform 0.4s $hoverEase, background-color 0.3s, color 0.3s, box-shadow 0.4s;
+
+  @include hover {
+    transform: translateY(-8px);
+    background-color: #fff;
+    color: $hoverGoldDark;
+    box-shadow: $hoverShadow;
+  }
+}
+
+// ---------- 共通ボタン（金色グラデーション） ----------
+// 浮き上がり＋矢印が動く
+.button,
+.contact_button {
+  transition: transform 0.4s $hoverEase, box-shadow 0.4s $hoverEase;
+
+  img {
+    transition: transform 0.4s $hoverEase;
+  }
+
+  @include hover {
+    transform: translateY(-4px);
+    box-shadow: $hoverShadow;
+
+    img {
+      @include arrow-move(5px);
+    }
+    .angle {
+      @include arrow-move(5px, true);
+    }
+  }
+}
+
+// ---------- トップページ：作品カード ----------
+#home .works .works_wrapper .work_card {
+  transition: transform 0.5s $hoverEase, box-shadow 0.5s $hoverEase;
+
+  .thumnail {
+    transition: filter 0.5s $hoverEase;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 40px -18px rgba(195, 144, 0, 0.6);
+
+      .thumnail {
+        filter: brightness(1.05) saturate(1.15);
+      }
+    }
+  }
+
+  // 「サイトを見る」などのリンク：文字が金色に、矢印が進む
+  .botton_wrapper .go_to_site {
+    .botton_text {
+      transition: color 0.3s, letter-spacing 0.4s $hoverEase;
+    }
+    .arrow {
+      transition: transform 0.4s $hoverEase;
+    }
+
+    @include hover {
+      .botton_text {
+        color: $hoverGoldDark;
+        letter-spacing: 0.05em;
+      }
+      .arrow {
+        @include arrow-move(6px);
+      }
+      .angle {
+        @include arrow-move(6px, true);
+      }
+    }
+  }
+}
+
+// ---------- 作品一覧ページ（works / AI works） ----------
+// カテゴリタブ：少し持ち上がって文字が白に
+#works-page .sec02 .works_list .works_link_item {
+  transition: transform 0.3s $hoverEase, background-color 0.3s, border-bottom 0.3s ease;
+
+  .works_link {
+    transition: color 0.3s;
+  }
+
+  @include hover {
+    transform: translateY(-3px);
+
+    .works_link {
+      color: #fff;
+    }
+  }
+}
+
+// 作品の行：画像が少し浮き上がる
+#works-page .sec03 .work_link_wrapper,
+#works-page .work_continuation .work_link_wrapper {
+  .work_image {
+    transition: transform 0.5s $hoverEase, box-shadow 0.5s $hoverEase;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover .work_image {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 18px 30px -16px rgba(195, 144, 0, 0.6);
+    }
+  }
+}
+
+// ---------- 詳細ボタン（作品一覧・詳細ページ共通） ----------
+// 下線が金色に伸び、矢印が進む
+// 各ページのセレクタより優先されるよう、同じ深さで指定している
+#works-page .sec03 .work_link_wrapper .link_flex .button_wrapper .work_button,
+#works-page .work_continuation .work_link_wrapper .link_flex .button_wrapper .work_button,
+#detail .sec01 .button_wrapper .work_button {
+  transition: transform 0.4s $hoverEase, box-shadow 0.4s $hoverEase;
+
+  .button_flex span {
+    transition: color 0.3s, letter-spacing 0.4s $hoverEase;
+  }
+  .button_flex img {
+    transition: transform 0.4s $hoverEase;
+  }
+  .border {
+    transition: width 0.5s $hoverEase, background-color 0.3s;
+  }
+
+  @include hover {
+    transform: translateY(-3px);
+
+    .button_flex span {
+      letter-spacing: 0.05em;
+    }
+    .button_flex img {
+      @include arrow-move(6px);
+    }
+    .border {
+      width: 100%;
+      background-color: $hoverGoldDark;
+    }
+  }
+}
+
+#detail .sec01 .button_wrapper .work_button {
+  @include hover {
+    box-shadow: $hoverShadow;
+  }
+}
+
+// ---------- 詳細ページ ----------
+#detail .sec01 .detail_subtitle {
+  transition: background 0.4s, transform 0.4s $hoverEase, box-shadow 0.4s $hoverEase;
+
+  @include hover {
+    transform: translateY(-3px);
+    box-shadow: $hoverShadow;
+  }
+}
+
+// URLリンク：左から下線が引かれる
+#detail .sec01 .detail_link a {
+  background-image: linear-gradient($hoverGoldDark, $hoverGoldDark);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 0 1px;
+  transition: background-size 0.5s $hoverEase, color 0.3s;
+
+  @include hover {
+    background-size: 100% 1px;
+    color: $hoverGoldDark;
+  }
+}
+
+#detail .sec01 .images_wrapper img {
+  transition: transform 0.5s $hoverEase, filter 0.5s $hoverEase;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-4px);
+      filter: drop-shadow(0 14px 18px rgba(195, 144, 0, 0.35));
+    }
+  }
+}
+
+// ---------- アバウトページ ----------
+// スキルカード・ツールカード：浮き上がって金色の影
+#about-page .sec03 .sec03_flex .card,
+#about-page .sec04 .sec04_grid .tool__card {
+  transition: transform 0.5s $hoverEase, box-shadow 0.5s $hoverEase, border-color 0.3s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: $hoverShadow;
+      border-color: $hoverGold;
+    }
+  }
+}
+
+#about-page .sec01 .skill_flex .skill_title {
+  transition: transform 0.4s $hoverEase;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// ---------- 「視差効果を減らす」設定のユーザーには動きを付けない ----------
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+  .header .header_content .nav_list .nav_item,
+  .footer .go_to_top,
+  .button,
+  .contact_button,
+  #home .works .works_wrapper .work_card,
+  #works-page .sec03 .work_link_wrapper .work_image,
+  #works-page .work_continuation .work_link_wrapper .work_image,
+  #works-page .sec03 .work_link_wrapper .link_flex .button_wrapper .work_button,
+  #works-page .work_continuation .work_link_wrapper .link_flex .button_wrapper .work_button,
+  #detail .sec01 .button_wrapper .work_button,
+  #detail .sec01 .detail_subtitle,
+  #detail .sec01 .images_wrapper img,
+  #about-page .sec03 .sec03_flex .card,
+  #about-page .sec04 .sec04_grid .tool__card,
+  #about-page .sec01 .skill_flex .skill_title {
+    transform: none !important;
+  }
+}
