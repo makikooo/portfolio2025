@@ -145,22 +145,22 @@
         </div>
       </article>
 
-      <!-- メモアプリのカード -->
+      <!-- kamiwaza アシスタントノートアプリのカード -->
       <article class="work_card">
-        <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/makiko-memo.webp" alt="からだの記録アプリのサムネイル">
+        <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/thumnail-kamiwaza.webp" alt="アシスタントノートのサムネイル">
         <div class="skill_wrapper">
           <h4 class="category">フルスクラッチ</h4>
-          <h5 class="website_name">マキコのメモ</h5>
-          <p class="skills">Webデザイン / HTML / CSS / JavaScript </p>
+          <h5 class="website_name">カミワザ</h5>
+          <p class="skills">Webデザイン / HTML / CSS / JavaScript / PHP </p>
         </div>
         <div class="botton_wrapper">
           <hr class="word_border">
-          <a href="https://cf817051.cloudfree.jp/" target="_blank" class="go_to_site">
+          <a href="https://kamiwaza-hair.net/" target="_blank" class="go_to_site">
             <p class="botton_text">アプリを見る</p>
             <img class="angle arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
           </a>
           <hr class="word_border">
-          <a href="/detail-makiko-memo/" class="go_to_site">
+          <a href="/detail-kamiwaza/" class="go_to_site">
             <p class="botton_text">サイト紹介を見る</p>
             <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
           </a>

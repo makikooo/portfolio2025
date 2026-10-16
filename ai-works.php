@@ -39,6 +39,44 @@
     <div class="work_link_wrapper" data-category="wordpress">
       <div class="link_flex">
         <div class="work_wrapper">
+          <img loading="lazy" class="work_image" src="<?php echo get_template_directory_uri(); ?>/assets/images/thumnail-kamiwaza.webp" alt="制作内容のイメージ画像">
+          <div class="work_box">
+            <h5 class="work_title">
+              <span>
+                美容師アシスタントノート
+              </span>
+            </h5>
+            <div class="category">Webアプリ</div>
+            <p class="activity">個人活動</p>
+            <!-- <p class="code">
+              Webデザイン / Tailwind CSS / JavaScript(Next.js・React)
+            </p> -->
+            <p class="production_date">制作日 2026年8月</p>
+          </div>
+        </div>
+        <div class="button_wrapper">
+          <a class="work_button detail_button" href="/detail-bleeding-tracker/">
+            <div class="button_flex">
+              <span>detail</span>
+              <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon01.webp" alt="リンクのアイコン"></span>
+            </div>
+            <div class="border"></div>
+          </a>
+          <a class="work_button site_button" target="_blank" href="https://kamiwaza-hair.net/">
+            <div class="button_flex">
+              <span>TO SITE</span>
+              <span><img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon02.webp" alt="リンクのアイコン"></span>
+            </div>
+            <div class="border"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- ここまで１サイト紹介終わり -->
+    <!-- ここから１サイト紹介始まり -->
+    <div class="work_link_wrapper" data-category="wordpress">
+      <div class="link_flex">
+        <div class="work_wrapper">
           <img loading="lazy" class="work_image" src="<?php echo get_template_directory_uri(); ?>/assets/images/bleeding-tracker.webp" alt="制作内容のイメージ画像">
           <div class="work_box">
             <h5 class="work_title">
@@ -73,6 +111,7 @@
       </div>
     </div>
     <!-- ここまで１サイト紹介終わり -->
+
     <!-- ここから１サイト紹介始まり -->
     <div class="work_link_wrapper" data-category="website">
       <div class="link_flex">
