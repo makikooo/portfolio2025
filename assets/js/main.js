@@ -8,13 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const mvTitle = document.querySelector('.mv_title');
   const mvSubtitle = document.querySelector('.mv_subtitle');
 
+  // ローディング要素がないページでは何もしない
+  if (!loading || !mvTitle || !mvSubtitle) return;
+
   // ページ読み込み完了時の処理
   window.addEventListener('load', function () {
     // ナビゲーションの種類を取得
     // ブラウザにどうやってこのページに来たかを聞いている。
     // 帰ってくる値は文字列で3種類[navigate][reload][back_forward] 
     // [0]?.typeの?.はもし結果が取得できなかった場合にエラーにならないようにする。undefinedを返して終わり
-    const navType = performance.getEntriesByType('navigation')[0]?.type; 
+    const navType = performance.getEntriesByType('navigation')[0]?.type;
     // リロードしてきた → isReload は true  それ以外 → isReload は false
     const isReload = navType === "reload";
     // sessionStorage という、ブラウザが持っているタブを開いている間だけ使えるデータ置き場から 'visited' というキーの値を取り出してる。
@@ -43,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 3500);
     } else {
       // コンタクトページから戻ってきた時はスキップ
-      loading.style.display = "none";   
+      loading.style.display = "none";
     }
   });
 });
@@ -55,22 +58,22 @@ document.addEventListener('DOMContentLoaded', function () {
  *******************************************/
 window.addEventListener('load', () => {
 
-    let humbergur = document.querySelector('.humbergur_box');
-    let sp_nav_list = document.querySelector('.sp_nav_list');
-    let nav_links = document.querySelectorAll('.nav_link');
+  let humbergur = document.querySelector('.humbergur_box');
+  let sp_nav_list = document.querySelector('.sp_nav_list');
+  let nav_links = document.querySelectorAll('.nav_link');
 
-    if (humbergur && sp_nav_list) {
-        humbergur.addEventListener('click', () => {
-            humbergur.classList.toggle('active');
-            sp_nav_list.classList.toggle('active');
-        });
-        nav_links.forEach(link => {
-            link.addEventListener('click', () => {
-                sp_nav_list.classList.remove('active');
-                humbergur.classList.remove('active');
-            });
-        });
-    };
+  if (humbergur && sp_nav_list) {
+    humbergur.addEventListener('click', () => {
+      humbergur.classList.toggle('active');
+      sp_nav_list.classList.toggle('active');
+    });
+    nav_links.forEach(link => {
+      link.addEventListener('click', () => {
+        sp_nav_list.classList.remove('active');
+        humbergur.classList.remove('active');
+      });
+    });
+  };
 });
 
 
@@ -79,33 +82,33 @@ window.addEventListener('load', () => {
  *******************************************/
 window.addEventListener('load', () => {
 
-    let work_continuation = document.querySelector('.work_continuation');
-    let continuation_button = document.querySelector('.continuation_button');
-    let continuation_button_wrapper = document.querySelector('.center_wrapper');
+  let work_continuation = document.querySelector('.work_continuation');
+  let continuation_button = document.querySelector('.continuation_button');
+  let continuation_button_wrapper = document.querySelector('.center_wrapper');
 
-    if (continuation_button) {
-        continuation_button.addEventListener('click', function () {
-            work_continuation.classList.add('active');
-            continuation_button_wrapper.style.display = "none";
-        });
-    }
+  if (continuation_button) {
+    continuation_button.addEventListener('click', function () {
+      work_continuation.classList.add('active');
+      continuation_button_wrapper.style.display = "none";
+    });
+  }
 });
 
 /*******************************************
  *  トップページ　ワークのつづきを見る2個目
  *******************************************/
 window.addEventListener('load', () => {
-    const btn = document.querySelector('#btnContinuation02');
+  const btn = document.querySelector('#btnContinuation02');
 
-    if (btn) {
+  if (btn) {
 
-        btn.addEventListener('click', () => {
-            const worksBox = document.querySelector('#workBox');
-            worksBox.classList.add("active");
-            const centerWrapper02 = document.querySelector('.center_wrapper02');
-            centerWrapper02.style.display = 'none';
-        });
-    }
+    btn.addEventListener('click', () => {
+      const worksBox = document.querySelector('#workBox');
+      worksBox.classList.add("active");
+      const centerWrapper02 = document.querySelector('.center_wrapper02');
+      centerWrapper02.style.display = 'none';
+    });
+  }
 
 });
 
@@ -116,12 +119,12 @@ let go_to_top_button = document.querySelector('.go_to_top');
 
 if (go_to_top_button) {
 
-    go_to_top_button.addEventListener('click', () => {
-        window.scroll({
-            top: 0,
-            behavior: "smooth",
-        });
+  go_to_top_button.addEventListener('click', () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
     });
+  });
 }
 
 /*******************************************
@@ -129,77 +132,77 @@ if (go_to_top_button) {
  *  そのカテゴリーだけのリスト表示にする
  *******************************************/
 window.addEventListener('load', function () {
-    const categoryLinks = document.querySelectorAll('.category_link');
-    const workItems = document.querySelectorAll('.work_link_wrapper');
-    const workContinuationSection = document.querySelector('.work_continuation');
-    const continuationWrappers = document.querySelectorAll('.center_wrapper, .center_wrapper02');
-    const workBox = document.querySelector('#workBox');
+  const categoryLinks = document.querySelectorAll('.category_link');
+  const workItems = document.querySelectorAll('.work_link_wrapper');
+  const workContinuationSection = document.querySelector('.work_continuation');
+  const continuationWrappers = document.querySelectorAll('.center_wrapper, .center_wrapper02');
+  const workBox = document.querySelector('#workBox');
 
-    // window.location.hash はURLの # 以降を取得します。
-    // .substring(1) で先頭の # を除去します。
-    const initialHash = window.location.hash.substring(1);
-    // #がついている時だけ処理を実行
-    if (initialHash) {
-      const category = initialHash === 'works' ? 'all' : initialHash;
-      showContinuationSection(); // 続きを見るボタンを隠して全カードを展開
-      filterItems(category); // categoryに一致するカードだけ表示
-      setActiveLink(category); // 対応するカテゴリボタンをアクティブ状態にする
-    }
+  // window.location.hash はURLの # 以降を取得します。
+  // .substring(1) で先頭の # を除去します。
+  const initialHash = window.location.hash.substring(1);
+  // #がついている時だけ処理を実行
+  if (initialHash) {
+    const category = initialHash === 'works' ? 'all' : initialHash;
+    showContinuationSection(); // 続きを見るボタンを隠して全カードを展開
+    filterItems(category); // categoryに一致するカードだけ表示
+    setActiveLink(category); // 対応するカテゴリボタンをアクティブ状態にする
+  }
 
-    categoryLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const href = this.getAttribute('href');
-            const category = href.substring(1);
+  categoryLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const href = this.getAttribute('href');
+      const category = href.substring(1);
 
-            window.location.hash = category;
+      window.location.hash = category;
 
-            showContinuationSection();
-            filterItems(category);
-            setActiveLink(category);
-        });
+      showContinuationSection();
+      filterItems(category);
+      setActiveLink(category);
     });
+  });
 
-    // 「つづきを見る」を隠して、続きを表示
-    function showContinuationSection() {
-        if (workContinuationSection) {
-            workContinuationSection.classList.add('active');
-        }
-        continuationWrappers.forEach(button => {
-            button.style.display = 'none';
-        });
-        const hiddenItems = document.querySelectorAll('.work_link_wrapper.hidden');
-        hiddenItems.forEach(item => {
-            item.classList.remove('hidden');
-        });
-        if (workBox) workBox.classList.add('active');
+  // 「つづきを見る」を隠して、続きを表示
+  function showContinuationSection() {
+    if (workContinuationSection) {
+      workContinuationSection.classList.add('active');
     }
+    continuationWrappers.forEach(button => {
+      button.style.display = 'none';
+    });
+    const hiddenItems = document.querySelectorAll('.work_link_wrapper.hidden');
+    hiddenItems.forEach(item => {
+      item.classList.remove('hidden');
+    });
+    if (workBox) workBox.classList.add('active');
+  }
 
-    function filterItems(category) {
-        if (category === 'all') {
-            workItems.forEach(item => {
-                item.style.display = '';
-            });
-            return;
-        }
-        workItems.forEach(item => {
-            if (!item.hasAttribute('data-category')) {
-                item.style.display = 'none';
-                return;
-            }
-            const itemCategoryAttr = item.getAttribute('data-category');
-            const itemCategories = itemCategoryAttr.split(/\s+/);
-            item.style.display = itemCategories.includes(category) ? '' : 'none';
-        });
+  function filterItems(category) {
+    if (category === 'all') {
+      workItems.forEach(item => {
+        item.style.display = '';
+      });
+      return;
     }
+    workItems.forEach(item => {
+      if (!item.hasAttribute('data-category')) {
+        item.style.display = 'none';
+        return;
+      }
+      const itemCategoryAttr = item.getAttribute('data-category');
+      const itemCategories = itemCategoryAttr.split(/\s+/);
+      item.style.display = itemCategories.includes(category) ? '' : 'none';
+    });
+  }
 
-    function setActiveLink(category) {
-        categoryLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            const linkCategory = href.substring(1);
-            link.classList.toggle('active', linkCategory === category);
-        });
-    }
+  function setActiveLink(category) {
+    categoryLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      const linkCategory = href.substring(1);
+      link.classList.toggle('active', linkCategory === category);
+    });
+  }
 });
 
 
@@ -207,52 +210,52 @@ window.addEventListener('load', function () {
  *  トップページ カテゴリーをクリックすると背景色に色つける
  *******************************************/
 window.addEventListener('load', function () {
-    const categoryLinks = document.querySelectorAll('.category_link');
-    const workItems = document.querySelectorAll('.work_link_wrapper');
+  const categoryLinks = document.querySelectorAll('.category_link');
+  const workItems = document.querySelectorAll('.work_link_wrapper');
 
-    function filterWorks(category) {
-        workItems.forEach(item => {
-            const categories = item.getAttribute('data-category').split(/\s+/);
-            const isMatch = category === 'all' || categories.includes(category);
-            item.style.display = isMatch ? 'block' : 'none';
-        });
-    }
-
-    categoryLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const category = link.getAttribute('href').substring(1);
-            const clickedLi = link.parentElement;
-
-            // すべてのカテゴリを非アクティブに
-            categoryLinks.forEach(otherLink => {
-                const li = otherLink.parentElement;
-                li.classList.remove('active');
-                li.style.backgroundColor = '';
-                li.style.borderBottom = 'none';
-            });
-
-            // 選択されたカテゴリだけをアクティブに
-            clickedLi.classList.add('active');
-            clickedLi.style.backgroundColor = '#F1DC80';
-            clickedLi.style.borderBottom = '2px solid #C39000';
-
-            // 表示を更新
-            filterWorks(category);
-        });
+  function filterWorks(category) {
+    workItems.forEach(item => {
+      const categories = item.getAttribute('data-category').split(/\s+/);
+      const isMatch = category === 'all' || categories.includes(category);
+      item.style.display = isMatch ? 'block' : 'none';
     });
+  }
 
-    // 初期状態（"ALL" を選択状態にする）
-    const initial = document.querySelector('.category_link.active');
-    if (initial) {
-        const li = initial.parentElement;
-        li.classList.add('active');
-        li.style.backgroundColor = '#F1DC80';
-        li.style.borderBottom = '2px solid #C39000';
-        const category = initial.getAttribute('href').substring(1);
-        filterWorks(category);
-    }
+  categoryLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const category = link.getAttribute('href').substring(1);
+      const clickedLi = link.parentElement;
+
+      // すべてのカテゴリを非アクティブに
+      categoryLinks.forEach(otherLink => {
+        const li = otherLink.parentElement;
+        li.classList.remove('active');
+        li.style.backgroundColor = '';
+        li.style.borderBottom = 'none';
+      });
+
+      // 選択されたカテゴリだけをアクティブに
+      clickedLi.classList.add('active');
+      clickedLi.style.backgroundColor = '#F1DC80';
+      clickedLi.style.borderBottom = '2px solid #C39000';
+
+      // 表示を更新
+      filterWorks(category);
+    });
+  });
+
+  // 初期状態（"ALL" を選択状態にする）
+  const initial = document.querySelector('.category_link.active');
+  if (initial) {
+    const li = initial.parentElement;
+    li.classList.add('active');
+    li.style.backgroundColor = '#F1DC80';
+    li.style.borderBottom = '2px solid #C39000';
+    const category = initial.getAttribute('href').substring(1);
+    filterWorks(category);
+  }
 });
 
 /*******************************************
@@ -260,33 +263,33 @@ window.addEventListener('load', function () {
  *******************************************/
 window.addEventListener('load', () => {
 
-    // 利用規約同意チェックボックスと送信ボタンの要素を取得
-    const agreementCheckbox = document.getElementById('agreement');
-    const submitButton = document.querySelector('.contact_button');
+  // 利用規約同意チェックボックスと送信ボタンの要素を取得
+  const agreementCheckbox = document.getElementById('agreement');
+  const submitButton = document.querySelector('.contact_button');
 
-    // 初期状態で送信ボタンを無効化して半透明にする
-    if (submitButton) {
+  // 初期状態で送信ボタンを無効化して半透明にする
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.style.opacity = '0.5';
+    submitButton.style.cursor = 'not-allowed';
+  }
+
+  // チェックボックスの状態が変わった時のイベントハンドラー
+  if (agreementCheckbox) {
+    agreementCheckbox.addEventListener('change', function () {
+      if (this.checked) {
+        // チェックされた場合、ボタンを有効化して不透明度を元に戻す
+        submitButton.disabled = false;
+        submitButton.style.opacity = '1';
+        submitButton.style.cursor = 'pointer';
+      } else {
+        // チェックが外れた場合、ボタンを無効化して半透明にする
         submitButton.disabled = true;
         submitButton.style.opacity = '0.5';
         submitButton.style.cursor = 'not-allowed';
-    }
-
-    // チェックボックスの状態が変わった時のイベントハンドラー
-    if (agreementCheckbox) {
-        agreementCheckbox.addEventListener('change', function () {
-            if (this.checked) {
-                // チェックされた場合、ボタンを有効化して不透明度を元に戻す
-                submitButton.disabled = false;
-                submitButton.style.opacity = '1';
-                submitButton.style.cursor = 'pointer';
-            } else {
-                // チェックが外れた場合、ボタンを無効化して半透明にする
-                submitButton.disabled = true;
-                submitButton.style.opacity = '0.5';
-                submitButton.style.cursor = 'not-allowed';
-            }
-        });
-    }
+      }
+    });
+  }
 });
 
 /*******************************************
@@ -300,7 +303,7 @@ function equalizeSkillsHeight() {
   // offsetParent が null = 非表示の要素
   const cards = Array.from(wrapper.querySelectorAll('.work_card'))
     .filter(card => card.offsetParent !== null);
-  
+
   // カードが1枚もなければ何もしない
   if (cards.length === 0) return;
 
@@ -319,7 +322,7 @@ function equalizeSkillsHeight() {
 
   // カラム数ずつカードをグループ化して行ごとに処理
   for (let i = 0; i < cards.length; i += columnCount) {
-    
+
     // 同じ行のカードを取り出す（例：3カラムなら0〜2、3〜5...）
     const row = cards.slice(i, i + columnCount);
 
@@ -356,7 +359,7 @@ window.addEventListener('load', () => {
 });
 
 // 画面リサイズ時に再実行（カラム数が変わるため）
-window.addEventListener('resize',() => {
+window.addEventListener('resize', () => {
   if (!document.querySelector('.works_wrapper')) return;
   equalizeSkillsHeight();
 });
