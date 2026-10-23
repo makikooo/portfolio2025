@@ -25,6 +25,81 @@
     </div>
   </section>
 
+  <section class="works ai-coding title_wrapper" id="ai">
+    <h3 class="section_title">Vibe Coding　　pick up <span>バイブコーディングしたアプリ</span></h3>
+    <div class="works_wrapper">
+      <!-- からだの記憶アプリのカード -->
+      <article class="work_card">
+        <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/bleeding-tracker.webp" alt="からだの記録アプリのサムネイル">
+        <div class="skill_wrapper">
+          <h4 class="category">フルスクラッチ（Next.jsで自作）</h4>
+          <h5 class="website_name">からだの記録アプリ</h5>
+          <p class="skills">Webデザイン / Tailwind CSS / JavaScript(Next.js・React) </p>
+        </div>
+        <div class="botton_wrapper">
+          <hr class="word_border">
+          <a href="https://bleeding-tracker.vercel.app/" target="_blank" class="go_to_site">
+            <p class="botton_text">アプリを見る</p>
+            <img class="angle arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
+          </a>
+          <hr class="word_border">
+          <a href="/detail-bleeding-tracker/" class="go_to_site">
+            <p class="botton_text">サイト紹介を見る</p>
+            <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
+          </a>
+        </div>
+      </article>
+
+      <!-- kamiwaza アシスタントノートアプリのカード -->
+      <article class="work_card">
+        <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/thumnail-kamiwaza.webp" alt="アシスタントノートのサムネイル">
+        <div class="skill_wrapper">
+          <h4 class="category">フルスクラッチ</h4>
+          <h5 class="website_name">カミワザ</h5>
+          <p class="skills">Webデザイン / HTML / CSS / JavaScript / PHP </p>
+        </div>
+        <div class="botton_wrapper">
+          <hr class="word_border">
+          <a href="https://kamiwaza-hair.net/" target="_blank" class="go_to_site">
+            <p class="botton_text">アプリを見る</p>
+            <img class="angle arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
+          </a>
+          <hr class="word_border">
+          <a href="/detail-kamiwaza/" class="go_to_site">
+            <p class="botton_text">サイト紹介を見る</p>
+            <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
+          </a>
+        </div>
+      </article>
+
+      <!-- みにっちゃのカード -->
+      <article class="work_card">
+        <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/miniccha.webp" alt="みにっちゃのサムネイル">
+        <div class="skill_wrapper">
+          <h4 class="category">WordPress・運用</h4>
+          <h5 class="website_name">みにっちゃ</h5>
+          <p class="skills">Webデザイン / WordPress / HTML / PHP / CSS / JavaScript </p>
+        </div>
+        <div class="botton_wrapper">
+          <hr class="word_border">
+          <a href="https://miniccha0709.cloudfree.jp/" target="_blank" class="go_to_site">
+            <p class="botton_text">アプリを見る</p>
+            <img class="angle arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
+          </a>
+          <hr class="word_border">
+          <a href="/detail-miniccha/" class="go_to_site">
+            <p class="botton_text">サイト紹介を見る</p>
+            <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
+          </a>
+        </div>
+      </article>
+    </div>
+    <a class="go_to_detail_ai button" href="/detail-ai-coding/">
+      <span class="button_text">すべての作品を見る</span>
+      <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
+    </a>
+  </section>
+
   <section class="works title_wrapper" id="works">
     <h3 class="section_title">WORKS　　pick up <span>実績</span></h3>
     <div class="works_wrapper">
@@ -115,81 +190,6 @@
       </article>
     </div>
     <a class="go_to_detail_works button" href="/detail-works/">
-      <span class="button_text">すべての作品を見る</span>
-      <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
-    </a>
-  </section>
-
-  <section class="works ai-coding title_wrapper" id="ai">
-    <h3 class="section_title">Vibe Coding　　pick up <span>バイブコーディングしたアプリ</span></h3>
-    <div class="works_wrapper">
-      <!-- からだの記憶アプリのカード -->
-      <article class="work_card">
-        <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/bleeding-tracker.webp" alt="からだの記録アプリのサムネイル">
-        <div class="skill_wrapper">
-          <h4 class="category">フルスクラッチ（Next.jsで自作）</h4>
-          <h5 class="website_name">からだの記録アプリ</h5>
-          <p class="skills">Webデザイン / Tailwind CSS / JavaScript(Next.js・React) </p>
-        </div>
-        <div class="botton_wrapper">
-          <hr class="word_border">
-          <a href="https://bleeding-tracker.vercel.app/" target="_blank" class="go_to_site">
-            <p class="botton_text">アプリを見る</p>
-            <img class="angle arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
-          </a>
-          <hr class="word_border">
-          <a href="/detail-bleeding-tracker/" class="go_to_site">
-            <p class="botton_text">サイト紹介を見る</p>
-            <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
-          </a>
-        </div>
-      </article>
-
-      <!-- kamiwaza アシスタントノートアプリのカード -->
-      <article class="work_card">
-        <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/thumnail-kamiwaza.webp" alt="アシスタントノートのサムネイル">
-        <div class="skill_wrapper">
-          <h4 class="category">フルスクラッチ</h4>
-          <h5 class="website_name">カミワザ</h5>
-          <p class="skills">Webデザイン / HTML / CSS / JavaScript / PHP </p>
-        </div>
-        <div class="botton_wrapper">
-          <hr class="word_border">
-          <a href="https://kamiwaza-hair.net/" target="_blank" class="go_to_site">
-            <p class="botton_text">アプリを見る</p>
-            <img class="angle arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
-          </a>
-          <hr class="word_border">
-          <a href="/detail-kamiwaza/" class="go_to_site">
-            <p class="botton_text">サイト紹介を見る</p>
-            <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
-          </a>
-        </div>
-      </article>
-
-      <!-- みにっちゃのカード -->
-      <article class="work_card">
-        <img class="thumnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/miniccha.webp" alt="みにっちゃのサムネイル">
-        <div class="skill_wrapper">
-          <h4 class="category">WordPress・運用</h4>
-          <h5 class="website_name">みにっちゃ</h5>
-          <p class="skills">Webデザイン / WordPress / HTML / PHP / CSS / JavaScript </p>
-        </div>
-        <div class="botton_wrapper">
-          <hr class="word_border">
-          <a href="https://miniccha0709.cloudfree.jp/" target="_blank" class="go_to_site">
-            <p class="botton_text">アプリを見る</p>
-            <img class="angle arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
-          </a>
-          <hr class="word_border">
-          <a href="/detail-miniccha/" class="go_to_site">
-            <p class="botton_text">サイト紹介を見る</p>
-            <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
-          </a>
-        </div>
-      </article>
-    </div>
-    <a class="go_to_detail_ai button" href="/detail-ai-coding/">
       <span class="button_text">すべての作品を見る</span>
       <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg">
     </a>
